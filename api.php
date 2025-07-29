@@ -1,0 +1,60 @@
+<?php 
+$key = 'f2f7ef3b-8168-4a6e-be8d-aab31fdb980e';
+
+$json = file_get_contents('https://cdn-customer.theteampower.com/data/'.$key.'.json');
+if(!$json){
+    die('json not found...');
+}
+$api = json_decode($json);
+ 
+
+
+if (!$api) {
+    die('server connection error...');
+}
+if(isset($api->status) =='error'){
+    die($api->message);
+}
+$get = $api[0];
+// die();
+function makeMenu($orig_tree)
+{
+    $parent_set = [];
+    $result = [];
+    foreach ($orig_tree as $node) {
+        $node->children = [];
+        if ($node->parent_id == 0) {
+            $result[] = $node;
+            $parent_set[$node->id] = &$result[count($result) - 1];
+        } else {
+            $parent = &$parent_set[$node->parent_id];
+            $parent->children[] = $node;
+            $parent_set[$node->id] = &$parent->children[count($parent->children) - 1];
+        }
+    }
+
+    return $result;
+}
+
+$menus = makeMenu($get->menus);
+$theme = $get->theme;
+$sliders = $get->sliders;
+$cards = $get->cards;
+$counters = $get->counters;
+$imageCards = $get->image_cards;
+$companies = $get->companies;
+$comments = $get->comments;
+$extra_menus = $get->extra_menu;
+$popups = $get->popup;
+$other_pages = $get->other_page;
+$blog = $get->blog;
+$blog_category= $get->blog_category;
+$properties= $get->properties;
+$accounts= $get->accounts;
+$questions= $get->questions;
+$advantages= $get->advantages;
+//get page 
+$page = @$_GET['page'];    
+$getURL = @$_GET['url'];  
+
+ 

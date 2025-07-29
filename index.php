@@ -1,0 +1,68 @@
+<?php
+require 'api.php';
+require 'includes/head.php';
+
+if (!$page) {
+    require 'includes/home.php';
+} else {
+    $menuDetail = (object)[];
+    // $menuDetail = new stdClass; 
+    
+        if($page == 'contact-us'){
+
+            require("includes/contact-us.php");
+
+        }else if($page == 'otherPage'){
+           
+            foreach ($get->other_page as $pageOther) {
+                if ($pageOther->url == $getURL) {
+                    $menuDetail = $pageOther;
+                }
+            } 
+ 
+            require("includes/otherPage.php");
+
+        }
+        else if ($page == 'documents'){
+
+            require("includes/document.php");
+        }
+        else if($page=='blog')
+        {
+           
+            require("includes/blog.php");
+        }
+        else if($page=='blogDetail')
+        {
+
+            foreach ($get->blog as $blog1) {
+                
+                if ($blog1->id == $_GET["id"]) {
+                    $blogDetail = $blog1;
+                }
+            }
+            require("includes/BlogDetail.php");
+        }
+        else{
+
+            foreach ($get->menus as $pageMenus) {
+                if ($pageMenus->url == $page) {
+                    $menuDetail = $pageMenus;
+                }
+            } 
+    
+            if (!count((array)$menuDetail)) {
+                die('page not found...');
+            }
+    
+            require("includes/page.php");
+
+        }
+ 
+
+        
+     
+}
+
+
+require 'includes/footer.php';
