@@ -49,6 +49,15 @@
                        <?= isset($get->email) ? ' <li><i class="bi bi-envelope mt-2 px-1"> </i>'. $get->email .'</li>' : null ?>
                        <?= isset($get->address) ? ' <li><i class="bi bi-geo-alt mt-2 px-1"></i>'. $get->address .'</li>' : null ?>
                     </ul>
+                    <div>
+                       <a href="#" style="cursor: pointer; display: inline-block; margin: 0 8px; vertical-align: middle;">
+                        <img src="./assets/img/NewTemp/mc.png" alt="mc" style="width: 50px; height: auto; object-fit: contain; display: block;" />
+                        </a>
+
+                        <a href="#" style="cursor: pointer; display: inline-block; margin: 0 8px; vertical-align: middle;">
+                        <img src="./assets/img/NewTemp/visa.png" alt="visa" style="width: 50px; height: auto; object-fit: contain; display: block;" />
+                        </a>
+                    </div>
 
                 </div>
 
@@ -65,11 +74,9 @@
                         <div class="row">
   <div class="col-12">
     <div style="color:<?=$get->footer_text_color?>; font-size:13px; line-height:1.5; padding-bottom:10px; text-align:center;">
-      © 2025 Amber Rock Trade Ltd, registered at Level 5, Alexander House, 
-      35 Cybercity, 72201 Ebene, Mauritius, Company No: 222594.<br>
-      This website is operated by Amber Rock Trade Ltd.<br>
-      Payment processing is handled by our authorized payment agent B-tech Ltd,
-      registered in Cyprus, Company No: HE 414065.
+      © 2025 Amber Rock Trade Ltd, Level 5, Alexander House, 35 Cybercity, 72201 Ebene, Mauritius, Company No: 222594,<br> License No: GB24203892. The Company is authorized and regulated by the Financial Services Commission of Mauritius (“FSC”).
+This website is operated by Amber Rock Trade Ltd.<br>
+Payment processing is handled by our authorized payment agent, B-Tech Ltd, registered at Louki Akrita 1, Akritas Court,<br> 3rd Floor, Flat/Office 301, 3030 Limassol, Cyprus, Company No: HE 414065.
     </div>
 
     <div style="color: white !important; font-size:13px;  padding-bottom:10px; text-align:center;">
