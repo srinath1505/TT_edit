@@ -6,14 +6,39 @@
 
     <!-- Primary Meta Tags -->
     <title><?= $get->title ?></title>
-    <meta name="description" content="<?= $get->desc ?>" />
-    <meta name="keyw" content="<?= $get->keyw ?>" />
-    <link rel="icon" href="<?= $get->assets_url.'/'.$get->favicon ?>" />
-    <?= $theme->css_files ?>
-    <?= $get->head_code ?>
+    <meta name="title" content="<?= $get->title ?>">
+    <meta name="description" content="<?= $get->desc ?>">
+    <meta name="keywords" content="<?= $get->keyw ?>">
+    <meta name="author" content=" <?= $get->brand_name ?>">
+    <meta name="theme-color" content="#E63946">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/main.css">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tradertok.com/">
+    <meta property="og:title" content="TraderTok - Professional Trading Platform">
+    <meta property="og:description" content="Grow your savings with confidence. Access powerful trading platforms, real-time analysis, and 24/7 expert support.">
+    <meta property="og:image" content="https://tradertok.com/og-image.jpg">
+    <meta property="og:site_name" content="TraderTok">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://tradertok.com/">
+    <meta name="twitter:title" content="TraderTok - Professional Trading Platform">
+    <meta name="twitter:description" content="Grow your savings with confidence. Access powerful trading platforms and expert market insights.">
+    <meta name="twitter:image" content="https://tradertok.com/twitter-image.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
+
+    <!-- Google Fonts - Manrope -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/team-styles.css">
+    <link rel="stylesheet" href="assets/css/instruments-styles.css">
 </head>
 <body>
     <!-- Header -->
