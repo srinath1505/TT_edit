@@ -180,7 +180,7 @@
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
                                 </button>
-                                <button class="mobile-language-item" data-lang="de">
+                                <!-- <button class="mobile-language-item" data-lang="de">
                                     <span class="language-flag">
                                         <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
                                             <path fill="#ffce00" d="M0 320h640v160H0z"/>
@@ -192,7 +192,27 @@
                                     <svg class="mobile-language-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                                         <polyline points="20 6 9 17 4 12"></polyline>
                                     </svg>
+                                </button> -->
+
+                                <button class="mobile-language-item" data-lang="hi">
+                                    <span class="language-flag">
+                                        <svg class="flag-icon" viewBox="0 0 640 480">
+                                            <path fill="#f93" d="M0 0h640v160H0z"/>
+                                            <path fill="#fff" d="M0 160h640v160H0z"/>
+                                            <path fill="#128807" d="M0 320h640v160H0z"/>
+                                            <circle cx="320" cy="240" r="48" fill="none" stroke="#000088" stroke-width="6"/>
+                                            <circle cx="320" cy="240" r="3" fill="#000088"/>
+                                        </svg>
+                                    </span>
+
+                                    <span class="mobile-language-name">Hindi</span>
+
+                                    <svg class="mobile-language-check" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                        stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="20 6 9 17 4 12"></polyline>
+                                    </svg>
                                 </button>
+
                             </div>
                         </div>
                     </div>
@@ -242,7 +262,7 @@
                                 </span>
                                 <span class="language-name">Italiano</span>
                             </div>
-                            <div class="language-item" data-lang="de">
+                            <!-- <div class="language-item" data-lang="de">
                                 <span class="language-flag">
                                     <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
                                         <path fill="#ffce00" d="M0 320h640v160H0z"/>
@@ -251,7 +271,21 @@
                                     </svg>
                                 </span>
                                 <span class="language-name">Deutsch</span>
+                            </div> -->
+
+                            <div class="language-item" data-lang="hi">
+                                <span class="language-flag">
+                                    <svg class="flag-icon" viewBox="0 0 640 480">
+                                        <path fill="#f93" d="M0 0h640v160H0z"/>
+                                        <path fill="#fff" d="M0 160h640v160H0z"/>
+                                        <path fill="#128807" d="M0 320h640v160H0z"/>
+                                        <circle cx="320" cy="240" r="48" fill="none" stroke="#000088" stroke-width="6"/>
+                                        <circle cx="320" cy="240" r="3" fill="#000088"/>
+                                    </svg>
+                                </span>
+                                <span class="language-name">Hindi</span>
                             </div>
+
                         </div>
                     </div>
 
