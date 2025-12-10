@@ -1205,7 +1205,7 @@ let currentLanguage = 'en';
 const languageNames = {
     'en': 'EN',
     'it': 'IT',
-    'de': 'DE'
+    'hi': 'HI'
 };
 
 // Function to update language
