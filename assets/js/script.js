@@ -1182,13 +1182,18 @@ if (signinForm) {
         const email = document.getElementById('signin-email').value;
         const password = document.getElementById('signin-password').value;
 
-        console.log('Sign In:', { email, password });
+        //         console.log('Sign In:', { email, password });
 
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+        // // Simulate API call
+        // await new Promise(resolve => setTimeout(resolve, 1000));
 
-        alert('Sign In functionality - Connect your backend here!');
+        // alert('Sign In functionality - Connect your backend here!');
         // closeAuthSidebar();
+
+        // Redirect to the client portal with credentials
+        const redirectUrl = `https://client.tradertok.com/#/auth/autologin?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+        
+        window.location.href = redirectUrl;
     });
 }
 
