@@ -7,9 +7,9 @@
                 <div class="footer-column">
                     <h3 class="footer-title" data-i18n="footer.quickLinks">Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="meet-the-team/index.html" class="footer-link" data-i18n="nav.meetTheTeam">Meet the Team</a></li>
-                        <li><a href="trading-platforms/index.html" class="footer-link" data-i18n="nav.tradingPlatforms">Trading Platforms</a></li>
-                        <li><a href="legal/index.html" class="footer-link" data-i18n="nav.legal">Legal</a></li>
+                        <li><a href="meet-the-team" class="footer-link" data-i18n="nav.meetTheTeam">Meet the Team</a></li>
+                        <li><a href="trading-platforms" class="footer-link" data-i18n="nav.tradingPlatforms">Trading Platforms</a></li>
+                        <li><a href="legal" class="footer-link" data-i18n="nav.legal">Legal</a></li>
                     </ul>
                 </div>
 
@@ -17,9 +17,9 @@
                 <div class="footer-column">
                     <h3 class="footer-title" data-i18n="footer.resources">Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="trading-essentials/index.html" class="footer-link" data-i18n="nav.educationResources">Education Resources</a></li>
-                        <li><a href="events-calendar/index.html" class="footer-link" data-i18n="nav.marketsOverview">Markets Overview</a></li>
-                        <li><a href="contact-us/index.html" class="footer-link" data-i18n="nav.contactUs">Contact Us</a></li>
+                        <li><a href="trading-essentials" class="footer-link" data-i18n="nav.educationResources">Education Resources</a></li>
+                        <li><a href="events-calendar" class="footer-link" data-i18n="nav.marketsOverview">Markets Overview</a></li>
+                        <li><a href="contact-us" class="footer-link" data-i18n="nav.contactUs">Contact Us</a></li>
                     </ul>
                 </div>
 

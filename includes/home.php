@@ -909,6 +909,40 @@ if ($get->home_image_about_us && $get->home_about_us) {
       </div>
     </section>
 
+    <!-- Trustpilot Reviews Section -->
+    <section class="trustpilot-section">
+      <div class="container">
+        <div class="trustpilot-header">
+          <div class="trustpilot-logo">
+            <a href="https://www.trustpilot.com/review/tradertok.com" target="_blank" class="trustpilot-brand">
+              <svg viewBox="0 0 24 24" width="32" height="32" class="trustpilot-star-icon">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  fill="#00B67A" />
+              </svg>
+              <span class="trustpilot-name">Trustpilot</span>
+            </a>
+            <div class="trustpilot-rating">
+              <div class="trustpilot-stars">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+              </div>
+              <span class="trustpilot-score">4.8 out of 5</span>
+            </div>
+          </div>
+        </div>
+
+
+        <a href="https://www.trustpilot.com" target="_blank" class="trustpilot-link">
+          <span data-i18n="trustpilot.moreReviews">More reviews on Trustpilot</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </section>
 
     <!-- Banking Partners Section -->
     <section class="payment-methods-section">
