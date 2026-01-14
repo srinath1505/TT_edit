@@ -42,7 +42,7 @@
                         </div>
 
                         <!-- Sign In Button -->
-                        <a href='https://tradertok.com/download/win.zip' style="text-decoration: none;" class="btn-platform btn-platform-primary" data-i18n="tradingPlatformsPage.signIn">Sign In</a>
+                        <a href='https://appzone.tradertok.com/ ' style="text-decoration: none;" class="btn-platform btn-platform-primary" data-i18n="tradingPlatformsPage.signIn">Sign In</a>
                     </div>
 
                     <!-- Mobile Device Image -->
@@ -54,7 +54,7 @@
                 </div>
 
                 <!-- Desktop Card -->
-                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 48px; position: relative; overflow: hidden; height: 600px;">
+                <div style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 24px; padding: 48px; position: relative; overflow: hidden; height: 600px;" class="desktop-platform-card">
                     <h2 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 48px; color: var(--text-primary);" data-i18n="tradingPlatformsPage.webDesktop">Web & Desktop</h2>
 
                     <!-- OS Icons -->
@@ -81,7 +81,7 @@
                     </div>
 
                     <!-- Download Button -->
-                    <a href='https://appzone.tradertok.com/' style='text-decoration: none' class="btn-platform btn-platform-primary" data-i18n="tradingPlatformsPage.download">Download</a>
+                    <a href='https://tradertok.com/download/win.zip' style='text-decoration: none' class="btn-platform btn-platform-primary" data-i18n="tradingPlatformsPage.download">Download</a>
 
                     <!-- Desktop Device Image -->
                     <div style="position: absolute; bottom: 0; right: 0; width: 80%; text-align: right;">

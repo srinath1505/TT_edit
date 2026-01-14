@@ -5743,6 +5743,9 @@ body.light-theme .platform-icon {
     padding: 30px;
     margin: 20px;
   }
+  .desktop-platform-card {
+    display: none !important;
+  }
 }
 
 /* ====== TELEGRAM SECTION ====== */
@@ -5980,4 +5983,7 @@ body.light-theme .platform-icon {
     width: 100%;
     justify-content: center;
   }
+  /* .desktop-platform-card {
+    display: hidden;
+  } */
 }
