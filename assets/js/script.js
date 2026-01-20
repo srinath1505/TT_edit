@@ -1435,6 +1435,113 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// ================== DEVICE DETECTION UTILITIES ==================
+
+/**
+ * Generate or retrieve a unique device ID
+ * This ID is stored in localStorage to persist across sessions
+ */
+function getUniqueDeviceId() {
+    const storageKey = 'device_unique_id';
+    let uniqueId = localStorage.getItem(storageKey);
+    
+    if (!uniqueId) {
+        // Generate a new unique ID using timestamp and random string
+        uniqueId = 'device_' + Date.now() + '_' + Math.random().toString(36).substring(2, 15);
+        localStorage.setItem(storageKey, uniqueId);
+    }
+    
+    return uniqueId;
+}
+
+/**
+ * Detect the operating system from user agent
+ */
+function detectOS() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    if (/windows phone/i.test(userAgent)) return "Windows Phone";
+    if (/android/i.test(userAgent)) return "Android";
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) return "iOS";
+    if (/Win/i.test(userAgent)) return "Windows";
+    if (/Mac/i.test(userAgent)) return "MacOS";
+    if (/Linux/i.test(userAgent)) return "Linux";
+    if (/X11/i.test(userAgent)) return "UNIX";
+    
+    return "Unknown";
+}
+
+/**
+ * Detect the system name (device type)
+ */
+function detectSystemName() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    
+    // Check for mobile devices
+    if (/iPad/.test(userAgent)) return "Tablet";
+    if (/iPhone|iPod/.test(userAgent)) return "Mobile";
+    if (/android/i.test(userAgent)) {
+        // Check if it's a tablet or mobile
+        return /mobile/i.test(userAgent) ? "Mobile" : "Tablet";
+    }
+    if (/windows phone/i.test(userAgent)) return "Mobile";
+    
+    // Default to Desktop for non-mobile devices
+    return "Desktop";
+}
+
+/**
+ * Detect the browser brand
+ */
+function detectBrowser() {
+    const userAgent = navigator.userAgent;
+    
+    // Check for Edge (must be before Chrome check)
+    if (/Edg/i.test(userAgent)) return "Edge";
+    
+    // Check for Chrome
+    if (/Chrome/i.test(userAgent) && !/Edg/i.test(userAgent)) return "Chrome";
+    
+    // Check for Safari (must be after Chrome check)
+    if (/Safari/i.test(userAgent) && !/Chrome/i.test(userAgent)) return "Safari";
+    
+    // Check for Firefox
+    if (/Firefox/i.test(userAgent)) return "Firefox";
+    
+    // Check for Opera
+    if (/OPR|Opera/i.test(userAgent)) return "Opera";
+    
+    // Check for Internet Explorer
+    if (/MSIE|Trident/i.test(userAgent)) return "Internet Explorer";
+    
+    return "Unknown";
+}
+
+/**
+ * Get the browser language (base language code only)
+ * Examples: "en-US" → "en", "es-419" → "es", "fr-CA" → "fr"
+ */
+function getBrowserLanguage() {
+    const fullLanguage = navigator.language || navigator.userLanguage || 'en';
+    // Extract base language code (everything before the hyphen)
+    return fullLanguage.split('-')[0];
+}
+
+
+function getUserDeviceInfo() {
+    return {
+        appVersion: "1.0",
+        uniqueId: getUniqueDeviceId(),
+        device: detectOS(),
+        systemName: detectSystemName(),
+        useragent: navigator.userAgent,
+        type: "website",
+        brand: detectBrowser(),
+        systemVersion: "1",
+        language: getBrowserLanguage()
+    };
+}
+
 // Signup form submission with phone
 if (signupForm) {
     signupForm.addEventListener('submit', async (e) => {
@@ -1467,8 +1574,10 @@ if (signupForm) {
                     "leverage": 100,
                     "isDemoAccount": false
                 }
-            ]
+            ],
+            userDevice: getUserDeviceInfo()
         };
+
 
         try {
             const submitBtn = signupForm.querySelector('button[type="submit"]');
