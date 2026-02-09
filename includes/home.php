@@ -18,7 +18,8 @@
         </div>
       </div>
       <div class="banner-right">
-        <img src="assets/images/gold-silver-bar-white-background.png" alt="Gold and Silver" class="banner-bg-image">
+        <img src="assets/images/gold-silver-bar-transparent-background.png" alt="Gold and Silver"
+          class="banner-bg-image">
       </div>
     </section>
 
