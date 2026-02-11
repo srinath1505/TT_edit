@@ -389,6 +389,10 @@
     "docOrderExecutionDesc": "The Company is committed to providing clients with optimal trading conditions.",
     "docRiskDisclosure": "Risk Disclosure",
     "docRiskDisclosureDesc": "This document informs you of the inherent risks associated with trading.",
+    "docGeneralRiskDisclosure": "General Risk Disclosure",
+    "docGeneralRiskDisclosureDesc": "Outlines the general risks involved in trading financial instruments and informs clients about potential losses and market volatility.",
+    "docClientServiceAgreement": "Client Service Agreement",
+    "docClientServiceAgreementDesc": "Defines the terms, conditions, rights, and obligations governing the relationship between the client and the Company.",
     "important": "Important",
     "importantNotice": "By continuing to use our services, you confirm that you have read, understood, and agreed to the terms outlined in these policies."
   },
