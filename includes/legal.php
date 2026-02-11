@@ -461,6 +461,63 @@
                     inherent risks associated with trading, by entering into over-the-counter.</p>
                 </div>
               </div>
+
+              <div class="document-card">
+                <div class="document-header">
+                  <div class="document-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                  </div>
+                  <div class="document-content">
+                    <h3 class="document-title" data-i18n="legalPage.docGeneralRiskDisclosure">General Risk Disclosure</h3>
+                  </div>
+                  <span class="document-toggle">+</span>
+                  <a href="./files/General_Risk _Disclosure_AMBER_ROCK_TRADE_LTD.pdf" class="document-download"
+                    target="_blank">
+                    <svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                      stroke-width="3" stroke="currentColor" fill="none">
+                      <path
+                        d="M55.4,32V53.58a1.81,1.81,0,0,1-1.82,1.82H10.42A1.81,1.81,0,0,1,8.6,53.58V10.42A1.81,1.81,0,0,1,10.42,8.6H32" />
+                      <polyline points="40.32 8.6 55.4 8.6 55.4 24.18" />
+                      <line x1="19.32" y1="45.72" x2="54.61" y2="8.91" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="document-description">
+                  <p data-i18n="legalPage.docGeneralRiskDisclosureDesc">The Company is committed to providing clients with
+                    optimal trading conditions and efficient order execution.</p>
+                </div>
+              </div>
+
+              <div class="document-card">
+                <div class="document-header">
+                  <div class="document-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                    </svg>
+                  </div>
+                  <div class="document-content">
+                    <h3 class="document-title" data-i18n="legalPage.docClientServiceAgreement">Client Service Agreement</h3>
+                  </div>
+                  <span class="document-toggle">+</span>
+                  <a href="./files/CLIENT_SERVICES_AGREEMENT_AMBER_ROCK_TRADE_LTD.pdf" class="document-download" target="_blank">
+                    <svg width="800px" height="800px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
+                      stroke-width="3" stroke="currentColor" fill="none">
+                      <path
+                        d="M55.4,32V53.58a1.81,1.81,0,0,1-1.82,1.82H10.42A1.81,1.81,0,0,1,8.6,53.58V10.42A1.81,1.81,0,0,1,10.42,8.6H32" />
+                      <polyline points="40.32 8.6 55.4 8.6 55.4 24.18" />
+                      <line x1="19.32" y1="45.72" x2="54.61" y2="8.91" />
+                    </svg>
+                  </a>
+                </div>
+                <div class="document-description">
+                  <p data-i18n="legalPage.docClient ServiceAgreementDesc">This Risk Disclosure document informs you of the
+                    inherent risks associated with trading, by entering into over-the-counter.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
