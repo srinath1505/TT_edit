@@ -1,4 +1,4 @@
-   <style>
+<style>
 .research-page {
   padding-top: 100px;
 }
@@ -633,31 +633,27 @@
 
          <div class="videos-grid">
            <!-- Video Card 1 -->
-           <div class="video-card">
-             <div class="video-thumbnail" onclick="openVideo('assets/videos/vid1.mp4')">
-               <!-- <div style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
-                                <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1">
-                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-                                </svg>
-                            </div> -->
-               <!-- <video preload="metadata" muted playsinline style="width: 100%; height: 100%; object-fit: cover;">
-                                <source src="assets/videos/vid1.mp4#t=0.5" type="video/mp4">
-                            </video> -->
-               <video id="video-preview-1" preload="none" muted playsinline
-                 style="width: 100%; height: 100%; object-fit: cover;" data-src="assets/videos/vid1.mp4#t=0.5">
-                 <source data-src="assets/videos/vid1.mp4#t=0.5" type="video/mp4">
-               </video>
+                       <div class="video-card">
+             <div class="video-thumbnail">
+               <div
+                 style="background: linear-gradient(135deg, #1a1a2e 0%, #e94560 50%, #1a1a2e 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"
+                   stroke-width="1">
+                   <rect x="3" y="3" width="18" height="18" rx="2" />
+                   <line x1="3" y1="9" x2="21" y2="9" />
+                   <line x1="9" y1="21" x2="9" y2="9" />
+                 </svg>
+               </div>
                <div class="play-button">
                  <svg viewBox="0 0 24 24">
                    <polygon points="5 3 19 12 5 21 5 3" />
                  </svg>
                </div>
-               <!-- <span class="video-duration">12:45</span> -->
-               <span class="video-duration" id="duration-1">--:--</span>
+               <span class="video-duration">24:15</span>
              </div>
              <div class="video-info">
                <div class="video-category">Trading Strategy</div>
-               <h3 class="video-title"> Understanding Trading Accounts: A Comprehensive Guide</h3>
+               <h3 class="video-title">CFDs Types</h3>
                <div class="video-meta">
                  <span>
                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
@@ -668,44 +664,50 @@
                  </span>
                  <!-- <span>
                                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                                    2.4k views
+                                    3.1k views
                                 </span> -->
                </div>
              </div>
            </div>
 
            <!-- Video Card 2 -->
-           <div class="video-card">
-             <div class="video-thumbnail" onclick="openVideo('assets/videos/vid2.mp4')">
-               <video id="video-preview-2" preload="none" muted playsinline
-                 style="width: 100%; height: 100%; object-fit: cover;" data-src="assets/videos/vid2.mp4#t=0.5">
-                 <source data-src="assets/videos/vid2.mp4#t=0.5" type="video/mp4">
-               </video>
+            <div class="video-card">
+             <div class="video-thumbnail">
+               <div
+                 style="background: linear-gradient(135deg, #1a1a2e 0%, #e94560 50%, #1a1a2e 100%); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;">
+                 <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)"
+                   stroke-width="1">
+                   <rect x="3" y="3" width="18" height="18" rx="2" />
+                   <line x1="3" y1="9" x2="21" y2="9" />
+                   <line x1="9" y1="21" x2="9" y2="9" />
+                 </svg>
+               </div>
                <div class="play-button">
                  <svg viewBox="0 0 24 24">
                    <polygon points="5 3 19 12 5 21 5 3" />
                  </svg>
                </div>
-               <span class="video-duration" id="duration-2">--:--</span>
+               <span class="video-duration">24:15</span>
              </div>
              <div class="video-info">
                <div class="video-category">Trading Strategy</div>
-               <h3 class="video-title">Mastering CFD Trading Orders & Market Types</h3>
+               <h3 class="video-title">Market Types</h3>
                <div class="video-meta">
                  <span>
                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
                      <circle cx="12" cy="12" r="10" />
                      <polyline points="12 6 12 12 16 14" />
                    </svg>
-                   Dec 10, 2024
+                   Dec 8, 2024
                  </span>
                  <!-- <span>
                                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                                    1.8k views
+                                    3.1k views
                                 </span> -->
                </div>
              </div>
            </div>
+
 
            <!-- Video Card 3 -->
            <div class="video-card">
@@ -983,16 +985,7 @@
        </div>
      </section>
    </main>
-   <div id="videoModal" class="video-modal">
-     <div class="video-modal-content">
-       <button class="close-btn" onclick="closeVideo()">×</button>
 
-       <video id="videoPlayer" controls preload="metadata">
-         <source src="" type="video/mp4">
-         Your browser does not support the video tag.
-       </video>
-     </div>
-   </div>
 
 
 
@@ -1078,23 +1071,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
    </script>
-   <script>
-function openVideo(src) {
-  const modal = document.getElementById("videoModal");
-  const video = document.getElementById("videoPlayer");
-
-  video.src = src;
-  modal.style.display = "flex";
-  video.play();
-}
-
-function closeVideo() {
-  const modal = document.getElementById("videoModal");
-  const video = document.getElementById("videoPlayer");
-
-  video.pause();
-  video.currentTime = 0;
-  video.src = "";
-  modal.style.display = "none";
-}
-   </script>
+ 

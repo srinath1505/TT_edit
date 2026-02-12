@@ -87,14 +87,14 @@
                 <!-- English Team -->
                 <div class="team-stack active" data-team="english">
                     <div class="team-cards">
-                        <article class="team-card">
+                        <!-- <article class="team-card">
                             <div class="team-card-overlay"></div>
                             <img src="assets/images/Avatars/Kai_Lockwood.png" alt="Kai Lockwood" class="team-card-avatar">
                             <div class="team-card-content">
                                 <h3 class="team-card-name" data-i18n="meetTheTeam.english.kai_lockwood.name">Kai Lockwood</h3>
                                 <p class="team-card-role" data-i18n="meetTheTeam.english.kai_lockwood.role">Kai Lockwood is a proactive and client-focused Account Manager with a strong track record of building long-term partnerships. Known for clear communication, attention to detail, and fast problem-solving, Jayden consistently delivers on client goals while maintaining a positive, collaborative working style.</p>
                             </div>
-                        </article>
+                        </article> -->
                         <article class="team-card">
                             <div class="team-card-overlay"></div>
                             <img src="assets/images/Avatars/Dominic_Weber.png" alt="Dominic Weber" class="team-card-avatar">
@@ -174,10 +174,10 @@
                     <div class="team-cards">
                         <article class="team-card">
                             <div class="team-card-overlay"></div>
-                            <img src="assets/images/Avatars/Aaron_Dev.png" alt="Aaron Dev" class="team-card-avatar">
+                            <img src="assets/images/Avatars/Aaron_Dev.png" alt="Vikram Patel" class="team-card-avatar">
                             <div class="team-card-content">
-                                <h3 class="team-card-name" data-i18n="meetTheTeam.hindi.aaron_dev.name">Aaron Dev</h3>
-                                <p class="team-card-role" data-i18n="meetTheTeam.hindi.aaron_dev.role">Aaron Dev is a dedicated and knowledgeable Account Manager who specializes in serving Hindi-speaking clients. With a strong understanding of both Indian and international markets, Aaron provides tailored guidance and ensures a seamless, supportive trading experience for every client.</p>
+                                <h3 class="team-card-name" data-i18n="meetTheTeam.hindi.aaron_dev.name">Vikram Patel</h3>
+                                <p class="team-card-role" data-i18n="meetTheTeam.hindi.aaron_dev.role">Vikram Patel is a dedicated and knowledgeable Account Manager who specializes in serving Hindi-speaking clients. With a strong understanding of both Indian and international markets, Vikram provides tailored guidance and ensures a seamless, supportive trading experience for every client.</p>
                             </div>
                         </article>
                     </div>
