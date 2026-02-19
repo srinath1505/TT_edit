@@ -31,7 +31,13 @@
     <meta name="twitter:image" content="https://tradertok.com/twitter-image.jpg">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo.png"> -->
+     <!-- Favicon -->
+    <link rel="icon" href="assests/images/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="48x48" href="assests/images/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assests/images/favicon-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assests/images/favicon-192x192.png">
+
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo.png">
 
     <!-- Google Fonts - Manrope -->
