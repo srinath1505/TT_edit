@@ -29,6 +29,16 @@
     <meta name="twitter:description"
       content="Grow your savings with confidence. Access powerful trading platforms and expert market insights.">
     <meta name="twitter:image" content="https://tradertok.com/twitter-image.jpg">
+        
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHD8CS6T8H"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZHD8CS6T8H');
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.ico">
@@ -50,6 +60,7 @@
     <link rel="stylesheet" href="assets/css/team-styles.css?v=<?= filemtime('assets/css/team-styles.css') ?>">
     <link rel="stylesheet"
       href="assets/css/instruments-styles.css?v=<?= filemtime('assets/css/instruments-styles.css') ?>">
+
   </head>
 
   <body>
