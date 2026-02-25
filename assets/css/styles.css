@@ -5385,6 +5385,128 @@ body.light-theme .platform-icon {
   }
 }
 
+/* ====== TRADER PROMO POPUP ====== */
+.trader-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trader-popup.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.trader-popup-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.trader-popup-content {
+  position: relative;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  max-width: 650px;
+  width: 90%;
+  transform: translateY(30px) scale(0.9);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.trader-popup.active .trader-popup-content {
+  transform: translateY(0) scale(1);
+}
+
+.trader-popup-image-container {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.trader-popup-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.btn-trader-claim {
+  position: absolute;
+  bottom: 8%;
+  right: 17%;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #e6ff00 0%, #b8cc00 100%);
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(230, 255, 0, 0.3);
+  transition: all 0.3s ease;
+  z-index: 5;
+  font-size: 16px;
+}
+
+.btn-trader-claim:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(230, 255, 0, 0.4);
+}
+
+.trader-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.trader-popup-close:hover {
+  background: #e6ff00;
+  border-color: transparent;
+  transform: rotate(90deg);
+}
+
+.trader-popup-close:hover svg {
+  color: #000000;
+}
+
+.trader-popup-close svg {
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .trader-popup-content {
+    border-radius: 16px;
+  }
+  .btn-trader-claim {
+    padding: 8px 16px;
+    font-size: 14px;
+    bottom: 8%;
+    right: 15%;
+  }
+}
+
 /* ====== DEPOSIT ACCOUNT SECTION ====== */
 .deposit-section {
   padding: 80px 0;
