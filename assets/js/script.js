@@ -1845,56 +1845,91 @@ if (signupForm) {
   });
 }
 
-// ====== EARNINGS REPORTS POPUP ======
+// ====== POPUPS (EARNINGS & TRADER PROMO) ======
 (function () {
-  const popup = document.getElementById("earnings-popup");
-  const closeBtn = document.getElementById("earnings-popup-close");
-  const overlay = popup?.querySelector(".earnings-popup-overlay");
+  const earningsPopup = document.getElementById("earnings-popup");
+  const earningsCloseBtn = document.getElementById("earnings-popup-close");
+  const earningsOverlay = earningsPopup?.querySelector(".earnings-popup-overlay");
 
-  if (!popup) return;
+  const traderPopup = document.getElementById("trader-popup");
+  const traderCloseBtn = document.getElementById("trader-popup-close");
+  const traderOverlay = traderPopup?.querySelector(".trader-popup-overlay");
+  const traderClaimBtn = traderPopup?.querySelector(".btn-trader-claim");
 
-  function openEarningsPopup() {
-    popup.classList.add("active");
+  if (!earningsPopup && !traderPopup) return;
+
+  function openPopups() {
+    if (earningsPopup) earningsPopup.classList.add("active");
+    if (traderPopup) traderPopup.classList.add("active");
     document.body.style.overflow = "hidden";
   }
 
+  function closeTraderPopup() {
+    if (traderPopup) traderPopup.classList.remove("active");
+    // Only restore scroll if earnings is also closed
+    if (!earningsPopup || !earningsPopup.classList.contains("active")) {
+      document.body.style.overflow = "";
+    }
+  }
+
   function closeEarningsPopup() {
-    popup.classList.remove("active");
+    if (earningsPopup) earningsPopup.classList.remove("active");
+    // Also close trader if it's still open (safety)
+    if (traderPopup) traderPopup.classList.remove("active");
     document.body.style.overflow = "";
   }
 
-  // Close button click
-  if (closeBtn) {
-    closeBtn.addEventListener("click", closeEarningsPopup);
+  // Trader Popup Close
+  if (traderCloseBtn) {
+    traderCloseBtn.addEventListener("click", closeTraderPopup);
+  }
+  if (traderOverlay) {
+    traderOverlay.addEventListener("click", closeTraderPopup);
+  }
+  if (traderClaimBtn) {
+    traderClaimBtn.addEventListener("click", () => {
+      closeTraderPopup();
+      // Optionally also close earnings? User didn't specify, 
+      // but usually clicking a CTA closes the popup.
+      // For now let's just close trader as requested.
+    });
   }
 
-  // Overlay click to close
-  if (overlay) {
-    overlay.addEventListener("click", closeEarningsPopup);
+  // Earnings Popup Close
+  if (earningsCloseBtn) {
+    earningsCloseBtn.addEventListener("click", closeEarningsPopup);
+  }
+  if (earningsOverlay) {
+    earningsOverlay.addEventListener("click", closeEarningsPopup);
   }
 
-  // ESC key to close
+  // ESC key to close (closes top-most or both)
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && popup.classList.contains("active")) {
-      closeEarningsPopup();
+    if (e.key === "Escape") {
+      if (traderPopup?.classList.contains("active")) {
+        closeTraderPopup();
+      } else if (earningsPopup?.classList.contains("active")) {
+        closeEarningsPopup();
+      }
     }
   });
 
-  // Close popup when CTA button is clicked (after opening auth modal)
-  const ctaBtn = popup.querySelector(".btn-earnings-register");
-  if (ctaBtn) {
-    ctaBtn.addEventListener("click", () => {
+  // Close popup when CTA button in earnings is clicked
+  const earningsCtaBtn = earningsPopup?.querySelector(".btn-earnings-register");
+  if (earningsCtaBtn) {
+    earningsCtaBtn.addEventListener("click", () => {
       closeEarningsPopup();
     });
   }
 
-  // Show popup after 3 seconds on every page load
+  // Show both popups after 3 seconds
   setTimeout(() => {
-    openEarningsPopup();
+    openPopups();
   }, 3000);
 
-  // Expose function globally for manual triggering if needed
-  window.openEarningsPopup = openEarningsPopup;
+  // Expose functions globally for manual triggering if needed
+  window.openPopups = openPopups;
+  window.closeTraderPopup = closeTraderPopup;
   window.closeEarningsPopup = closeEarningsPopup;
 
   // ====== COUNTDOWN TIMER - End of February 2026 ======
