@@ -1,0 +1,704 @@
+/* ====== OFFERS & PROMOTIONS PAGE STYLES ====== */
+
+
+/* ----------------------------------------
+   1. Page Layout & Hero Section
+   ---------------------------------------- */
+
+.offers-page {
+    padding-top: 100px;
+    background: var(--bg-primary);
+    font-family: 'Manrope', sans-serif;
+    min-height: 100vh;
+}
+
+.offers-hero {
+    padding: 60px 0 32px;
+    text-align: center;
+}
+
+.offers-title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 16px 0;
+    line-height: 1.2;
+}
+
+.offers-title .gradient-text {
+    background: linear-gradient(
+        90deg,
+        #E63946 0%,
+        #FF6B35 25%,
+        #ffffff 50%,
+        #ffffff 100%
+    );
+    background-size: 250% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    animation: gradientFillOffers 1.8s ease-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes gradientFillOffers {
+    0% { background-position: 100% 0; }
+    100% { background-position: 0% 0; }
+}
+
+.offers-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+
+/* ----------------------------------------
+   2. Split Panel Layout
+   ---------------------------------------- */
+
+.offers-split {
+    padding: 0 0 60px;
+}
+
+.offers-split-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+    min-height: 50vh;
+}
+
+
+/* ----------------------------------------
+   3. Left Sidebar
+   ---------------------------------------- */
+
+.offers-sidebar {
+    position: sticky;
+    top: 120px;
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 16px 0;
+}
+
+.offers-sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+
+.offers-sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.offers-sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 3px;
+}
+
+.offers-sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.offers-sidebar-header {
+    padding: 4px 20px 14px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 6px;
+}
+
+.offers-sidebar-title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* Sidebar country items */
+.sidebar-country-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-family: 'Manrope', sans-serif;
+    text-align: left;
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s ease, opacity 0.25s ease, border-color 0.2s ease;
+}
+
+.sidebar-country-item:hover {
+    background: var(--hover-bg);
+}
+
+.sidebar-country-item:focus-visible {
+    outline: 2px solid var(--brand-color-start);
+    outline-offset: -2px;
+}
+
+/* Sidebar flag */
+.sidebar-country-flag {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1.5px solid var(--border-color);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 0.25s ease, border-color 0.25s ease;
+}
+
+.sidebar-country-flag svg,
+.sidebar-country-flag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-country-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    transition: color 0.25s ease;
+}
+
+.sidebar-country-count {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    margin-left: auto;
+    white-space: nowrap;
+    transition: color 0.25s ease;
+}
+
+/* Active sidebar item */
+.sidebar-country-item.active {
+    background: rgba(230, 57, 70, 0.08);
+    border-left-color: var(--brand-color-start);
+}
+
+.sidebar-country-item.active .sidebar-country-name {
+    color: var(--text-primary);
+    font-weight: 700;
+}
+
+.sidebar-country-item.active .sidebar-country-flag {
+    border-color: var(--brand-color-start);
+}
+
+.sidebar-country-item.active .sidebar-country-count {
+    color: var(--brand-color-start);
+    font-weight: 600;
+}
+
+/* Muted state: when a country is selected, non-active items go gray */
+.offers-sidebar.has-selection .sidebar-country-item:not(.active) {
+    opacity: 0.45;
+}
+
+.offers-sidebar.has-selection .sidebar-country-item:not(.active):hover {
+    opacity: 0.85;
+}
+
+.offers-sidebar.has-selection .sidebar-country-item:not(.active) .sidebar-country-flag {
+    filter: grayscale(0.7);
+}
+
+.offers-sidebar.has-selection .sidebar-country-item:not(.active):hover .sidebar-country-flag {
+    filter: grayscale(0.3);
+}
+
+
+/* ----------------------------------------
+   4. Mobile Selector & Horizontal Strip
+   ---------------------------------------- */
+
+.offers-mobile-selector {
+    display: none;
+}
+
+.offers-country-strip {
+    display: none;
+}
+
+
+/* ----------------------------------------
+   5. Right Content Area
+   ---------------------------------------- */
+
+.offers-content {
+    min-height: 400px;
+}
+
+/* Promotions header */
+.offers-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.promotions-region-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.promotions-clear-btn {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.promotions-clear-btn:hover {
+    color: #E63946;
+    border-color: #E63946;
+    background: rgba(230, 57, 70, 0.05);
+}
+
+/* Promotions grid */
+.offers-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Promo card */
+.promo-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+    animation: promoCardAppear 0.4s ease-out both;
+}
+
+.promo-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(230, 57, 70, 0.3);
+    background: var(--bg-tertiary);
+    box-shadow: 0 8px 32px var(--shadow-color);
+}
+
+@keyframes promoCardAppear {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.promo-card:nth-child(1) { animation-delay: 0.00s; }
+.promo-card:nth-child(2) { animation-delay: 0.05s; }
+.promo-card:nth-child(3) { animation-delay: 0.10s; }
+.promo-card:nth-child(4) { animation-delay: 0.15s; }
+.promo-card:nth-child(5) { animation-delay: 0.20s; }
+.promo-card:nth-child(6) { animation-delay: 0.25s; }
+
+/* Badge */
+.promo-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(230, 57, 70, 0.1);
+    color: #E63946;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.promo-card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.promo-card-description {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.promo-card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.promo-detail-tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--text-tertiary);
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 5px 10px;
+    white-space: nowrap;
+}
+
+.promo-card-cta {
+    color: #E63946;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: auto;
+    transition: opacity 0.2s ease;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.promo-card-cta:hover {
+    opacity: 0.7;
+}
+
+/* Empty state */
+.offers-content-empty {
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------------
+   6. Integrated CTA (inside content area)
+   ---------------------------------------- */
+
+.offers-content-cta {
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border-color);
+    display: none;
+}
+
+.offers-content-cta .offers-cta-inner {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.offers-content-cta .offers-cta-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+
+.offers-content-cta .offers-cta-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0 0 28px 0;
+    line-height: 1.6;
+}
+
+.btn-offers-cta {
+    display: inline-block;
+    padding: 14px 40px;
+    background: var(--brand-gradient, linear-gradient(135deg, #E63946 0%, #FF6B35 100%));
+    color: #fff;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-offers-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px var(--brand-shadow, rgba(230, 57, 70, 0.4));
+}
+
+.btn-offers-cta:active {
+    transform: translateY(0);
+}
+
+
+/* ----------------------------------------
+   7. Region Dropdown (mobile only)
+   ---------------------------------------- */
+
+.region-dropdown-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.region-dropdown-container {
+    position: relative;
+    display: inline-flex;
+}
+
+.region-dropdown {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-width: 240px;
+    padding: 12px 40px 12px 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.region-dropdown:focus {
+    border-color: var(--brand-color-start, #E63946);
+    box-shadow: 0 0 0 3px rgba(230, 57, 70, 0.1);
+}
+
+.region-dropdown:hover {
+    border-color: rgba(230, 57, 70, 0.3);
+}
+
+.region-dropdown option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+
+/* ----------------------------------------
+   8. Responsive Breakpoints
+   ---------------------------------------- */
+
+@media (max-width: 1200px) {
+    .offers-split-layout {
+        grid-template-columns: 260px 1fr;
+        gap: 24px;
+    }
+}
+
+/* Tablets & mobile: sidebar collapses */
+@media (max-width: 768px) {
+    .offers-page {
+        padding-top: 80px;
+    }
+
+    .offers-hero {
+        padding: 40px 0 20px;
+    }
+
+    /* Hide desktop sidebar */
+    .offers-sidebar {
+        display: none;
+    }
+
+    /* Show mobile selector */
+    .offers-mobile-selector {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0 0 20px;
+    }
+
+    /* Show horizontal strip */
+    .offers-country-strip {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+        padding: 0 0 24px;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .offers-country-strip::-webkit-scrollbar {
+        display: none;
+    }
+
+    .strip-country-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: var(--bg-secondary);
+        border: 1.5px solid var(--border-color);
+        cursor: pointer;
+        flex-shrink: 0;
+        min-width: 78px;
+        font-family: 'Manrope', sans-serif;
+        transition: border-color 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+    }
+
+    .strip-country-item:hover {
+        border-color: rgba(230, 57, 70, 0.3);
+    }
+
+    .strip-country-item.active {
+        border-color: var(--brand-color-start);
+        background: rgba(230, 57, 70, 0.08);
+        opacity: 1 !important;
+    }
+
+    .offers-country-strip.has-selection .strip-country-item:not(.active) {
+        opacity: 0.45;
+    }
+
+    .offers-country-strip.has-selection .strip-country-item:not(.active):hover {
+        opacity: 0.75;
+    }
+
+    .strip-country-flag {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .strip-country-flag svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .strip-country-name {
+        font-size: 0.62rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    /* Single column layout */
+    .offers-split-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .offers-content-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .offers-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .offers-content-cta .offers-cta-inner {
+        padding: 36px 20px;
+    }
+
+    .offers-content-cta .offers-cta-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .offers-hero {
+        padding: 28px 0 16px;
+    }
+
+    .strip-country-item {
+        min-width: 68px;
+        padding: 8px 10px;
+    }
+
+    .offers-content-cta .offers-cta-inner {
+        padding: 28px 16px;
+    }
+
+    .btn-offers-cta {
+        padding: 12px 32px;
+        font-size: 0.85rem;
+    }
+
+    .region-dropdown {
+        min-width: 200px;
+    }
+}
+
+
+/* ----------------------------------------
+   9. Reduced Motion
+   ---------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .offers-title .gradient-text {
+        animation: none;
+        background-position: 0% 0;
+    }
+
+    .promo-card {
+        animation: none;
+    }
+
+    .promo-card,
+    .btn-offers-cta,
+    .promotions-clear-btn,
+    .region-dropdown,
+    .promo-card-cta,
+    .sidebar-country-item,
+    .sidebar-country-flag,
+    .sidebar-country-name,
+    .sidebar-country-count,
+    .strip-country-item {
+        transition: none;
+    }
+
+    .promo-card:hover,
+    .btn-offers-cta:hover {
+        transform: none;
+    }
+}

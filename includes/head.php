@@ -56,7 +56,7 @@
     <link rel="stylesheet" href="assets/css/team-styles.css?v=<?= filemtime('assets/css/team-styles.css') ?>">
     <link rel="stylesheet"
       href="assets/css/instruments-styles.css?v=<?= filemtime('assets/css/instruments-styles.css') ?>">
-
+     <link rel="stylesheet" href="assets/css/offers-promotions-styles.css?v=<?= filemtime('assets/css/offers-promotions-styles.css') ?>">
     <?= $get->head_code ?>
   </head>
 
@@ -201,6 +201,12 @@
                     </a>
                   </div>
                 </div>
+              <li class="nav-item dropdown">
+                  <a href="./offers-promotions" class="nav-link" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.offersPromotions">Offers</span> <span class="arrow">▼</span></a>
+                  <div class="dropdown-menu offers-dropdown" role="menu"></div>
+              </li>
+              <li class="nav-item">
+                <a href="./legal" class="nav-link" data-i18n="nav.legal">Legal</a>
               </li>
               <li class="nav-item">
                 <a href="./contact-us" class="nav-link" data-i18n="nav.contactUs">Contact Us</a>

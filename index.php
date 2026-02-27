@@ -20,7 +20,9 @@ if (!$page) {
       require("includes/research.php");
         } elseif ($page == 'live-training'){
       require("includes/live-training.php");
-        } elseif ($page == 'trading-platform'){
+        } elseif ($page == 'offers' || $page == 'offers-promotions' || in_array($page, ['vn', 'th', 'ph', 'id', 'pk', 'latam', 'na', 'ke', 'gh', 'ng', 'za', 'tt', 'gy'])){
+      require("includes/offers.php");
+      } elseif ($page == 'trading-platform'){
       require("includes/trading-platform.php");
         } elseif ($page == 'legal-documents'){
       require("includes/legal-documents.php");
