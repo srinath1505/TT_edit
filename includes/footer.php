@@ -7,6 +7,7 @@
           <div class="footer-column">
             <h3 class="footer-title" data-i18n="footer.quickLinks">Compliance</h3>
             <ul class="footer-links">
+              <li><a href="regulations" class="footer-link" data-i18n="nav.regulations">Regulations</a></li>
               <li><a href="general-risk-disclosure" class="footer-link" data-i18n="nav.generalRiskDisclosure">General
                   Risk
                   Disclosure</a>
