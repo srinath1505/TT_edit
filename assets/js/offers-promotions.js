@@ -1,0 +1,888 @@
+/**
+ * Offers & Promotions Page
+ * Manages country-specific promotions with region selection and geo-detection.
+ */
+(function () {
+    'use strict';
+
+    // -------------------------------------------------------------------------
+    // Region Data
+    // -------------------------------------------------------------------------
+
+    const REGIONS = [
+        { id: 'vietnam', name: 'Vietnam', code: 'VN' },
+        { id: 'thailand', name: 'Thailand', code: 'TH' },
+        { id: 'philippines', name: 'Philippines', code: 'PH' },
+        { id: 'indonesia', name: 'Indonesia', code: 'ID' },
+        { id: 'pakistan', name: 'Pakistan', code: 'PK' },
+        { id: 'latam', name: 'Latin America', code: 'LATAM' },
+        { id: 'namibia', name: 'Namibia', code: 'NA' },
+        { id: 'kenya', name: 'Kenya', code: 'KE' },
+        { id: 'ghana', name: 'Ghana', code: 'GH' },
+        { id: 'nigeria', name: 'Nigeria', code: 'NG' },
+        { id: 'south-africa', name: 'South Africa', code: 'ZA' },
+        { id: 'trinidad-tobago', name: 'Trinidad & Tobago', code: 'TT' },
+        { id: 'guyana', name: 'Guyana', code: 'GY' }
+    ];
+
+    // -------------------------------------------------------------------------
+    // Flag SVGs
+    // -------------------------------------------------------------------------
+
+    const FLAGS = {
+        vietnam: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="480" fill="#da251d"/><polygon points="320,120 348,206 438,206 366,258 388,344 320,296 252,344 274,258 202,206 292,206" fill="#ff0"/></svg>',
+
+        thailand: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="480" fill="#fff"/><rect width="640" height="80" y="0" fill="#a51931"/><rect width="640" height="80" y="400" fill="#a51931"/><rect width="640" height="160" y="160" fill="#2d2a4a"/></svg>',
+
+        philippines: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="240" fill="#0038a8"/><rect width="640" height="240" y="240" fill="#ce1126"/><polygon points="0,0 360,240 0,480" fill="#fff"/><circle cx="120" cy="240" r="48" fill="none" stroke="#fcd116" stroke-width="4"/><g fill="#fcd116"><polygon points="120,192 125,208 142,208 128,218 134,234 120,224 106,234 112,218 98,208 115,208"/><polygon points="62,330 67,346 84,346 70,356 76,372 62,362 48,372 54,356 40,346 57,346"/><polygon points="178,330 183,346 200,346 186,356 192,372 178,362 164,372 170,356 156,346 173,346"/><g transform="translate(120,240)"><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(45)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(90)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(135)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(180)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(225)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(270)"/><line x1="0" y1="-48" x2="0" y2="-68" stroke="#fcd116" stroke-width="3" transform="rotate(315)"/></g></g></svg>',
+
+        indonesia: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="240" fill="#ce1126"/><rect width="640" height="240" y="240" fill="#fff"/></svg>',
+
+        pakistan: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="480" fill="#fff"/><rect x="160" width="480" height="480" fill="#01411c"/><circle cx="400" cy="240" r="100" fill="#fff"/><circle cx="420" cy="240" r="80" fill="#01411c"/><polygon points="444,180 452,204 478,204 458,220 466,244 444,228 422,244 430,220 410,204 436,204" fill="#fff"/></svg>',
+
+        latam: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><circle cx="320" cy="240" r="220" fill="#1a2744"/><circle cx="320" cy="240" r="210" fill="#1e3050"/><path d="M280,80 C260,100 250,130 255,160 C258,180 250,200 245,220 C240,240 242,260 250,280 C258,300 260,320 255,340 C252,355 255,370 265,385 C275,400 290,410 310,415 C330,418 345,412 355,400 C365,388 380,380 395,382 C410,384 418,375 420,360 C422,345 418,330 408,318 C398,306 392,290 390,272 C388,254 380,238 368,226 C356,214 348,198 346,180 C344,162 336,148 322,138 C308,128 298,114 294,98 C292,88 286,82 280,80 Z" fill="#2ec4b6" opacity="0.85"/><circle cx="320" cy="240" r="215" fill="none" stroke="#2ec4b6" stroke-width="2" opacity="0.3"/></svg>',
+
+        namibia: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><polygon points="0,0 640,0 0,480" fill="#003580"/><polygon points="640,480 640,0 0,480" fill="#009543"/><line x1="0" y1="480" x2="640" y2="0" stroke="#fff" stroke-width="60"/><line x1="0" y1="480" x2="640" y2="0" stroke="#d21034" stroke-width="40"/><circle cx="170" cy="140" r="60" fill="#ffce00"/><circle cx="190" cy="140" r="50" fill="#003580"/></svg>',
+
+        kenya: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="120" fill="#000"/><rect width="640" height="20" y="120" fill="#fff"/><rect width="640" height="200" y="140" fill="#bb0000"/><rect width="640" height="20" y="340" fill="#fff"/><rect width="640" height="120" y="360" fill="#006600"/><g transform="translate(320,240)"><ellipse cx="0" cy="0" rx="50" ry="90" fill="#000" stroke="#fff" stroke-width="4"/><line x1="0" y1="-110" x2="0" y2="110" stroke="#fff" stroke-width="5"/><line x1="-30" y1="-95" x2="-60" y2="-120" stroke="#000" stroke-width="5"/><line x1="30" y1="-95" x2="60" y2="-120" stroke="#000" stroke-width="5"/><line x1="-30" y1="95" x2="-60" y2="120" stroke="#000" stroke-width="5"/><line x1="30" y1="95" x2="60" y2="120" stroke="#000" stroke-width="5"/><rect x="-4" y="-90" width="8" height="180" fill="#bb0000" rx="2"/></g></svg>',
+
+        ghana: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="160" fill="#ce1126"/><rect width="640" height="160" y="160" fill="#fcd116"/><rect width="640" height="160" y="320" fill="#006b3f"/><polygon points="320,190 334,230 376,230 342,256 354,296 320,270 286,296 298,256 264,230 306,230" fill="#000"/></svg>',
+
+        nigeria: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="214" height="480" fill="#008751"/><rect x="214" width="212" height="480" fill="#fff"/><rect x="426" width="214" height="480" fill="#008751"/></svg>',
+
+        'south-africa': '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="240" fill="#de3831"/><rect width="640" height="240" y="240" fill="#002395"/><polygon points="0,0 240,240 0,480" fill="#000"/><polygon points="0,48 200,240 0,432" fill="#ffb612" stroke="#ffb612" stroke-width="2"/><path d="M0,168 L320,240 L0,312 Z" fill="#007a4d"/><path d="M240,240 L640,96 L640,168 L340,240 L640,312 L640,384 L240,240 Z" fill="#007a4d"/><line x1="0" y1="168" x2="640" y2="168" stroke="#fff" stroke-width="4" opacity="0"/><path d="M640,96 L640,168 L340,240 L640,312 L640,384" fill="none" stroke="#fff" stroke-width="4"/><path d="M0,48 L200,240 L0,432" fill="none" stroke="#fff" stroke-width="4"/></svg>',
+
+        'trinidad-tobago': '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="480" fill="#ce1126"/><line x1="640" y1="0" x2="0" y2="480" stroke="#fff" stroke-width="72"/><line x1="640" y1="0" x2="0" y2="480" stroke="#000" stroke-width="56"/></svg>',
+
+        guyana: '<svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg"><rect width="640" height="480" fill="#009e49"/><polygon points="0,0 640,240 0,480" fill="#fff"/><polygon points="0,0 640,240 0,480" fill="#fcd116" transform="scale(0.94)" transform-origin="0 240"/><polygon points="0,30 300,240 0,450" fill="#000" opacity="0.15"/><polygon points="0,30 300,240 0,450" fill="#ce1126"/><polygon points="0,60 200,240 0,420" fill="#000" opacity="0.15"/><polygon points="0,60 200,240 0,420" fill="#fff"/></svg>'
+    };
+
+    // -------------------------------------------------------------------------
+    // Promotions Data
+    // -------------------------------------------------------------------------
+
+    const PROMOTIONS = {
+        vietnam: [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for New Traders',
+                description: 'Double your starting capital with our exclusive welcome offer for Vietnamese traders. Open a live account and receive a 100% bonus on your first deposit.',
+                details: ['Min. deposit $100', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Cashback Program',
+                title: '5% Weekly Cashback on Trading Volume',
+                description: 'Earn back a percentage of your weekly trading volume automatically. The more you trade, the more you earn back into your account.',
+                details: ['5% weekly cashback', 'No cap on earnings', 'Credited every Monday', 'All instruments eligible'],
+                cta: 'Join Program',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Refer a Friend',
+                title: 'Earn $50 for Every Successful Referral',
+                description: 'Invite your friends to trade with TraderTok and receive $50 for each friend who opens and funds a live account. Your friend also gets a bonus.',
+                details: ['$50 per referral', 'No referral limit', 'Friend gets $25 bonus', 'Withdrawable profits'],
+                cta: 'Start Referring',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        thailand: [
+            {
+                badge: 'Welcome Bonus',
+                title: '75% Deposit Bonus for Thai Traders',
+                description: 'Start trading with extra margin. Thai traders receive a generous 75% bonus on their first deposit to amplify their trading potential.',
+                details: ['Min. deposit $50', 'Max. bonus $3,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Reduced Spreads',
+                title: 'Spreads from 0.1 Pips on Major Pairs',
+                description: 'Enjoy ultra-tight spreads on all major currency pairs. Trade EUR/USD, GBP/USD, and USD/JPY with some of the lowest spreads in the industry.',
+                details: ['From 0.1 pips on majors', 'No commission on standard', 'Available on all platforms', 'Gold & oil included'],
+                cta: 'Open Account',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Free Signals',
+                title: 'Daily Free Trading Signals Package',
+                description: 'Receive professional daily trading signals directly to your device. Our expert analysts deliver actionable trade ideas across forex, commodities, and indices.',
+                details: ['5+ signals daily', 'Entry, TP & SL levels', 'Telegram & email delivery', '70%+ historical accuracy'],
+                cta: 'Get Signals',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        philippines: [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for Filipino Traders',
+                description: 'Kickstart your trading journey with double the capital. Filipino traders receive a 100% match on their first deposit to maximize trading opportunities.',
+                details: ['Min. deposit $100', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Trading Competition',
+                title: '$10,000 Monthly Trading Competition',
+                description: 'Compete against fellow traders for a share of the $10,000 monthly prize pool. Top performers on demo or live accounts win cash prizes.',
+                details: ['$10,000 prize pool', 'Top 10 win prizes', 'Demo & live eligible', 'Monthly reset'],
+                cta: 'Enter Competition',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Free Education',
+                title: 'Complete Trading Education Package',
+                description: 'Access our comprehensive education library at no cost. Includes video courses, webinars, e-books, and live mentoring sessions for all skill levels.',
+                details: ['50+ video lessons', 'Weekly live webinars', 'E-book library', 'Personal mentor access'],
+                cta: 'Start Learning',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        indonesia: [
+            {
+                badge: 'Welcome Bonus',
+                title: '50% Deposit Bonus for Indonesian Traders',
+                description: 'Boost your first deposit with a 50% bonus. Indonesian traders can start with additional trading capital to explore the global markets.',
+                details: ['Min. deposit $50', 'Max. bonus $2,500', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Islamic Account',
+                title: 'Swap-Free Islamic Trading Account',
+                description: 'Trade in accordance with Sharia principles. Our Islamic account features zero overnight swap charges on all positions held past market close.',
+                details: ['Zero swap charges', 'No hidden fees', 'All instruments available', 'Sharia-compliant'],
+                cta: 'Open Islamic Account',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Cashback',
+                title: '3% Cashback on Every Trade',
+                description: 'Receive 3% cashback on every trade you execute, regardless of the outcome. Funds are credited directly to your trading account weekly.',
+                details: ['3% per trade', 'Win or lose', 'Weekly credit', 'No minimum volume'],
+                cta: 'Activate Cashback',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        pakistan: [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for Pakistani Traders',
+                description: 'Double your trading power with our exclusive 100% deposit match for Pakistani clients. Fund your account and trade with twice the capital.',
+                details: ['Min. deposit $100', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Islamic Account',
+                title: 'Zero Swap Islamic Account',
+                description: 'Trade confidently with our fully Sharia-compliant trading account. Hold positions overnight without any swap or rollover fees applied.',
+                details: ['Zero swap fees', 'Sharia-compliant', 'Full instrument access', 'Dedicated support'],
+                cta: 'Open Islamic Account',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Reduced Commission',
+                title: 'Up to 50% Reduced Trading Commission',
+                description: 'Enjoy significantly lower commission rates on all your trades. High-volume traders benefit from even deeper discounts on our ECN accounts.',
+                details: ['Up to 50% reduction', 'ECN accounts eligible', 'Volume-based tiers', 'Instant activation'],
+                cta: 'Reduce Costs',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        latam: [
+            {
+                badge: 'Bono de Bienvenida',
+                title: '100% Bonus de Deposito para Nuevos Traders',
+                description: 'Duplica tu capital inicial con nuestra oferta exclusiva de bienvenida para traders latinoamericanos. Abre una cuenta y recibe un 100% de bono en tu primer deposito.',
+                details: ['Deposito min. $100', 'Bono max. $5,000', 'Valido por 30 dias', 'T&C aplican'],
+                cta: 'Reclamar Oferta',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Referral Program',
+                title: 'Earn $75 per Referral Across Latin America',
+                description: 'Invite traders from any Latin American country and earn $75 for each successful referral. Build your network and earn unlimited rewards.',
+                details: ['$75 per referral', 'Unlimited referrals', 'Multi-country support', 'Fast payouts'],
+                cta: 'Start Referring',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Trading Competition',
+                title: '$15,000 LATAM Trading Championship',
+                description: 'Compete in the region-wide trading championship with a $15,000 prize pool. Traders from all Latin American countries are eligible to participate.',
+                details: ['$15,000 prize pool', 'Regional leaderboard', 'Monthly rounds', 'Demo & live accounts'],
+                cta: 'Enter Championship',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        namibia: [
+            {
+                badge: 'Welcome Bonus',
+                title: '75% Deposit Bonus for Namibian Traders',
+                description: 'Start your trading journey with a 75% bonus on your first deposit. Namibian traders can access global markets with enhanced capital.',
+                details: ['Min. deposit $50', 'Max. bonus $3,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Local Payment Bonus',
+                title: 'Extra 10% Bonus on Local Payment Methods',
+                description: 'Receive an additional 10% bonus when you deposit using local Namibian payment methods. Stack this on top of your welcome bonus for maximum value.',
+                details: ['Extra 10% bonus', 'Local bank transfers', 'Mobile money accepted', 'Instant credit'],
+                cta: 'Deposit Now',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Education Access',
+                title: 'Free Premium Trading Education',
+                description: 'Access our complete premium education suite at no charge. Includes beginner to advanced courses, market analysis tools, and weekly mentoring sessions.',
+                details: ['Full course library', 'Weekly mentoring', 'Market analysis tools', 'Certificate on completion'],
+                cta: 'Start Learning',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        kenya: [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for Kenyan Traders',
+                description: 'Double your capital with a 100% match on your first deposit. Kenyan traders can take advantage of this offer to trade forex, metals, and more.',
+                details: ['Min. deposit $50', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'M-Pesa Bonus',
+                title: 'Extra 15% Bonus on M-Pesa Deposits',
+                description: 'Fund your account using M-Pesa and receive an extra 15% bonus on every deposit. Fast, convenient, and rewarding for Kenyan traders.',
+                details: ['15% extra on M-Pesa', 'Instant processing', 'No deposit fees', 'Stackable with welcome bonus'],
+                cta: 'Deposit via M-Pesa',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Live Training',
+                title: 'Free Weekly Live Trading Sessions',
+                description: 'Join our expert analysts for free live trading sessions every week. Watch real-time analysis, learn strategies, and ask questions during market hours.',
+                details: ['Weekly live sessions', 'Real-time analysis', 'Interactive Q&A', 'Recording access'],
+                cta: 'Join Sessions',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        ghana: [
+            {
+                badge: 'Welcome Bonus',
+                title: '50% Deposit Bonus for Ghanaian Traders',
+                description: 'Get a 50% boost on your first deposit. Ghanaian traders can begin their trading journey with additional capital across all account types.',
+                details: ['Min. deposit $50', 'Max. bonus $2,500', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Cashback Program',
+                title: '4% Weekly Cashback on All Trades',
+                description: 'Earn 4% cashback on your weekly trading volume. Funds are automatically credited to your account every Monday morning.',
+                details: ['4% weekly cashback', 'Automatic credit', 'No cap on earnings', 'All instruments'],
+                cta: 'Activate Cashback',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Trading Education',
+                title: 'Free Comprehensive Trading Course',
+                description: 'Master the markets with our free trading education program designed for Ghanaian traders. Covers fundamentals, technical analysis, and risk management.',
+                details: ['40+ video lessons', 'Practice exercises', 'Downloadable guides', 'Community access'],
+                cta: 'Enroll Free',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        nigeria: [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for Nigerian Traders',
+                description: 'Start strong with a 100% deposit match. Nigerian traders can fund their accounts and trade with double the capital from day one.',
+                details: ['Min. deposit $100', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Naira Deposit Bonus',
+                title: 'Extra 15% Bonus on Naira Deposits',
+                description: 'Deposit in Nigerian Naira and receive an extra 15% bonus on top of your deposit. Supports local bank transfers and popular Nigerian payment methods.',
+                details: ['15% extra on NGN deposits', 'Local bank transfers', 'Opay & Palmpay accepted', 'Instant processing'],
+                cta: 'Deposit in Naira',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Free Signals',
+                title: 'Premium Trading Signals at No Cost',
+                description: 'Receive daily professional trading signals delivered via Telegram and email. Covering forex, gold, and indices with clear entry and exit levels.',
+                details: ['5+ daily signals', 'Forex, gold & indices', 'Telegram delivery', 'Performance tracking'],
+                cta: 'Get Free Signals',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        'south-africa': [
+            {
+                badge: 'Welcome Bonus',
+                title: '75% Deposit Bonus for South African Traders',
+                description: 'Amplify your starting capital with a 75% deposit bonus. South African traders enjoy competitive conditions and enhanced trading power.',
+                details: ['Min. deposit $100', 'Max. bonus $3,750', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'ZAR Account',
+                title: 'ZAR-Denominated Account Benefits',
+                description: 'Trade directly in South African Rand with no currency conversion fees. Enjoy local deposits and withdrawals with zero additional charges.',
+                details: ['ZAR base currency', 'No conversion fees', 'EFT deposits supported', 'Fast ZAR withdrawals'],
+                cta: 'Open ZAR Account',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Trading Competition',
+                title: '$20,000 South Africa Trading Cup',
+                description: 'Compete for your share of a $20,000 prize pool in our quarterly South Africa Trading Cup. Open to all SA-based traders on live accounts.',
+                details: ['$20,000 prize pool', 'Quarterly competition', 'Live accounts only', 'Top 20 win prizes'],
+                cta: 'Enter Competition',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        'trinidad-tobago': [
+            {
+                badge: 'Welcome Bonus',
+                title: '100% Deposit Bonus for T&T Traders',
+                description: 'Double your first deposit with our exclusive welcome offer for Trinidad & Tobago traders. Access global markets with enhanced trading capital.',
+                details: ['Min. deposit $100', 'Max. bonus $5,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Caribbean Trader',
+                title: 'Caribbean Trader Loyalty Program',
+                description: 'Join our exclusive Caribbean Trader program and earn loyalty points on every trade. Redeem points for cash bonuses, reduced spreads, and premium services.',
+                details: ['Earn points per lot', 'Redeem for cash', 'Tiered VIP levels', 'Exclusive perks'],
+                cta: 'Join Program',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Reduced Spreads',
+                title: 'Tight Spreads from 0.2 Pips',
+                description: 'Trade with some of the tightest spreads available in the Caribbean region. Major forex pairs, gold, and indices at ultra-competitive pricing.',
+                details: ['From 0.2 pips', 'Majors & gold', 'No requotes', 'Fast execution'],
+                cta: 'Start Trading',
+                ctaLink: '../contact-us/index.html'
+            }
+        ],
+
+        guyana: [
+            {
+                badge: 'Welcome Bonus',
+                title: '75% Deposit Bonus for Guyanese Traders',
+                description: 'Start with a 75% bonus on your first deposit. Guyanese traders can access world-class trading conditions with boosted starting capital.',
+                details: ['Min. deposit $50', 'Max. bonus $3,000', 'Valid for 30 days', 'T&C apply'],
+                cta: 'Claim Offer',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'GYD Deposit Bonus',
+                title: 'Extra 10% on Guyanese Dollar Deposits',
+                description: 'Fund your account in GYD and receive an additional 10% bonus. Supports local bank transfers with quick processing times.',
+                details: ['10% extra on GYD', 'Local bank support', 'Quick processing', 'No hidden fees'],
+                cta: 'Deposit in GYD',
+                ctaLink: '../contact-us/index.html'
+            },
+            {
+                badge: 'Personal Manager',
+                title: 'Dedicated Personal Account Manager',
+                description: 'Receive one-on-one support from a dedicated account manager. Get personalized trading guidance, market insights, and priority assistance.',
+                details: ['1-on-1 support', 'Trading guidance', 'Priority withdrawals', 'Direct phone line'],
+                cta: 'Get Your Manager',
+                ctaLink: '../contact-us/index.html'
+            }
+        ]
+    };
+
+    // -------------------------------------------------------------------------
+    // LATAM Country Code Mapping
+    // -------------------------------------------------------------------------
+
+    const LATAM_CODES = [
+        'MX', 'BR', 'AR', 'CO', 'CL', 'PE', 'EC', 'VE',
+        'UY', 'PY', 'BO', 'CR', 'PA', 'GT', 'HN', 'SV',
+        'NI', 'DO', 'CU'
+    ];
+
+    // -------------------------------------------------------------------------
+    // State
+    // -------------------------------------------------------------------------
+
+    let selectedRegion = null;
+
+    // -------------------------------------------------------------------------
+    // Star SVG Icon (for promo badges)
+    // -------------------------------------------------------------------------
+
+    const STAR_ICON = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg>';
+
+    // -------------------------------------------------------------------------
+    // Render Sidebar (Desktop)
+    // -------------------------------------------------------------------------
+
+    function renderSidebar() {
+        var list = document.getElementById('sidebarCountryList');
+        if (!list) return;
+
+        var html = '';
+        for (var i = 0; i < REGIONS.length; i++) {
+            var region = REGIONS[i];
+            var promos = PROMOTIONS[region.id] || [];
+            var offerCount = promos.length;
+            var offerText = offerCount === 1 ? '1 offer' : offerCount + ' offers';
+            var flag = FLAGS[region.id] || '';
+
+            html +=
+                '<button class="sidebar-country-item" data-region="' + region.id + '" ' +
+                'role="option" aria-selected="false" type="button">' +
+                    '<div class="sidebar-country-flag">' + flag + '</div>' +
+                    '<span class="sidebar-country-name">' + region.name + '</span>' +
+                    '<span class="sidebar-country-count">' + offerText + '</span>' +
+                '</button>';
+        }
+
+        list.innerHTML = html;
+    }
+
+    // -------------------------------------------------------------------------
+    // Render Horizontal Strip (Mobile)
+    // -------------------------------------------------------------------------
+
+    function renderStrip() {
+        var strip = document.getElementById('countryStrip');
+        if (!strip) return;
+
+        var html = '';
+        for (var i = 0; i < REGIONS.length; i++) {
+            var region = REGIONS[i];
+            var flag = FLAGS[region.id] || '';
+
+            html +=
+                '<button class="strip-country-item" data-region="' + region.id + '" type="button">' +
+                    '<div class="strip-country-flag">' + flag + '</div>' +
+                    '<span class="strip-country-name">' + region.name + '</span>' +
+                '</button>';
+        }
+
+        strip.innerHTML = html;
+    }
+
+    // -------------------------------------------------------------------------
+    // Render Promotions
+    // -------------------------------------------------------------------------
+
+    function renderPromotions(regionId) {
+        var grid = document.getElementById('promotionsGrid');
+        var empty = document.getElementById('promotionsEmpty');
+        if (!grid) return;
+
+        var cta = document.getElementById('offersContentCta');
+
+        // No region selected — show prompt to pick one
+        if (!regionId) {
+            grid.innerHTML = '';
+            if (empty) {
+                empty.innerHTML =
+                    '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-tertiary); margin-bottom: 16px;">' +
+                        '<circle cx="12" cy="12" r="10"></circle>' +
+                        '<path d="M8 12l2 2 4-4"></path>' +
+                    '</svg>' +
+                    '<p>Select a country to view exclusive offers for your region.</p>';
+                empty.style.display = '';
+            }
+            if (cta) cta.style.display = 'none';
+            return;
+        }
+
+        var promos = [];
+        var regionPromos = PROMOTIONS[regionId] || [];
+        for (var i = 0; i < regionPromos.length; i++) {
+            promos.push({ promo: regionPromos[i], regionId: regionId });
+        }
+
+        if (promos.length === 0) {
+            grid.innerHTML = '';
+            if (empty) {
+                empty.innerHTML =
+                    '<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--text-tertiary); margin-bottom: 16px;">' +
+                        '<circle cx="12" cy="12" r="10"></circle>' +
+                        '<line x1="12" y1="8" x2="12" y2="12"></line>' +
+                        '<line x1="12" y1="16" x2="12.01" y2="16"></line>' +
+                    '</svg>' +
+                    '<p data-i18n="offersPage.noOffers">No offers available for this region yet. Check back soon!</p>';
+                empty.style.display = '';
+            }
+            return;
+        }
+
+        if (empty) empty.style.display = 'none';
+
+        var html = '';
+        for (var p = 0; p < promos.length; p++) {
+            var item = promos[p];
+            var promo = item.promo;
+            var delay = p * 60;
+
+            // Build details tags
+            var detailsHtml = '';
+            if (promo.details && promo.details.length) {
+                for (var d = 0; d < promo.details.length; d++) {
+                    detailsHtml += '<span class="promo-detail-tag">' + promo.details[d] + '</span>';
+                }
+            }
+
+            html +=
+                '<div class="promo-card" style="animation-delay: ' + delay + 'ms;">' +
+                    '<div class="promo-card-badge">' +
+                        STAR_ICON +
+                        '<span>' + promo.badge + '</span>' +
+                    '</div>' +
+                    '<h3 class="promo-card-title">' + promo.title + '</h3>' +
+                    '<p class="promo-card-description">' + promo.description + '</p>' +
+                    '<div class="promo-card-details">' + detailsHtml + '</div>' +
+                    '<a href="' + promo.ctaLink + '" class="promo-card-cta">' + promo.cta + '</a>' +
+                '</div>';
+        }
+
+        grid.innerHTML = html;
+
+        // Show CTA when a region is selected with promotions
+        if (cta) cta.style.display = 'block';
+    }
+
+    // -------------------------------------------------------------------------
+    // Select Region
+    // -------------------------------------------------------------------------
+
+    function selectRegion(regionId) {
+        selectedRegion = regionId;
+
+        // Update sidebar active states
+        var sidebar = document.getElementById('offersSidebar');
+        var sidebarItems = document.querySelectorAll('.sidebar-country-item');
+        for (var i = 0; i < sidebarItems.length; i++) {
+            var item = sidebarItems[i];
+            var isActive = item.getAttribute('data-region') === regionId;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        }
+        if (sidebar) sidebar.classList.toggle('has-selection', !!regionId);
+
+        // Update mobile strip active states
+        var strip = document.getElementById('countryStrip');
+        var stripItems = document.querySelectorAll('.strip-country-item');
+        for (var j = 0; j < stripItems.length; j++) {
+            var stripItem = stripItems[j];
+            var isStripActive = stripItem.getAttribute('data-region') === regionId;
+            stripItem.classList.toggle('active', isStripActive);
+        }
+        if (strip) strip.classList.toggle('has-selection', !!regionId);
+
+        // Scroll active strip item into view on mobile
+        if (regionId) {
+            var activeStripItem = document.querySelector('.strip-country-item.active');
+            if (activeStripItem) {
+                activeStripItem.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+        }
+
+        // Sync dropdown
+        var dropdown = document.getElementById('regionDropdown');
+        if (dropdown) {
+            dropdown.value = regionId || '';
+        }
+
+        // Update promotions header
+        var header = document.getElementById('promotionsHeader');
+        var headerTitle = document.getElementById('promotionsRegionTitle');
+        if (regionId) {
+            var region = getRegionById(regionId);
+            if (header) header.style.display = '';
+            if (headerTitle && region) {
+                headerTitle.textContent = region.name + ' Offers';
+            }
+        } else {
+            if (header) header.style.display = 'none';
+        }
+
+        // Render promotions
+        renderPromotions(regionId);
+
+        // On mobile, scroll to content
+        var content = document.getElementById('offersContent');
+        if (content && window.innerWidth < 768) {
+            content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Clear Selection
+    // -------------------------------------------------------------------------
+
+    function clearSelection() {
+        selectedRegion = null;
+
+        // Remove active state from sidebar
+        var sidebar = document.getElementById('offersSidebar');
+        var sidebarItems = document.querySelectorAll('.sidebar-country-item');
+        for (var i = 0; i < sidebarItems.length; i++) {
+            sidebarItems[i].classList.remove('active');
+            sidebarItems[i].setAttribute('aria-selected', 'false');
+        }
+        if (sidebar) sidebar.classList.remove('has-selection');
+
+        // Remove active state from strip
+        var strip = document.getElementById('countryStrip');
+        var stripItems = document.querySelectorAll('.strip-country-item');
+        for (var j = 0; j < stripItems.length; j++) {
+            stripItems[j].classList.remove('active');
+        }
+        if (strip) strip.classList.remove('has-selection');
+
+        // Reset dropdown to placeholder
+        var dropdown = document.getElementById('regionDropdown');
+        if (dropdown) dropdown.selectedIndex = 0;
+
+        // Hide promotions header
+        var header = document.getElementById('promotionsHeader');
+        if (header) header.style.display = 'none';
+
+        // Show prompt state (also hides CTA)
+        renderPromotions(null);
+    }
+
+    // -------------------------------------------------------------------------
+    // Event Listeners
+    // -------------------------------------------------------------------------
+
+    function initEventListeners() {
+        // Sidebar clicks via event delegation
+        var sidebarList = document.getElementById('sidebarCountryList');
+        if (sidebarList) {
+            sidebarList.addEventListener('click', function (e) {
+                var item = e.target.closest('.sidebar-country-item');
+                if (!item) return;
+                var regionId = item.getAttribute('data-region');
+                if (!regionId) return;
+                if (selectedRegion === regionId) {
+                    clearSelection();
+                } else {
+                    selectRegion(regionId);
+                }
+            });
+        }
+
+        // Mobile strip clicks
+        var strip = document.getElementById('countryStrip');
+        if (strip) {
+            strip.addEventListener('click', function (e) {
+                var item = e.target.closest('.strip-country-item');
+                if (!item) return;
+                var regionId = item.getAttribute('data-region');
+                if (!regionId) return;
+                if (selectedRegion === regionId) {
+                    clearSelection();
+                } else {
+                    selectRegion(regionId);
+                }
+            });
+        }
+
+        // Dropdown change (mobile)
+        var dropdown = document.getElementById('regionDropdown');
+        if (dropdown) {
+            dropdown.addEventListener('change', function () {
+                var value = dropdown.value;
+                if (value) {
+                    selectRegion(value);
+                } else {
+                    clearSelection();
+                }
+            });
+        }
+
+        // Clear button
+        var clearBtn = document.getElementById('clearRegion');
+        if (clearBtn) {
+            clearBtn.addEventListener('click', function () {
+                clearSelection();
+            });
+        }
+
+        // React to hash changes (e.g. clicking nav dropdown while already on page)
+        window.addEventListener('hashchange', function () {
+            var region = getRegionFromURL();
+            if (region && region !== selectedRegion) {
+                selectRegion(region);
+            }
+        });
+    }
+
+    // -------------------------------------------------------------------------
+    // Geo-Detection
+    // -------------------------------------------------------------------------
+
+    async function attemptGeoDetection() {
+        try {
+            // Check if a region is already selected
+            if (selectedRegion) return;
+
+            // Check sessionStorage cache
+            var cached = sessionStorage.getItem('tradertok_geo_region');
+            if (cached) {
+                var cachedRegion = getRegionById(cached);
+                if (cachedRegion && !selectedRegion) {
+                    selectRegion(cached);
+                }
+                return;
+            }
+
+            var response = await fetch('https://ipapi.co/json/', {
+                signal: AbortSignal.timeout(3000)
+            });
+
+            if (!response.ok) return;
+
+            var data = await response.json();
+            var countryCode = data.country_code;
+            if (!countryCode) return;
+
+            var detectedRegion = mapCountryToRegion(countryCode);
+            if (!detectedRegion) return;
+
+            // Cache result
+            sessionStorage.setItem('tradertok_geo_region', detectedRegion);
+
+            // Only auto-select if no region already selected
+            if (!selectedRegion) {
+                selectRegion(detectedRegion);
+            }
+        } catch (e) {
+            // Fail silently on any error
+        }
+    }
+
+    // -------------------------------------------------------------------------
+    // Helpers
+    // -------------------------------------------------------------------------
+
+    function getRegionById(regionId) {
+        for (var i = 0; i < REGIONS.length; i++) {
+            if (REGIONS[i].id === regionId) return REGIONS[i];
+        }
+        return null;
+    }
+
+    function mapCountryToRegion(countryCode) {
+        var code = countryCode.toUpperCase();
+
+        // Direct region matches
+        for (var i = 0; i < REGIONS.length; i++) {
+            if (REGIONS[i].code === code) return REGIONS[i].id;
+        }
+
+        // LATAM country codes
+        if (LATAM_CODES.indexOf(code) !== -1) {
+            return 'latam';
+        }
+
+        return null;
+    }
+
+    // -------------------------------------------------------------------------
+    // Initialization
+    // -------------------------------------------------------------------------
+
+    function getRegionFromURL() {
+        // Check hash fragment first (e.g. #kenya), then query param as fallback
+        var hash = window.location.hash.replace('#', '');
+        var region = hash || new URLSearchParams(window.location.search).get('region');
+        if (region) {
+            var valid = REGIONS.some(function(r) { return r.id === region; });
+            if (valid) return region;
+        }
+        return null;
+    }
+
+    // Subdomain → region mapping
+    // e.g. vn.tradertok.com → vietnam, th.tradertok.com → thailand
+    var SUBDOMAIN_MAP = {
+        vn: 'vietnam',
+        th: 'thailand',
+        ph: 'philippines',
+        id: 'indonesia',
+        pk: 'pakistan',
+        latam: 'latam',
+        na: 'namibia',
+        ke: 'kenya',
+        gh: 'ghana',
+        ng: 'nigeria',
+        za: 'south-africa',
+        tt: 'trinidad-tobago',
+        gy: 'guyana'
+    };
+
+    function getRegionFromSubdomain() {
+        var hostname = window.location.hostname; // e.g. "vn.tradertok.com"
+        var parts = hostname.split('.');
+
+        // Need at least 3 parts: subdomain.domain.tld
+        // Skip "www" and localhost/IP addresses
+        if (parts.length < 3) return null;
+
+        var sub = parts[0].toLowerCase();
+        if (sub === 'www') return null;
+
+        return SUBDOMAIN_MAP[sub] || null;
+    }
+
+    function init() {
+        renderSidebar();
+        renderStrip();
+        initEventListeners();
+
+        // Priority: 1) URL hash/param  2) subdomain  3) IP geo-detection
+        var urlRegion = getRegionFromURL();
+        if (urlRegion) {
+            selectRegion(urlRegion);
+            return;
+        }
+
+        var subdomainRegion = getRegionFromSubdomain();
+        if (subdomainRegion) {
+            selectRegion(subdomainRegion);
+            return;
+        }
+
+        // No explicit region — show prompt and try geo-detection
+        renderPromotions(null);
+        attemptGeoDetection();
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+})();
