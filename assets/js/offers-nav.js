@@ -62,7 +62,7 @@
         // Detect base path from the parent nav link's href
         dropdowns.forEach(function(dropdown) {
             var parentLink = dropdown.parentElement.querySelector('a.nav-link');
-            var basePath = parentLink ? parentLink.getAttribute('href') : 'offers-promotions/index.html';
+            var basePath = parentLink ? parentLink.getAttribute('href') : './offers-promotions';
 
             var html = '<div class="offers-dropdown-grid">';
             REGION_GROUPS.forEach(function(group) {
