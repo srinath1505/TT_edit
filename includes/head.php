@@ -206,9 +206,6 @@
                   <div class="dropdown-menu offers-dropdown" role="menu"></div>
               </li>
               <li class="nav-item">
-                <a href="./legal" class="nav-link" data-i18n="nav.legal">Legal</a>
-              </li>
-              <li class="nav-item">
                 <a href="./contact-us" class="nav-link" data-i18n="nav.contactUs">Contact Us</a>
               </li>
             </ul>
