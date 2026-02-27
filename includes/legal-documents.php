@@ -616,7 +616,7 @@
           <p class="notice-text" data-i18n="legalPage.importantNotice">
             By continuing to use our services, you confirm that you have read, understood, and agreed to the terms
             outlined in these policies. If you have any questions or concerns regarding these documents, please <a
-              href="../contact-us/index.html">contact our legal department</a> for clarification.
+              href="./contact-us/">contact our legal department</a> for clarification.
           </p>
         </div>
       </section>
