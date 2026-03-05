@@ -47,7 +47,7 @@
         </div>
 
         <!-- Content -->
-        <!-- <div class="earnings-popup-header">
+        <div class="earnings-popup-header">
           <span class="earnings-badge-text" data-i18n="earningsPopup.badge">Limited Time Offer</span>
           <h2 class="earnings-popup-title" data-i18n="earningsPopup.title">
             Earnings Reports & Premarket Opportunities
@@ -56,7 +56,7 @@
             January & February 2026
           </p>
 
-          Countdown Timer
+          <!-- Countdown Timer -->
           <div class="earnings-countdown" id="earnings-countdown">
             <div class="earnings-countdown-item">
               <span class="earnings-countdown-value" id="earnings-days">00</span>
@@ -75,9 +75,9 @@
               <span class="earnings-countdown-label" data-i18n="earningsPopup.seconds">Sec</span>
             </div>
           </div>
-        </div> -->
+        </div>
 
-        <!-- Company Logos Showcase
+        <!-- Company Logos Showcase -->
         <div class="earnings-companies">
           <div class="earnings-company" data-company="nvidia">
             <div class="company-icon">
@@ -100,9 +100,9 @@
             <span class="company-name">Amazon</span>
             <span class="company-ticker">AMZN</span>
           </div>
-        </div> -->
+        </div>
 
-        <!-- <p class="earnings-popup-description" data-i18n="earningsPopup.description">
+        <p class="earnings-popup-description" data-i18n="earningsPopup.description">
           Register your interest now and get exclusive promotions with guaranteed returns
         </p>
 
@@ -114,7 +114,7 @@
           *Terms and conditions apply. Capital at risk.
         </p>
       </div>
-    </div> -->
+    </div>
     
     <!-- Promo Image Popup (trader.jpg) -->
     <div class="trader-popup" id="trader-popup">
