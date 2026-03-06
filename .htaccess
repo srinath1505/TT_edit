@@ -1,6 +1,8 @@
 DirectoryIndex index.php
 RewriteEngine On
 
+RewriteRule ^$ index.php [L]
+
 RewriteRule ^favicon\.ico$ - [L]
 RewriteRule ^favicon-48x48\.png$ - [L]
 RewriteRule ^favicon-192x192\.png$ - [L]
