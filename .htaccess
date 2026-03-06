@@ -1,5 +1,6 @@
 DirectoryIndex index.php
 RewriteEngine On
+RewriteRule ^test-me$ meet-the-team [L,R=301]
 
 RewriteRule ^favicon\.ico$ - [L]
 RewriteRule ^favicon-48x48\.png$ - [L]
