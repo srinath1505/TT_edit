@@ -165,20 +165,6 @@
               style="text-decoration: none;">Learn More</a>
           </div>
 
-          <!-- <?php
-if ($get->home_image_about_us && $get->home_about_us) {
-    echo '
-                // <div class="about-text">
-                //     <h2 class="about-title">Your Trusted Partner in Financial Growth</h2>
-                //     <p class="about-subtitle gradient-text">At TraderTok, we&apos;re redefining what it means to trade in the global markets.</p>
-
-                //     <p class="about-description">' . $get->home_about_us . '</p>
-
-
-                //     <a href="<?php echo $get->register_url; ?>" class="btn-about" style="text-decoration: none;">Learn More</a>
-                // </div>';
-                }
-?> -->
 
           <div class="about-stats">
             <div class="stat-card">
