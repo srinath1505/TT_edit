@@ -249,7 +249,7 @@
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
                   </button>
-                  <button class="mobile-language-item" data-lang="hi">
+                  <!-- <button class="mobile-language-item" data-lang="hi">
                     <span class="language-flag">
                       <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
                         <path fill="#f93" d="M0 0h640v160H0z" />
@@ -265,7 +265,7 @@
                       stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
                       <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>
-                  </button>
+                  </button> -->
                   <button class="mobile-language-item" data-lang="es-419">
                     <span class="language-flag">
                       <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
@@ -358,7 +358,7 @@
                   </span>
                   <span class="language-name" data-i18n="language.english">English</span>
                 </div>
-                <div class="language-item" data-lang="hi">
+                <!-- <div class="language-item" data-lang="hi">
                   <span class="language-flag">
                     <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">
                       <path fill="#f93" d="M0 0h640v160H0z" />
@@ -370,7 +370,7 @@
                     </svg>
                   </span>
                   <span class="language-name" data-i18n="language.hindi">हिन्दी</span>
-                </div>
+                </div> -->
                 <div class="language-item" data-lang="es-419">
                   <span class="language-flag">
                     <svg class="flag-icon" viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg">

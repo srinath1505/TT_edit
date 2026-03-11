@@ -11,7 +11,7 @@
 
 /* Position LiveChat widget above WhatsApp */
 #chat-widget-container {
-  bottom: 90px !important;
+  bottom: 0px !important;
   right: 10px !important;
 }
 
