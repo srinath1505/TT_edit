@@ -13,7 +13,7 @@
 
       // Use i18n system for greeting message
       const greeting = (window.i18n && typeof window.i18n.t === "function") 
-        ? window.i18n.t("whatsapp.greeting")
+        ? window.i18n.t("Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?")
         : "Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?";
 
       const encodedMessage = encodeURIComponent(greeting);

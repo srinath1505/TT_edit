@@ -6571,7 +6571,7 @@ body.light-theme .platform-icon {
 
 body {
   font-family: "Manrope", sans-serif;
-  background: #0a0a0a;
+  /* background: #0a0a0a; */
 }
 
 /* ====== GOLD & SILVER BANNER SECTION ====== */
@@ -6916,7 +6916,8 @@ body {
     gap: 30px;
 }
 .article-card {
-    background: rgba(255,255,255,0.05);
+    /* background: var(--card-bg, rgba(255,255,255,0.05)); */
+    border: 1px solid var(--card-border, transparent);
     border-radius: 15px;
     overflow: hidden;
     transition: transform 0.3s;
@@ -6926,7 +6927,7 @@ body {
 }
 .article-card-image {
     height: 200px;
-    background: #333;
+    background: var(--bg-tertiary, #333);
 }
 .article-card-content {
     padding: 25px;
@@ -6935,18 +6936,19 @@ body {
     display: inline-block;
     padding: 4px 12px;
     background: rgba(255,156,0,0.2);
-    color: #ff9c00;
+    color: var(--accent-color, #ff9c00);
     border-radius: 5px;
     font-size: 12px;
     margin-bottom: 15px;
 }
 .article-title {
     font-size: 20px;
+    color: var(--text-primary, #fff);
     margin-bottom: 12px;
 }
 .article-excerpt {
     font-size: 14px;
-    color: #ccc;
+    color: var(--text-secondary, #ccc);
     margin-bottom: 20px;
 }
 .btn-read-more {

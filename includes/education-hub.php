@@ -11,7 +11,7 @@ $articles = json_decode($articles_json, true);
         </video>
         <div class="page-hero-overlay1"></div>
         <div class="page-hero-content1">
-            <h1 class="page-hero-title1" data-i18n-html="educationHub.hero.title"></h1>
+            <h1 class="page-hero-title1" data-i18n-html="educationHub.hero.title">Learn Forex the <span>Right Way</span></h1>
             <p class="page-hero-subtitle1" data-i18n="educationHub.hero.subtitle">
                 Access 20+ comprehensive trading guides designed specifically for beginners. No complex jargon, just clear explanations to help you start your journey.
             </p>
@@ -53,7 +53,7 @@ $articles = json_decode($articles_json, true);
     <section class="learn-section" id="learn">
         <div class="container">
             <h2 class="sec-title" data-i18n="educationHub.learn.title">What You'll Learn</h2>
-            <p class="sec-subtitle" data-i18n="educationHub.learn.subtitle">Our curriculum covers everything you need to know to get started.</p>
+            <p class="sec-subtitle" data-i18n="educationHub.learn.subtitle" style='padding-bottom: 25px;'>Our curriculum covers everything you need to know to get started.</p>
             <div class="learn-grid">
                 <div class="learn-card">
                     <h3 data-i18n="educationHub.learn.items.0.title">Forex Fundamentals</h3>

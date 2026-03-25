@@ -96,6 +96,9 @@
           <nav class="nav" id="main-navigation" aria-label="Main navigation">
             <ul class="nav-list">
               <li class="nav-item">
+                <a href="./about" class="nav-link" data-i18n="nav.aboutUs">About Us</a>
+              </li>
+              <li class="nav-item">
                 <a href="./meet-the-team" class="nav-link" data-i18n="nav.meetTheTeam">Meet the Team</a>
               </li>
               <li class="nav-item dropdown">
