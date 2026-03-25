@@ -4,9 +4,9 @@
     "description": "Haz crecer tus ahorros con confianza en TraderTok. Accede a potentes plataformas de trading de escritorio y móvil, análisis de mercado en tiempo real, soporte 24/7 y conocimientos de expertos."
   },
   "nav": {
-    "meetTheTeam": "Conoce al Equipo",
+    "meetTheTeam": "Equipo",
     "tradingPlatforms": "Plataformas",
-    "accountTypes": "Tipos de Cuenta",
+    "accountTypes": "Cuenta",
     "educationResources": "Educación",
     "marketsOverview": "Mercados",
     "legal": "Legal",
@@ -19,7 +19,8 @@
     "cookiePolicy": "Política de Cookie",
     "offers": "Ofertas",
     "educationHub": "Centro Educativo",
-    "trading": "Trading"
+    "trading": "Trading",
+    "aboutUs": "Nosotros"
   },
   "dropdown": {
     "tradingEssentials": "Fundamentos del Trading",
