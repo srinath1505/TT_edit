@@ -14,8 +14,8 @@
                 <span class="eyebrow-dot"></span>
                 Our Story
             </div>
-            <h1 class="about-hero-title gradient-text"  data-i18n="aboutPage.hero.titleLine1">
-                The Platform Built to<br>
+            <h1 class="about-hero-title gradient-text">
+                <span data-i18n="aboutPage.hero.titleLine1">The Platform Built to</span><br>
                 <span class="gradient-text"  data-i18n="aboutPage.hero.titleHighlight">Turn Noise Into Insight</span>
             </h1>
             <p class="about-hero-lead" data-i18n="aboutPage.hero.lead">
@@ -83,6 +83,41 @@
     </div>
 </section>
 
+<section class="about-leadership">
+    <div class="container">
+        <div class="leadership-grid">
+            <div class="leadership-content">
+                <div class="leadership-eyebrow" data-i18n="aboutPage.leadership.eyebrow">A Message from Leadership</div>
+                <h2 class="section-title" data-i18n="aboutPage.leadership.title">Trust is built through clarity, consistency, and accountability.</h2>
+                <div class="leadership-body">
+                    <p data-i18n="aboutPage.leadership.p1">In today’s financial markets, trust is built through clarity, consistency, and accountability; not promises.</p>
+                    <p data-i18n="aboutPage.leadership.p2">At TraderTok, this principle defines how we operate as a regulated online trading platform.</p>
+                    <p data-i18n="aboutPage.leadership.p3">Financial markets move faster than ever. Information travels instantly; global events reshape markets within seconds, and traders are constantly surrounded by noise, opinions, speculation, and an overwhelming volume of data. While access to global financial markets has expanded, many still struggle to find a platform that combines reliability, transparency, and institutional-grade trading infrastructure in one place.</p>
+                    <p data-i18n="aboutPage.leadership.p4">TraderTok was created to address this challenge.</p>
+                    <p data-i18n="aboutPage.leadership.p5">We built TraderTok as a technology-driven, multi-asset trading platform designed to transform market complexity into clear, actionable insights. Our focus is not only to provide access to Forex, CFDs, indices, and commodities, but to deliver a complete trading ecosystem, combining advanced trading technology, low-latency execution, and real-time market insight within a secure and structured environment.</p>
+                    <p data-i18n="aboutPage.leadership.p6">Being a regulated broker is not simply a requirement for us; it is a responsibility. It defines how we operate, how we safeguard client interests, and how we maintain transparency across every aspect of our platform. From client protection and risk management to execution integrity and compliance with international financial standards, regulation is embedded into our daily operations.</p>
+                    <p data-i18n="aboutPage.leadership.p7">At the same time, we understand that traders need more than access; they need clarity, reliability, and tools that support informed decision-making in fast-moving global markets.</p>
+                    <p data-i18n="aboutPage.leadership.p8">Our approach is built on delivering a high-performance trading environment where institutional-grade infrastructure, advanced execution technology, and data-driven market intelligence work together seamlessly.</p>
+                    <p data-i18n="aboutPage.leadership.p9">We are building TraderTok for individuals and partners who take online trading seriously, those who value structure, discipline, transparency, and long-term performance over noise and speculation.</p>
+                    <p data-i18n="aboutPage.leadership.p10">As we expand across global and high-growth markets, our commitment remains unchanged: to operate with integrity, to uphold the highest standards of regulatory compliance, and to provide a secure, transparent, and reliable trading environment where our clients can participate in the global financial markets with confidence.</p>
+                    <p data-i18n="aboutPage.leadership.p11">At TraderTok, our purpose is clear: to turn noise into insight.</p>
+                    <p data-i18n="aboutPage.leadership.p12">Thank you for placing your trust in TraderTok.</p>
+                </div>
+            </div>
+            <div class="leadership-visual">
+                <blockquote class="leadership-quote" data-i18n="aboutPage.leadership.quote">
+                    "I believe trading will always involve complexity. Our responsibility is to turn that complexity into clear, structured, and actionable insight for every client we serve."
+                </blockquote>
+                <div class="leadership-author">
+                    <div class="author-info">
+                        <div class="author-name" data-i18n="aboutPage.leadership.authorName">Alexandra Taylor</div>
+                        <div class="author-title" data-i18n="aboutPage.leadership.authorTitle">TraderTok Leadership Team</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="about-vision">
     <div class="about-vision-bg">

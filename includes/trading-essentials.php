@@ -21,7 +21,7 @@
     $display_limit = 20;
     ?>
 
-    <section class="hub-content-sec" id="articles" style="padding: 50px 0; background: black">
+    <section class="hub-content-sec" id="articles" style="padding: 50px 0;">
         <div class="container">
             <!-- <h2 class="sec-title">Educational Resources</h2>
             <p class="sec-subtitle">Explore our library of 20+ articles. Start from the beginning or dive into a specific topic.</p>

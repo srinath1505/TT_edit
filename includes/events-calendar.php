@@ -1,4 +1,105 @@
    <!-- Page Styles -->
+<style>
+.events-calendar-page {
+  padding: 120px 0 40px;
+  background: var(--bg-primary);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.markets-header {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  flex-shrink: 0;
+}
+
+.markets-header h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.markets-header p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Light Theme Styles */
+body.light-theme .markets-header .gradient-text {
+  background: linear-gradient(90deg,
+      #E63946 0%,
+      #FF6B35 25%,
+      #1a1a1a 50%,
+      #1a1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+body.light-theme .markets-header p {
+  color: #555;
+}
+
+.calendar-container {
+  flex: 1;
+  width: 100%;
+  background: var(--bg-secondary);
+  border: none;
+  /* Dynamically fill the rest of the viewport minus header and padding */
+  min-height: calc(100vh - 280px);
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 100%;
+  min-height: calc(100vh - 280px);
+  border: none;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .events-calendar-page {
+    padding-top: 100px;
+  }
+  .calendar-container,
+  .calendar-container iframe {
+    min-height: calc(100vh - 260px);
+  }
+}
+
+@media (max-width: 600px) {
+  .events-calendar-page {
+    padding-top: 80px;
+  }
+  .calendar-container,
+  .calendar-container iframe {
+    min-height: calc(100vh - 240px);
+  }
+}
+</style>
+
+<!-- Main Content Section -->
+<section class="events-calendar-page">
+  <!-- Page Header -->
+  <div class="markets-header">
+    <h1><span data-i18n="eventsCalendarPage.heroTitle">Markets</span> <span class="gradient-text"
+        data-i18n="eventsCalendarPage.heroTitleHighlight">Overview</span></h1>
+    <p data-i18n="eventsCalendarPage.heroSubtitle">Real-time market data, economic events, and cryptocurrency prices all in one place</p>
+  </div>
+
+  <div class="calendar-container">
+    <!-- Trading Central Economic Calendar Iframe -->
+      <!-- <iframe src="https://site.ct.recognia.com/afa40s/presto/economic_calendar_prelogin?sid=7yK4t3sey1mi8leCOBbXBeOZl8p%2FhnHa" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe> -->
+    <iframe src="https://site.tradingcentral.com/afa40s/serve.shtml?page=economic_calendar_prelogin" width="100%" height="100%" frameborder="0" scrolling="auto" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- 
    <style>
 .markets-page {
   padding: 120px 0 60px;
@@ -76,17 +177,15 @@
   stroke: #E63946;
 }
 
-/* Animated icon for Live Market */
 #live-market .section-icon svg {
   animation: float 3s ease-in-out infinite;
 }
 
-/* Animated icon for Economic Calendar */
 #economic-calendar .section-icon svg {
   animation: pulse-icon 2s ease-in-out infinite;
 }
 
-/* Animated icon for Crypto */
+
 #crypto-market .section-icon svg {
   animation: rotate-slow 8s linear infinite;
 }
@@ -139,7 +238,7 @@
   color: var(--text-secondary);
 }
 
-/* Minimal LIVE indicator */
+
 .live-indicator {
   display: inline-flex;
   align-items: center;
@@ -180,7 +279,7 @@
   }
 }
 
-/* Widget Container */
+
 .widget-container {
   background: var(--bg-secondary);
   border-radius: 16px;
@@ -193,7 +292,7 @@
   border: none;
 }
 
-/* Crypto Table */
+
 .crypto-table-wrapper {
   background: var(--bg-secondary);
   border-radius: 16px;
@@ -311,7 +410,7 @@
   height: 40px;
 }
 
-/* Loading State */
+
 .table-loading {
   display: flex;
   flex-direction: column;
@@ -337,7 +436,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .crypto-table-wrapper {
     overflow-x: auto;
@@ -374,7 +472,7 @@
   }
 }
 
-/* TradingView Widget Dark Mode Fix */
+
 [data-theme="dark"] .tradingview-widget-container {
   filter: none;
 }
@@ -383,7 +481,7 @@
   filter: invert(0);
 }
 
-/* Light Theme Styles */
+
 body.light-theme .markets-header .gradient-text {
   background: linear-gradient(90deg,
       #E63946 0%,
@@ -434,10 +532,9 @@ body.light-theme .markets-header p {
 }
    </style>
 
-   <!-- Main Content Section -->
    <section class="markets-page" style="background: var(--bg-primary);">
      <div class="container">
-       <!-- Page Header -->
+
        <div class="markets-header">
          <h1><span data-i18n="eventsCalendarPage.heroTitle">Markets</span> <span class="gradient-text"
              data-i18n="eventsCalendarPage.heroTitleHighlight">Overview</span></h1>
@@ -445,11 +542,11 @@ body.light-theme .markets-header p {
            prices all in one place</p>
        </div>
 
-       <!-- Section 1: Live Market -->
+ 
        <div class="market-section" id="live-market">
          <div class="section-header">
            <div class="section-icon">
-             <!-- Minimal Line Chart Icon -->
+
              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                stroke-linejoin="round">
                <polyline points="3 17 9 11 13 15 21 7" />
@@ -464,10 +561,10 @@ body.light-theme .markets-header p {
            <span class="live-indicator" data-i18n="eventsCalendarPage.live">LIVE</span>
          </div>
          <div class="widget-container">
-           <!-- TradingView Market Overview Widget -->
+
            <div id="market-overview-widget"></div>
          </div>
-         <!-- <div class="widget-container">
+         <div class="widget-container">
                     TradingView Market Overview Widget
                     <div class="tradingview-widget-container">
                         <div class="tradingview-widget-container__widget"></div>
@@ -524,14 +621,13 @@ body.light-theme .markets-header p {
                         }
                         </script>
                     </div>
-                </div> -->
+                </div>
        </div>
 
-       <!-- Section 2: Economic Calendar -->
+
        <div class="market-section" id="economic-calendar">
          <div class="section-header">
            <div class="section-icon">
-             <!-- Minimal Calendar Icon -->
              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                stroke-linejoin="round">
                <rect x="3" y="4" width="18" height="18" rx="2" />
@@ -548,7 +644,7 @@ body.light-theme .markets-header p {
            </div>
            <span class="live-indicator" data-i18n="eventsCalendarPage.live">LIVE</span>
          </div>
-         <!-- <div class="widget-container">
+         <div class="widget-container">
                     TradingView Economic Calendar Widget
                     <div class="tradingview-widget-container">
                         <div class="tradingview-widget-container__widget"></div>
@@ -564,18 +660,18 @@ body.light-theme .markets-header p {
                         }
                         </script>
                     </div>
-                </div> -->
+                </div>
          <div class="widget-container">
-           <!-- TradingView Economic Calendar Widget -->
+
            <div id="economic-calendar-widget"></div>
          </div>
        </div>
 
-       <!-- Section 3: Cryptocurrency Market -->
+
        <div class="market-section" id="crypto-market">
          <div class="section-header">
            <div class="section-icon">
-             <!-- Minimal Bitcoin/Crypto Icon -->
+
              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                stroke-linejoin="round">
                <circle cx="12" cy="12" r="9" />
@@ -625,12 +721,11 @@ body.light-theme .markets-header p {
      </div>
    </section>
 
-   <!-- Cryptocurrency Data Script -->
    <script>
-// CoinGecko API - Free, no API key required
+
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
 
-// Format currency
+
 function formatCurrency(num) {
   if (num >= 1e12) return '$' + (num / 1e12).toFixed(2) + 'T';
   if (num >= 1e9) return '$' + (num / 1e9).toFixed(2) + 'B';
@@ -639,7 +734,6 @@ function formatCurrency(num) {
   return '$' + num.toFixed(2);
 }
 
-// Format price with appropriate decimals
 function formatPrice(price) {
   if (price >= 1000) return '$' + price.toLocaleString('en-US', {
     minimumFractionDigits: 2,
@@ -650,7 +744,7 @@ function formatPrice(price) {
   return '$' + price.toFixed(6);
 }
 
-// Format percentage change
+
 function formatChange(change) {
   const isPositive = change >= 0;
   const formattedChange = Math.abs(change).toFixed(2);
@@ -660,7 +754,6 @@ function formatChange(change) {
   };
 }
 
-// Create mini sparkline SVG
 function createSparkline(data, isPositive) {
   if (!data || data.length === 0) return '';
 
@@ -694,7 +787,7 @@ function createSparkline(data, isPositive) {
             `;
 }
 
-// Fetch and render crypto data
+
 async function fetchCryptoData() {
   try {
     const response = await fetch(
@@ -719,7 +812,7 @@ async function fetchCryptoData() {
   }
 }
 
-// Render crypto table
+
 function renderCryptoTable(coins) {
   const tbody = document.getElementById('cryptoTableBody');
 
@@ -752,18 +845,16 @@ function renderCryptoTable(coins) {
   }).join('');
 }
 
-// Initialize
-// Initialize
+
 document.addEventListener('DOMContentLoaded', () => {
   fetchCryptoData();
 
-  // Refresh crypto data every 60 seconds
   setInterval(fetchCryptoData, 60000);
 
-  // Initialize TradingView widgets
+
   initTradingViewWidgets();
 
-  // Listen for theme changes
+
   const observer = new MutationObserver((mutations) => {
     mutations.forEach((mutation) => {
       if (mutation.attributeName === 'class') {
@@ -776,16 +867,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Get current theme
 function getCurrentTheme() {
   return document.body.classList.contains('light-theme') ? 'light' : 'dark';
 }
 
-// Initialize TradingView widgets with correct theme
 function initTradingViewWidgets() {
   const theme = getCurrentTheme();
 
-  // Market Overview Widget
+
   const marketContainer = document.getElementById('market-overview-widget');
   if (marketContainer) {
     marketContainer.innerHTML = '';
@@ -901,7 +990,7 @@ function initTradingViewWidgets() {
     widgetDiv.appendChild(script);
   }
 
-  // Economic Calendar Widget
+
   const calendarContainer = document.getElementById('economic-calendar-widget');
   if (calendarContainer) {
     calendarContainer.innerHTML = '';
@@ -926,4 +1015,4 @@ function initTradingViewWidgets() {
     widgetDiv.appendChild(script);
   }
 }
-   </script>
+   </script> -->

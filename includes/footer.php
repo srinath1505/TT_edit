@@ -152,9 +152,9 @@
             <h3 class="footer-title" data-i18n="footer.partnersAndPromotions">Partners and Promotions</h3>
             <ul class="footer-links">
               <li><a href="#" class="footer-link" data-i18n="footer.inviteAFriend">Invite a friend</a></li>
-              <li><a href="#" class="footer-link" data-i18n="footer.affiliateProgram">IB Program</a></li>
+              <li><a href="#" class="footer-link" data-i18n="footer.ibProgram">IB Program</a></li>
               <li><a href="#" class="footer-link" data-i18n="footer.traderTokClub">TraderTok Club</a></li>
-              <li><a href="#" class="footer-link" data-i18n="footer.investmentInsurance">Segregated Account</a></li>
+              <li><a href="#" class="footer-link" data-i18n="footer.segregatedAccount">Segregated Account</a></li>
               <li><a href="offers-promotions" class="footer-link" data-i18n="footer.offersAndPromotions">Offers &amp; Promotions</a></li>
             </ul>
           </div>
