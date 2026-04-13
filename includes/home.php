@@ -558,6 +558,8 @@
       </div>
     </section>
 
+    <?php include __DIR__ . '/partials/home-faq-section.php'; ?>
+
     <!-- Deposit Account Section -->
     <section class="deposit-section">
       <div class="container">

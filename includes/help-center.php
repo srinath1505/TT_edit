@@ -269,6 +269,9 @@ $help_center_sections = [
           We have grouped the most important information into clear sections so users can quickly
           find practical answers without reading through repeated policy language.
         </p>
+        <p>
+          Key questions also appear on the <a class="license-link" href="./#home-faq">home page</a> for quick access.
+        </p>
       </article>
 
       <article class="help-center-overview-card">
