@@ -22,13 +22,19 @@ function routeUrl($pageName, array $params = [])
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>window.subdomainData = <?php echo $subdomainJS; ?>;</script>
+    <script>
+    window.subdomainData = <?php echo $subdomainJS; ?>;
+    </script>
     <?php if (!empty($tradertok_extra_geo_main_hosts) && is_array($tradertok_extra_geo_main_hosts)) : ?>
-    <script>window.TRADERTOK_MAIN_DOMAINS = <?php echo json_encode(array_values($tradertok_extra_geo_main_hosts)); ?>;</script>
+    <script>
+    window.TRADERTOK_MAIN_DOMAINS = <?php echo json_encode(array_values($tradertok_extra_geo_main_hosts)); ?>;
+    </script>
     <?php endif; ?>
 
     <!-- Canonical subdomain map + region redirect (load order matters) -->
-    <script src="assets/js/tradertok-subdomain-config.js?v=<?php echo filemtime('assets/js/tradertok-subdomain-config.js'); ?>"></script>
+    <script
+      src="assets/js/tradertok-subdomain-config.js?v=<?php echo filemtime('assets/js/tradertok-subdomain-config.js'); ?>">
+    </script>
     <script src="assets/js/region-redirect.js?v=<?php echo filemtime('assets/js/region-redirect.js'); ?>"></script>
 
     <!-- Google Tag Manager -->
@@ -80,8 +86,7 @@ function routeUrl($pageName, array $params = [])
       rel="stylesheet">
 
     <link rel="icon" href="<?php echo $get->assets_url . '/' . $get->favicon; ?>" />
-    <?php echo $theme->css_files; ?>
-
+    <?php echo (isset($theme) && is_object($theme)) ? $theme->css_files : ''; ?>
     <?php
     $sharedStylesheets = [
         'assets/css/design-tokens.css',
@@ -110,11 +115,11 @@ function routeUrl($pageName, array $params = [])
     <?php include 'gtm-body-code.php'; ?>
     <!-- End Google Tag Manager (noscript) -->
 
-      <!-- Market Ticker -->
+    <!-- Market Ticker -->
     <div class="top-ticker" id="topTicker">
-        <div class="ticker-content" id="tickerContent">
-            <!-- Items will be populated by JS -->
-        </div>
+      <div class="ticker-content" id="tickerContent">
+        <!-- Items will be populated by JS -->
+      </div>
     </div>
 
     <!-- Header -->
@@ -123,7 +128,8 @@ function routeUrl($pageName, array $params = [])
         <div class="header-content">
           <!-- Logo -->
           <a href="./" class="logo">
-            <img src="<?php echo $get->assets_url.'/'.$get->logo; ?>" alt="<?php echo $get->brand_name; ?>" class="logo-image">
+            <img src="<?php echo $get->assets_url.'/'.$get->logo; ?>" alt="<?php echo $get->brand_name; ?>"
+              class="logo-image">
           </a>
 
           <!-- Navigation -->
@@ -142,7 +148,8 @@ function routeUrl($pageName, array $params = [])
                   <div class="dropdown-cards">
                     <a href="./trading-platform" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                           <line x1="8" y1="21" x2="16" y2="21"></line>
                           <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -155,7 +162,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="./trading-central" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                         </svg>
                       </span>
@@ -177,7 +185,8 @@ function routeUrl($pageName, array $params = [])
                   <div class="dropdown-cards">
                     <a href="<?php echo routeUrl('courses'); ?>" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
                           <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                         </svg>
@@ -189,7 +198,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="<?php echo routeUrl('trading-essentials'); ?>" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                         </svg>
@@ -201,7 +211,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="./edu-market-news" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M23 6l-9.5 9.5-5-5L1 18"></path>
                           <path d="M17 6h6v6"></path>
                         </svg>
@@ -213,7 +224,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="./edu-ebooks" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
                           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
                         </svg>
@@ -225,7 +237,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="./edu-webinars" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
                           <line x1="8" y1="21" x2="16" y2="21"></line>
                           <line x1="12" y1="17" x2="12" y2="21"></line>
@@ -238,7 +251,8 @@ function routeUrl($pageName, array $params = [])
                     </a>
                     <a href="./edu-glossary" class="menu-card">
                       <span class="menu-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                           <circle cx="11" cy="11" r="8"></circle>
                           <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                         </svg>
@@ -338,8 +352,9 @@ function routeUrl($pageName, array $params = [])
                   </div>
                 </div>
               <li class="nav-item dropdown">
-                  <a href="./offers-promotions" class="nav-link" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.offers">Offers</span> <span class="arrow">▼</span></a>
-                  <div class="dropdown-menu offers-dropdown" role="menu"></div>
+                <a href="./offers-promotions" class="nav-link" aria-haspopup="true" aria-expanded="false"><span
+                    data-i18n="nav.offers">Offers</span> <span class="arrow">▼</span></a>
+                <div class="dropdown-menu offers-dropdown" role="menu"></div>
               </li>
               <li class="nav-item">
                 <a href="./contact-us" class="nav-link" data-i18n="nav.contactUs">Contact Us</a>

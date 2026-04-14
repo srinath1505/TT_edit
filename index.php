@@ -1,9 +1,11 @@
 <?php
-
-echo "<!-- INDEX_PAGE_VAR: '" . @$_GET['page'] . "' -->\n";
+ob_start();
 
 require 'api.php';
 require 'includes/head.php';
+
+// Debug comment after full PHP execution
+echo "<!-- INDEX_PAGE_VAR: '" . @$_GET['page'] . "' -->\n";
 
 $routeConfig = require __DIR__ . '/config/page-routes.php';
 $staticRoutes = $routeConfig['static'];
@@ -83,3 +85,5 @@ switch ($page) {
 }
 
 require 'includes/footer.php';
+
+ob_end_flush();
