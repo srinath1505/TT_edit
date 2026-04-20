@@ -56,6 +56,11 @@
         var lang = REGION_ID_TO_LOCALE[regionId];
         if (!lang || !window.i18n || typeof window.i18n.setLanguage !== 'function') return;
         try {
+            var pref = localStorage.getItem('preferredLanguage');
+            var supported = window.i18n.supportedLangs;
+            if (pref && supported && supported.indexOf(pref) !== -1) return;
+        } catch (e) {}
+        try {
             sessionStorage.setItem(GEO_LOCALE_SESSION_KEY, lang);
         } catch (e) {}
         window.i18n.setLanguage(lang);

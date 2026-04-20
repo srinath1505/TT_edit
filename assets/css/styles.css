@@ -686,6 +686,7 @@ body.region-language-locked .language-btn .language-arrow {
   border-radius: var(--btn-pill-radius);
   cursor: pointer;
   transition: all 0.2s ease;
+  margin-bottom: 5px;
 }
 
 .language-item:hover {

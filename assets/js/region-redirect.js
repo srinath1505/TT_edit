@@ -274,6 +274,13 @@
                 return;
             }
             if (window.i18n.isLanguageLocked && window.i18n.isLanguageLocked()) return;
+            try {
+                var pref = localStorage.getItem('preferredLanguage');
+                var supported = window.i18n.supportedLangs;
+                if (pref && supported && supported.indexOf(pref) !== -1) {
+                    return;
+                }
+            } catch (e) {}
             window.i18n.setLanguage(locale);
         }
         applyWhenI18nReady();
@@ -291,6 +298,14 @@
                 subdomain: null,
                 source: 'hash'
             };
+
+            try {
+                var prefHash = localStorage.getItem('preferredLanguage');
+                var supHash = window.i18n && window.i18n.supportedLangs;
+                if (prefHash && supHash && supHash.indexOf(prefHash) !== -1) {
+                    return;
+                }
+            } catch (e) {}
 
             try {
                 sessionStorage.setItem(GEO_LOCALE_STORAGE_KEY, hl);

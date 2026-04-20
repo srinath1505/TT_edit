@@ -276,14 +276,15 @@
         // 1) PHP regional subdomain: fixed locale (highest priority)
         if (window.subdomainData && window.subdomainData.lang) {
             currentLang = window.subdomainData.lang;
+        } else if (savedLang && CONFIG.supportedLangs.includes(savedLang)) {
+            // 2) Stored preference (manual choice or prior session) before region/geo heuristics
+            currentLang = savedLang;
         } else if (window.regionData && window.regionData.lang) {
-            // 2) Hash / client subdomain / async geo-ip (set before or after this script)
+            // 3) Hash / client subdomain (set before or after this script)
             currentLang = window.regionData.lang;
         } else if (geoLocale && CONFIG.supportedLangs.includes(geoLocale)) {
-            // 3) Last IP-based locale (persists across pages until user changes language)
+            // 4) Last IP-based locale (persists across pages until user changes language)
             currentLang = geoLocale;
-        } else if (savedLang && CONFIG.supportedLangs.includes(savedLang)) {
-            currentLang = savedLang;
         // Auto-detect from subdomain if no explicit choice yet
         } else if (window.subdomainData && window.subdomainData.lang) {
             currentLang = window.subdomainData.lang;
