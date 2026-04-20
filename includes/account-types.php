@@ -941,7 +941,7 @@ body.light-theme .acct-data-table tbody tr:nth-child(even) {
                 <ul>
                   <li>Trade in cents (lower risk exposure)</li>
                   <li>Spread from 1.8 pips</li>
-                  <li>No commission</li>
+                  <!-- <li>No commission</li> -->
                   <li>Leverage up to 1:1000</li>
                   <li>Islamic (swap-free) option available</li>
                 </ul>
@@ -965,7 +965,7 @@ body.light-theme .acct-data-table tbody tr:nth-child(even) {
                 <ul>
                   <li>Minimum deposit: $100</li>
                   <li>Spread from 1.8 pips</li>
-                  <li>No commission</li>
+                  <!-- <li>No commission</li> -->
                   <li>Straight-through processing (STP)</li>
                   <li>Fast execution</li>
                   <li>Leverage up to 1:1000</li>
@@ -990,7 +990,7 @@ body.light-theme .acct-data-table tbody tr:nth-child(even) {
                 <ul>
                   <li>Minimum deposit: $500</li>
                   <li>Raw spreads from 0.1 pips</li>
-                  <li>Commission: $8–$10 per lot</li>
+                  <!-- <li>Commission: $8–$10 per lot</li> -->
                   <li>Leverage up to 1:1000</li>
                   <li>Supports Forex, Metals, Indices, Commodities, Crypto</li>
                   <li>Ideal for scalping and automated trading</li>
