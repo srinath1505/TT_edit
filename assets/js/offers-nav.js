@@ -109,11 +109,13 @@
                             inner +
                             '</span>';
                     } else {
+                        var qSep = basePath.indexOf('?') >= 0 ? '&' : '?';
                         html +=
                             '<a href="' +
                             basePath +
-                            '#' +
-                            c.id +
+                            qSep +
+                            'region=' +
+                            encodeURIComponent(c.id) +
                             '" class="' +
                             rowClass +
                             '">' +
@@ -124,9 +126,7 @@
                 html += '</div>';
             });
             html += '</div>';
-            var footerHref = lockedCountry
-                ? basePath + '#' + lockedCountry
-                : basePath;
+            var footerHref = basePath;
             if (allCountriesDisabled) {
                 html +=
                     '<div class="offers-dropdown-footer">' +

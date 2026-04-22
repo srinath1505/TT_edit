@@ -922,20 +922,14 @@
             }
             var lock = getOffersLockCountry();
             if (lock) {
-                var want = getRegionFromURL();
-                if (want && want !== lock) {
-                    history.replaceState(
-                        null,
-                        '',
-                        window.location.pathname + window.location.search + '#' + lock
-                    );
-                }
+                stripConsumedOfferRegionFromUrl();
                 return;
             }
             var region = getRegionFromURL();
             if (region && region !== selectedRegion) {
                 selectRegion(region);
             }
+            stripConsumedOfferRegionFromUrl();
         });
     }
 
@@ -1109,23 +1103,28 @@
         return !!getOffersLockCountry() || offerRegionResolutionPending || unsupported;
     }
 
-    function normalizeOffersHashToLock() {
-        var lock = getOffersLockCountry();
-        if (!lock) return;
-        var want = getRegionFromURL();
-        if (want && want !== lock) {
-            history.replaceState(
-                null,
-                '',
-                window.location.pathname + window.location.search + '#' + lock
-            );
-        } else if (!window.location.hash || window.location.hash === '#') {
-            history.replaceState(
-                null,
-                '',
-                window.location.pathname + window.location.search + '#' + lock
-            );
+    /**
+     * Removes #region and ?region= from the address bar after the offers region
+     * has been applied in memory (geo lock, session, or selection). Does not
+     * strip unrelated hashes (e.g. in-page anchors) when they are not valid offer regions.
+     */
+    function stripConsumedOfferRegionFromUrl() {
+        if (!getRegionFromURL()) return;
+        var path = window.location.pathname;
+        var sp = new URLSearchParams(
+            window.location.search ? window.location.search.slice(1) : ''
+        );
+        sp.delete('region');
+        var q = sp.toString();
+        var next = path + (q ? '?' + q : '');
+        var cur = path + (window.location.search || '') + (window.location.hash || '');
+        if (cur !== next) {
+            history.replaceState(null, '', next);
         }
+    }
+
+    function normalizeOffersHashToLock() {
+        stripConsumedOfferRegionFromUrl();
     }
 
     function refreshOffersChromeState() {
@@ -1171,6 +1170,36 @@
             return;
         }
 
+        if (window.TraderTokIsOffersUnsupportedVisitor && window.TraderTokIsOffersUnsupportedVisitor()) {
+            if (window.location.hash) {
+                history.replaceState(
+                    null,
+                    '',
+                    window.location.pathname + window.location.search
+                );
+            }
+            renderPromotions(null);
+            refreshOffersChromeState();
+            try {
+                window.dispatchEvent(new CustomEvent('tradertok:offers-unsupported-visitor'));
+            } catch (eUs) {}
+            return;
+        }
+
+        var urlRegionPre = getRegionFromURL();
+        if (urlRegionPre && getRegionById(urlRegionPre)) {
+            if (window.TraderTokClearOffersUnsupportedVisitorFlag) {
+                window.TraderTokClearOffersUnsupportedVisitorFlag();
+            }
+            try {
+                sessionStorage.setItem(OFFERS_GEO_SESSION_KEY, urlRegionPre);
+            } catch (eUrl0) {}
+            selectRegion(urlRegionPre);
+            refreshOffersChromeState();
+            normalizeOffersHashToLock();
+            return;
+        }
+
         try {
             var cached = sessionStorage.getItem(OFFERS_GEO_SESSION_KEY);
             if (cached && getRegionById(cached)) {
@@ -1195,22 +1224,6 @@
             selectRegion(subdomainRegion);
             refreshOffersChromeState();
             normalizeOffersHashToLock();
-            return;
-        }
-
-        if (window.TraderTokIsOffersUnsupportedVisitor && window.TraderTokIsOffersUnsupportedVisitor()) {
-            if (window.location.hash) {
-                history.replaceState(
-                    null,
-                    '',
-                    window.location.pathname + window.location.search
-                );
-            }
-            renderPromotions(null);
-            refreshOffersChromeState();
-            try {
-                window.dispatchEvent(new CustomEvent('tradertok:offers-unsupported-visitor'));
-            } catch (eUs) {}
             return;
         }
 
