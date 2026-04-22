@@ -36,7 +36,7 @@
         malaysia: 'my',
         philippines: 'ph',
         indonesia: 'id',
-        pakistan: 'pk',
+        pakistan: 'en',
         latam: 'es-419',
         namibia: 'en',
         kenya: 'en',

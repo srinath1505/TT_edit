@@ -87,7 +87,7 @@
 
     var COUNTRY_TO_LANG = {
         vietnam: 'vn', thailand: 'th', malaysia: 'my',
-        philippines: 'ph', indonesia: 'id', pakistan: 'pk',
+        philippines: 'ph', indonesia: 'id', pakistan: 'en',
         latam: 'es-419', namibia: 'en', kenya: 'en',
         ghana: 'en', nigeria: 'en', 'south-africa': 'en',
         'trinidad-tobago': 'en', guyana: 'en'

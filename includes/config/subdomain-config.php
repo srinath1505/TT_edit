@@ -41,7 +41,7 @@ $subdomainMap = [
     'my'    => ['country' => 'malaysia',       'lang' => 'my'], // ms fallback to en
     'ph'    => ['country' => 'philippines',    'lang' => 'ph'],
     'id'    => ['country' => 'indonesia',      'lang' => 'id'],
-    'pk'    => ['country' => 'pakistan',       'lang' => 'pk'],
+    'pk'    => ['country' => 'pakistan',       'lang' => 'en'],
     'latam' => ['country' => 'latam',          'lang' => 'es-419'],
     'es'    => ['country' => 'latam',          'lang' => 'es-419'],
     'na'    => ['country' => 'namibia',        'lang' => 'en'],
