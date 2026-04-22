@@ -73,7 +73,7 @@
         my: 'my',
         ph: 'ph',
         id: 'id',
-        pk: 'pk',
+        pk: 'en',
         latam: 'es-419',
         na: 'en',
         ke: 'en',
