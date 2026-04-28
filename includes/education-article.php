@@ -1,5 +1,36 @@
 <?php
 /**
+ * Render a paragraph item from JSON supporting plain text and bold blocks.
+ *
+ * Supported formats:
+ * - "Plain paragraph text"
+ * - {"bold":"Bold line"}
+ * - {"text":"Plain paragraph text"}
+ *
+ * @param mixed $para
+ */
+function education_article_render_paragraph_item($para): void
+{
+    if ($para === '' || $para === null) {
+        return;
+    }
+
+    if (is_array($para)) {
+        if (!empty($para['bold'])) {
+            echo '<p class="education-article-emphasis"><strong>' . htmlspecialchars((string) $para['bold']) . '</strong></p>';
+            return;
+        }
+        if (!empty($para['text'])) {
+            echo '<p>' . htmlspecialchars((string) $para['text']) . '</p>';
+            return;
+        }
+        return;
+    }
+
+    echo '<p>' . htmlspecialchars((string) $para) . '</p>';
+}
+
+/**
  * Render optional multi-paragraph intro/body from JSON (plain text, escaped).
  *
  * @param array<string, mixed> $content
@@ -8,10 +39,7 @@ function education_article_render_paragraph_field(array $content, string $field,
 {
     if (!empty($content[$paragraphsField]) && is_array($content[$paragraphsField])) {
         foreach ($content[$paragraphsField] as $para) {
-            if ($para === '' || $para === null) {
-                continue;
-            }
-            echo '<p>' . htmlspecialchars((string) $para) . '</p>';
+            education_article_render_paragraph_item($para);
         }
         return;
     }
@@ -29,10 +57,7 @@ function education_article_render_section_body(array $section): void
 {
     if (!empty($section['paragraphs']) && is_array($section['paragraphs'])) {
         foreach ($section['paragraphs'] as $para) {
-            if ($para === '' || $para === null) {
-                continue;
-            }
-            echo '<p>' . htmlspecialchars((string) $para) . '</p>';
+            education_article_render_paragraph_item($para);
         }
     } elseif (!empty($section['text'])) {
         echo '<p>' . htmlspecialchars((string) $section['text']) . '</p>';
@@ -52,6 +77,20 @@ function education_article_render_section_body(array $section): void
     if (!empty($section['text_after'])) {
         echo '<p>' . htmlspecialchars((string) $section['text_after']) . '</p>';
     }
+}
+
+/**
+ * Trimmed section heading for <h2> and TOC. Empty string means omit heading row and TOC link.
+ *
+ * @param array<string, mixed> $section
+ */
+function education_article_section_heading_text(array $section): string
+{
+    if (!isset($section['heading'])) {
+        return '';
+    }
+
+    return trim((string) $section['heading']);
 }
 
 $articles_json = file_get_contents(__DIR__ . '/../assets/data/education_articles.json');
@@ -106,11 +145,16 @@ $related_articles = array_slice($related_articles, 0, 3);
                         <ul class="education-article-toc">
                             <?php if (!empty($article['content']['sections'])): ?>
                                 <?php foreach ($article['content']['sections'] as $index => $section): ?>
+                                <?php
+                                $tocHeading = education_article_section_heading_text($section);
+                                if ($tocHeading !== '') :
+                                ?>
                             <li>
                                 <a href="#article-section-<?php echo $index + 1; ?>">
-                                    <?php echo htmlspecialchars($section['heading'] ?? 'Section'); ?>
+                                    <?php echo htmlspecialchars($tocHeading); ?>
                                 </a>
                             </li>
+                                <?php endif; ?>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                             <?php if (!empty($article['content']['faq']) && is_array($article['content']['faq'])): ?>
@@ -133,8 +177,11 @@ $related_articles = array_slice($related_articles, 0, 3);
 
                     <?php if (!empty($article['content']['sections'])): ?>
                         <?php foreach ($article['content']['sections'] as $index => $section): ?>
+                        <?php $sectionHeading = education_article_section_heading_text($section); ?>
                         <section class="education-article-block" id="article-section-<?php echo $index + 1; ?>">
-                            <h2><?php echo htmlspecialchars($section['heading'] ?? ''); ?></h2>
+                            <?php if ($sectionHeading !== ''): ?>
+                            <h2><?php echo htmlspecialchars($sectionHeading); ?></h2>
+                            <?php endif; ?>
                             <?php education_article_render_section_body($section); ?>
                         </section>
                         <?php endforeach; ?>

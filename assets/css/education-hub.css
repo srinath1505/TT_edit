@@ -1416,6 +1416,12 @@ body.light-theme .education-subpage--articles .education-subpage-hero {
   line-height: 1.9;
 }
 
+.education-article-block p.education-article-emphasis,
+.education-article-panel p.education-article-emphasis {
+  color: #ffffff;
+  font-weight: 700;
+}
+
 .education-article-bullets {
   margin: 16px 0 0;
   padding-left: 1.25rem;
