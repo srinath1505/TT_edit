@@ -1127,7 +1127,7 @@ if (contactForm) {
       // Simulate API call (replace with actual endpoint)
       await new Promise((resolve) => setTimeout(resolve, 1500));
 
-            // Show unified success message
+      // Show unified success message
       contactForm.innerHTML = `
                 <div style="text-align: center; padding: 40px 20px;">
                     <svg viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="2" style="width: 80px; height: 80px; margin-bottom: 20px;">
@@ -1252,7 +1252,7 @@ if (signinForm) {
     const password = document.getElementById("signin-password").value;
 
     // Redirect to the client portal with credentials
-    const redirectUrl = `https://client.tradertok.com/#/auth/autologin?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`;
+    const redirectUrl = `https://client.tradertok.com/#/auth/autologin?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}&lang=en`;
 
     window.location.href = redirectUrl;
   });
@@ -1397,9 +1397,9 @@ languageItems.forEach((item) => {
 mobileLanguageItems.forEach((item) => {
   // If subdomain is active, don't allow changing language
   if (window.subdomainData && window.subdomainData.lang) {
-    item.style.opacity = '0.5';
-    item.style.cursor = 'default';
-    item.style.pointerEvents = 'none';
+    item.style.opacity = "0.5";
+    item.style.cursor = "default";
+    item.style.pointerEvents = "none";
   }
 
   item.addEventListener("click", () => {
@@ -1585,7 +1585,7 @@ const countryIsoMap = {
   "Costa Rica": "CR",
   Croatia: "HR",
   Cuba: "CU",
-  "Curaçao": "CW",
+  Curaçao: "CW",
   Cyprus: "CY",
   "Czech Republic": "CZ",
   Denmark: "DK",
@@ -1713,7 +1713,7 @@ const countryIsoMap = {
   Romania: "RO",
   Russia: "RU",
   Rwanda: "RW",
-  "Réunion": "RE",
+  Réunion: "RE",
   "Saint Barthélemy": "BL",
   "Saint Helena, Ascension and Tristan da Cunha": "SH",
   "Saint Kitts and Nevis": "KN",
@@ -2100,7 +2100,9 @@ if (signupForm) {
 (function () {
   const earningsPopup = document.getElementById("earnings-popup");
   const earningsCloseBtn = document.getElementById("earnings-popup-close");
-  const earningsOverlay = earningsPopup?.querySelector(".earnings-popup-overlay");
+  const earningsOverlay = earningsPopup?.querySelector(
+    ".earnings-popup-overlay",
+  );
 
   const traderPopup = document.getElementById("trader-popup");
   const traderCloseBtn = document.getElementById("trader-popup-close");
@@ -2140,7 +2142,7 @@ if (signupForm) {
   if (traderClaimBtn) {
     traderClaimBtn.addEventListener("click", () => {
       closeTraderPopup();
-      // Optionally also close earnings? User didn't specify, 
+      // Optionally also close earnings? User didn't specify,
       // but usually clicking a CTA closes the popup.
       // For now let's just close trader as requested.
     });
@@ -2372,7 +2374,9 @@ if (signupForm) {
         <button type="button" class="btn-submit-deposit" id="depositPendingClose">OK</button>
       </div>
     `;
-    document.getElementById("depositPendingClose")?.addEventListener("click", closeModal);
+    document
+      .getElementById("depositPendingClose")
+      ?.addEventListener("click", closeModal);
     if (typeof window.updatePageLanguage === "function") {
       window.updatePageLanguage();
     }
@@ -2392,7 +2396,9 @@ if (signupForm) {
         <button type="button" class="btn-submit-deposit" id="depositRegSuccessClose">Close</button>
       </div>
     `;
-    document.getElementById("depositRegSuccessClose")?.addEventListener("click", closeModal);
+    document
+      .getElementById("depositRegSuccessClose")
+      ?.addEventListener("click", closeModal);
     if (typeof window.updatePageLanguage === "function") {
       window.updatePageLanguage();
     }
@@ -2448,8 +2454,9 @@ if (signupForm) {
   async function submitNewAccount(fields) {
     setFormError("");
     const fullPhone =
-      (typeof selectedCountryCode !== "undefined" ? selectedCountryCode : "+44") +
-      String(fields.phone).replace(/\s+/g, "");
+      (typeof selectedCountryCode !== "undefined"
+        ? selectedCountryCode
+        : "+44") + String(fields.phone).replace(/\s+/g, "");
 
     const payload = {
       firstName: fields.firstname,
@@ -2533,23 +2540,30 @@ if (signupForm) {
 
     modeRadios?.forEach((r) => {
       r.addEventListener("change", () => {
-        const m = form.querySelector('input[name="depositMode"]:checked')?.value;
+        const m = form.querySelector(
+          'input[name="depositMode"]:checked',
+        )?.value;
         if (m === "existing" || m === "new") updateModeUI(m);
         setFormError("");
       });
     });
 
-    const initial =
-      form?.querySelector('input[name="depositMode"]:checked')?.value;
+    const initial = form?.querySelector(
+      'input[name="depositMode"]:checked',
+    )?.value;
     updateModeUI(initial === "new" ? "new" : "existing");
 
     form?.addEventListener("submit", async (e) => {
       e.preventDefault();
       setFormError("");
-      const mode = form.querySelector('input[name="depositMode"]:checked')?.value;
+      const mode = form.querySelector(
+        'input[name="depositMode"]:checked',
+      )?.value;
 
       if (mode === "existing") {
-        const email = document.getElementById("depositEmailExisting")?.value?.trim();
+        const email = document
+          .getElementById("depositEmailExisting")
+          ?.value?.trim();
         if (!email) {
           setFormError("Please enter your email.");
           return;
@@ -2570,14 +2584,20 @@ if (signupForm) {
           if (submitBtn) {
             submitBtn.disabled = false;
           }
-          const m = form.querySelector('input[name="depositMode"]:checked')?.value;
+          const m = form.querySelector(
+            'input[name="depositMode"]:checked',
+          )?.value;
           updateModeUI(m === "new" ? "new" : "existing");
         }
         return;
       }
 
-      const firstname = document.getElementById("depositFirstname")?.value?.trim();
-      const lastname = document.getElementById("depositLastname")?.value?.trim();
+      const firstname = document
+        .getElementById("depositFirstname")
+        ?.value?.trim();
+      const lastname = document
+        .getElementById("depositLastname")
+        ?.value?.trim();
       const email = document.getElementById("depositEmailNew")?.value?.trim();
       const phone = document.getElementById("depositPhone")?.value?.trim();
       const password = document.getElementById("depositPassword")?.value;
@@ -2606,8 +2626,7 @@ if (signupForm) {
       } catch (err) {
         console.error(err);
         setFormError(
-          err?.message ||
-            "Network error. Check your connection and try again.",
+          err?.message || "Network error. Check your connection and try again.",
         );
       } finally {
         if (submitBtn) {
@@ -2828,16 +2847,8 @@ if (signupForm) {
     startAutoPlay();
   }
 
-  prevBtn.addEventListener(
-    "click",
-    (e) => handleNavClick(e, prevSlide),
-    true,
-  );
-  nextBtn.addEventListener(
-    "click",
-    (e) => handleNavClick(e, nextSlide),
-    true,
-  );
+  prevBtn.addEventListener("click", (e) => handleNavClick(e, prevSlide), true);
+  nextBtn.addEventListener("click", (e) => handleNavClick(e, nextSlide), true);
 
   const sliderRoot = track.closest(".client-testimonials-slider");
   const hoverTarget = sliderRoot || track;
@@ -2945,7 +2956,9 @@ if (signupForm) {
         <button type="button" class="btn-submit-club" id="tradersClubPendingClose">OK</button>
       </div>
     `;
-    document.getElementById("tradersClubPendingClose")?.addEventListener("click", closeModal);
+    document
+      .getElementById("tradersClubPendingClose")
+      ?.addEventListener("click", closeModal);
     if (typeof window.updatePageLanguage === "function") {
       window.updatePageLanguage();
     }
@@ -2965,7 +2978,9 @@ if (signupForm) {
         <button type="button" class="btn-submit-club" id="tradersClubRegSuccessClose">Close</button>
       </div>
     `;
-    document.getElementById("tradersClubRegSuccessClose")?.addEventListener("click", closeModal);
+    document
+      .getElementById("tradersClubRegSuccessClose")
+      ?.addEventListener("click", closeModal);
     if (typeof window.updatePageLanguage === "function") {
       window.updatePageLanguage();
     }
@@ -2992,7 +3007,13 @@ if (signupForm) {
 
     const raw = await res.text();
     const data = raw ? parseJsonSafe(raw) : null;
-    logQualificationDebug("Traders Club qualification", payload, res, raw, data);
+    logQualificationDebug(
+      "Traders Club qualification",
+      payload,
+      res,
+      raw,
+      data,
+    );
 
     if (!res.ok) {
       const msg =
@@ -3021,8 +3042,9 @@ if (signupForm) {
   async function submitNewAccount(fields) {
     setFormError("");
     const fullPhone =
-      (typeof selectedCountryCode !== "undefined" ? selectedCountryCode : "+44") +
-      String(fields.phone).replace(/\s+/g, "");
+      (typeof selectedCountryCode !== "undefined"
+        ? selectedCountryCode
+        : "+44") + String(fields.phone).replace(/\s+/g, "");
 
     const payload = {
       firstName: fields.firstname,
@@ -3106,25 +3128,30 @@ if (signupForm) {
 
     modeRadios?.forEach((r) => {
       r.addEventListener("change", () => {
-        const m = form.querySelector('input[name="tradersClubMode"]:checked')
-          ?.value;
+        const m = form.querySelector(
+          'input[name="tradersClubMode"]:checked',
+        )?.value;
         if (m === "existing" || m === "new") updateModeUI(m);
         setFormError("");
       });
     });
 
-    const initial =
-      form?.querySelector('input[name="tradersClubMode"]:checked')?.value;
+    const initial = form?.querySelector(
+      'input[name="tradersClubMode"]:checked',
+    )?.value;
     updateModeUI(initial === "new" ? "new" : "existing");
 
     form?.addEventListener("submit", async (e) => {
       e.preventDefault();
       setFormError("");
-      const mode = form.querySelector('input[name="tradersClubMode"]:checked')
-        ?.value;
+      const mode = form.querySelector(
+        'input[name="tradersClubMode"]:checked',
+      )?.value;
 
       if (mode === "existing") {
-        const email = document.getElementById("clubEmailExisting")?.value?.trim();
+        const email = document
+          .getElementById("clubEmailExisting")
+          ?.value?.trim();
         if (!email) {
           setFormError("Please enter your email.");
           return;
@@ -3145,8 +3172,9 @@ if (signupForm) {
           if (submitBtn) {
             submitBtn.disabled = false;
           }
-          const m = form.querySelector('input[name="tradersClubMode"]:checked')
-            ?.value;
+          const m = form.querySelector(
+            'input[name="tradersClubMode"]:checked',
+          )?.value;
           updateModeUI(m === "new" ? "new" : "existing");
         }
         return;
@@ -3182,8 +3210,7 @@ if (signupForm) {
       } catch (err) {
         console.error(err);
         setFormError(
-          err?.message ||
-            "Network error. Check your connection and try again.",
+          err?.message || "Network error. Check your connection and try again.",
         );
       } finally {
         if (submitBtn) {
@@ -3249,19 +3276,28 @@ if (signupForm) {
     setStatus("", null);
 
     try {
-      const res = await fetch(form.getAttribute("action") || "./api/education-newsletter.php", {
-        method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify({
-          email,
-          name: (nameInput?.value || "").trim(),
-          consent: true,
-          website: "",
-        }),
-      });
+      const res = await fetch(
+        form.getAttribute("action") || "./api/education-newsletter.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            name: (nameInput?.value || "").trim(),
+            consent: true,
+            website: "",
+          }),
+        },
+      );
       const data = await res.json().catch(() => ({}));
       if (!res.ok || !data.ok) {
-        setStatus(data.message || "Something went wrong. Please try again.", "error");
+        setStatus(
+          data.message || "Something went wrong. Please try again.",
+          "error",
+        );
         return;
       }
       setStatus(data.message || "Thanks — you are subscribed.", "success");
