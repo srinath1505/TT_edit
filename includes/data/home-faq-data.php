@@ -238,8 +238,8 @@ return [
             [
                 'question' => 'What are your trading fees?',
                 'paragraphs' => [
-                    'Micro trades (0.01–0.19 lots): No commission',
-                    'Standard trades (0.20–4.99 lots): $1.50 per trade',
+                    'Micro trades (0.01 - 0.19 lots): No commission',
+                    'Standard trades (0.20 - 4.99 lots): $1.50 per trade',
                     'Large trades (5.00+ lots): $3.50 per trade',
                     'Commissions apply on trade opening unless otherwise specified.',
                     'TraderTok reserves the right to update its fee structure.',
