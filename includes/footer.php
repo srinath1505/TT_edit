@@ -274,7 +274,7 @@
           <nav class="footer-subbar-platforms" aria-label="Trading platforms">
             <!-- <a href="#" class="footer-subbar-chip" target="_blank" rel="noopener noreferrer"
               data-i18n="footer.platformMt4">MetaTrader 4</a> -->
-            <a href="#" class="footer-subbar-chip" target="_blank" rel="noopener noreferrer" data-i18n="">
+            <a href="https://trader.tradertok.com" class="footer-subbar-chip" target="_blank" rel="noopener noreferrer" data-i18n="">
               <img src="assets/images/mt5.png" alt="MetaTrader 5" class="footer-subbar-chip-icon">
             </a>
             <a href="#" class="footer-subbar-chip" target="_blank" rel="noopener noreferrer"
