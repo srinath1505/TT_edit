@@ -4,6 +4,47 @@
  * Routing helpers for page resolution and 404 handling.
  */
 
+/**
+ * When the server routes pretty URLs to index.php without setting ?page= (e.g. nginx
+ * try_files /index.php only), derive the slug from REQUEST_URI (mirrors .htaccess / router.php).
+ */
+function tt_apply_request_uri_page_param(): void
+{
+    $existing = isset($_GET['page']) ? trim((string) $_GET['page']) : '';
+    if ($existing !== '') {
+        return;
+    }
+
+    $requestUri = isset($_SERVER['REQUEST_URI']) ? (string) $_SERVER['REQUEST_URI'] : '';
+    $path = parse_url($requestUri, PHP_URL_PATH);
+    if (!is_string($path) || $path === '') {
+        return;
+    }
+
+    $path = rawurldecode($path);
+    $basePath = rtrim(str_replace('\\', '/', dirname((string) ($_SERVER['SCRIPT_NAME'] ?? '/index.php'))), '/');
+    if ($basePath !== '' && $basePath !== '/') {
+        if (strncmp($path, $basePath . '/', strlen($basePath) + 1) === 0) {
+            $path = substr($path, strlen($basePath)) ?: '/';
+        } elseif ($path === $basePath) {
+            $path = '/';
+        }
+    }
+
+    if (preg_match('#^/academy/market-news/?$#i', $path)) {
+        $_GET['page'] = 'edu-market-news';
+
+        return;
+    }
+
+    $slug = trim($path, '/');
+    if ($slug === '' || $slug === 'index.php') {
+        return;
+    }
+
+    $_GET['page'] = $slug;
+}
+
 function tt_get_route_config(): array
 {
     static $config = null;
