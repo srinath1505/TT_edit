@@ -1,5 +1,7 @@
 <?php
 ob_start();
+require __DIR__ . '/includes/helpers/routing.php';
+tt_apply_request_uri_page_param();
 echo "<!-- INDEX_PAGE_VAR: '" . @$_GET['page'] . "' -->\n";
 require __DIR__ . '/ensure-api-cache-shape.php';
 require __DIR__ . '/api.php';
@@ -56,7 +58,6 @@ if (isset($page) && $page === 'education-article') {
     exit;
 }
 
-require __DIR__ . '/includes/helpers/routing.php';
 $routeConfig = require __DIR__ . '/includes/config/page-routes.php';
 $staticRoutes = $routeConfig['static'];
 $ttIsNotFound = false;
