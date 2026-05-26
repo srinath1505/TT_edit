@@ -1,8 +1,15 @@
+:root {
+  --whatsapp-widget-bottom: 20px;
+  --whatsapp-widget-right: 20px;
+  --respondio-widget-bottom: 90px;
+  --respondio-widget-right: 10px;
+}
+
 /* WhatsApp Widget */
 .whatsapp-widget {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: var(--whatsapp-widget-bottom);
+  right: var(--whatsapp-widget-right);
   z-index: 9999;
   display: flex;
   align-items: center;
@@ -81,9 +88,16 @@
 }
 
 @media (max-width: 768px) {
+  :root {
+    --whatsapp-widget-bottom: 20px;
+    --whatsapp-widget-right: 20px;
+    --respondio-widget-bottom: 84px;
+    --respondio-widget-right: 10px;
+  }
+
   .whatsapp-widget {
-    bottom: 20px;
-    right: 20px;
+    bottom: var(--whatsapp-widget-bottom);
+    right: var(--whatsapp-widget-right);
   }
 
   .whatsapp-button {
