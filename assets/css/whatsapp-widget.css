@@ -16,7 +16,6 @@
   gap: 12px;
 }
 
-<<<<<<< HEAD
 /*
  * respond.io renders <respond-io-widget> with an open Shadow DOM.
  * Page CSS cannot reach .__respondio-widget inside the shadow tree.
@@ -26,13 +25,6 @@
 #respondio__growth_tool {
   bottom: 90px !important;
   right: 10px !important;
-=======
-/* Chat Widget Container */
-.respondio-widget-offset {
-  bottom: var(--respondio-widget-bottom) !important;
-  right: var(--respondio-widget-right) !important;
-  z-index: 9998 !important;
->>>>>>> c661894 (update on chat widget)
 }
 
 .whatsapp-button {
