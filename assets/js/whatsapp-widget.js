@@ -1,16 +1,46 @@
-// ================== WHATSAPP + RESPOND.IO WIDGET ==================
+// WhatsApp click handler + respond.io stacked above the WhatsApp bubble.
 (function () {
-  /** Gap between the bottom of respond.io and the top of the WhatsApp bubble. */
-  var RESPOND_IO_GAP_PX = 14;
+  "use strict";
+
+  var RESPOND_IO_Z_INDEX = "9998";
+  var REAPPLY_DELAYS_MS = [0, 400, 1200, 3000];
+
+  function getStackGapPx() {
+    var raw = getComputedStyle(document.documentElement)
+      .getPropertyValue("--widget-stack-gap")
+      .trim();
+    var n = parseFloat(raw);
+    return Number.isFinite(n) ? n : 12;
+  }
+
+  function isMobileViewport() {
+    return window.matchMedia("(max-width: 768px)").matches;
+  }
+
+  function getRespondIoContainer(host) {
+    if (!host || !host.shadowRoot) {
+      return null;
+    }
+
+    var root = host.shadowRoot;
+    return (
+      root.querySelector(".container.container--fixed") ||
+      root.querySelector(".container") ||
+      root.querySelector("[class*='container']")
+    );
+  }
 
   function getRespondIoOffset() {
     var whatsapp = document.querySelector(".whatsapp-widget");
     if (!whatsapp) {
-      return { bottom: "96px", right: "20px" };
+      var fallbackBottom = isMobileViewport() ? "58px" : "68px";
+      var fallbackRight = isMobileViewport() ? "12px" : "16px";
+      return { bottom: fallbackBottom, right: fallbackRight };
     }
 
     var rect = whatsapp.getBoundingClientRect();
-    var bottom = window.innerHeight - rect.top + RESPOND_IO_GAP_PX;
+    var gap = getStackGapPx();
+    var bottom = window.innerHeight - rect.top + gap;
     var right = window.innerWidth - rect.right;
 
     return {
@@ -21,47 +51,68 @@
 
   function positionRespondIoWidget() {
     var host = document.querySelector("respond-io-widget");
-    if (!host || !host.shadowRoot) {
-      return false;
-    }
-
-    var container = host.shadowRoot.querySelector(".container.container--fixed");
+    var container = getRespondIoContainer(host);
     if (!container) {
       return false;
     }
 
     var offset = getRespondIoOffset();
-    container.style.bottom = offset.bottom;
-    container.style.right = offset.right;
+    container.style.setProperty("bottom", offset.bottom, "important");
+    container.style.setProperty("right", offset.right, "important");
+    container.style.setProperty("z-index", RESPOND_IO_Z_INDEX, "important");
     return true;
   }
 
-  function applyRespondIoPosition() {
-    if (!positionRespondIoWidget()) {
-      return false;
-    }
-    // respond.io may re-apply defaults shortly after mount
-    setTimeout(positionRespondIoWidget, 400);
-    setTimeout(positionRespondIoWidget, 1200);
-    return true;
+  function scheduleReapply() {
+    REAPPLY_DELAYS_MS.forEach(function (delay) {
+      setTimeout(positionRespondIoWidget, delay);
+    });
   }
 
   var resizeTimer;
   function onLayoutChange() {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(applyRespondIoPosition, 100);
+    resizeTimer = setTimeout(function () {
+      positionRespondIoWidget();
+    }, 100);
+  }
+
+  function watchWhatsAppWidget() {
+    var whatsapp = document.querySelector(".whatsapp-widget");
+    if (!whatsapp || typeof ResizeObserver === "undefined") {
+      return;
+    }
+
+    var ro = new ResizeObserver(function () {
+      positionRespondIoWidget();
+    });
+    ro.observe(whatsapp);
   }
 
   function watchRespondIoWidget() {
-    if (applyRespondIoPosition()) {
+    function onPositioned() {
+      scheduleReapply();
+      watchWhatsAppWidget();
       window.addEventListener("resize", onLayoutChange);
+      window.addEventListener("orientationchange", onLayoutChange);
+      if (window.visualViewport) {
+        window.visualViewport.addEventListener("resize", onLayoutChange);
+      }
+      var mq = window.matchMedia("(max-width: 768px)");
+      if (typeof mq.addEventListener === "function") {
+        mq.addEventListener("change", onLayoutChange);
+      }
+    }
+
+    if (positionRespondIoWidget()) {
+      onPositioned();
       return;
     }
 
     var observer = new MutationObserver(function () {
-      if (applyRespondIoPosition()) {
+      if (positionRespondIoWidget()) {
         observer.disconnect();
-        window.addEventListener("resize", onLayoutChange);
+        onPositioned();
       }
     });
 
@@ -72,34 +123,35 @@
 
     setTimeout(function () {
       observer.disconnect();
-    }, 15000);
+    }, 20000);
   }
 
-  function init() {
-    const whatsappBtn = document.querySelector(".whatsapp-button");
+  function initWhatsAppClick() {
+    var whatsappBtn = document.querySelector(".whatsapp-button");
     if (!whatsappBtn) {
       return;
     }
 
-    const PHONE_NUMBER = "447988536833"; 
+    var phoneNumber = "447988536833";
 
     whatsappBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // Use i18n system for greeting message
-      const greeting = (window.i18n && typeof window.i18n.t === "function") 
-        ? window.i18n.t("Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?")
-        : "Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?";
+      var greeting =
+        window.i18n && typeof window.i18n.t === "function"
+          ? window.i18n.t(
+              "Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?"
+            )
+          : "Hello! Welcome to TraderTok. We are here to help you. What can we do for you today?";
 
-      const encodedMessage = encodeURIComponent(greeting);
-      const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodedMessage}`;
-
+      var whatsappUrl =
+        "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(greeting);
       window.open(whatsappUrl, "_blank");
     });
   }
 
   function boot() {
-    init();
+    initWhatsAppClick();
     watchRespondIoWidget();
   }
 

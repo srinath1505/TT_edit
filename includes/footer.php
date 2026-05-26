@@ -353,29 +353,21 @@
     <script src="assets/js/offers-promotions.js?v=<?php echo filemtime('assets/js/offers-promotions.js'); ?>" defer>
     </script>
     <script src="assets/js/market-ticker.js?v=<?php echo filemtime('assets/js/market-ticker.js'); ?>" defer></script>
-    <script src="assets/js/whatsapp-widget.js?v=<?php echo filemtime('assets/js/whatsapp-widget.js'); ?>" defer>
-    </script>
-    <script src="assets/js/respondio-widget.js?v=<?php echo filemtime('assets/js/respondio-widget.js'); ?>" defer>
-    </script>
 
-
-
-    <!-- WhatsApp Widget -->
+    <!-- WhatsApp + respond.io (stacked via whatsapp-widget.js) -->
     <div class="whatsapp-widget">
       <div class="whatsapp-tooltip" data-i18n="whatsapp.tooltip">Chat with us</div>
-      <a href="#" class="whatsapp-button">
+      <a href="#" class="whatsapp-button" aria-label="Chat on WhatsApp">
         <div class="whatsapp-pulse"></div>
-        <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor">
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path
             d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.187-2.59-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793 0-.853.43-1.284.601-1.473.171-.189.346-.234.461-.234.116 0 .231.001.331.006.105.004.248-.039.388.297.144.346.491 1.197.534 1.284.043.087.072.189.014.302-.058.113-.087.189-.174.293-.087.104-.183.23-.261.308-.087.082-.18.171-.077.346.104.175.459.757.986 1.226.677.603 1.247.788 1.42.874.173.085.274.072.376-.045.102-.116.442-.518.56-.697.117-.18.232-.149.388-.09.156.059.991.467 1.164.554.173.087.288.13.332.202.043.073.043.418-.1.823z" />
         </svg>
       </a>
     </div>
-
-    <!-- This site is converting visitors into subscribers and customers with https://respond.io -->
     <script id="respondio__growth_tool"
       src="https://cdn.respond.io/widget/widget.js?wId=059e9f18-f588-475a-bd46-0e2dd5c8a907"></script>
-    <!-- https://respond.io -->
+    <script src="assets/js/whatsapp-widget.js?v=<?php echo filemtime('assets/js/whatsapp-widget.js'); ?>" defer></script>
 
     </body>
 

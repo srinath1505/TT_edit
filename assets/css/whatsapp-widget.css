@@ -1,11 +1,10 @@
 :root {
-  --whatsapp-widget-bottom: 95px;
-  --whatsapp-widget-right: 35px;
-  --respondio-widget-bottom: 15px;
-  --respondio-widget-right: 10px;
+  --whatsapp-widget-bottom: 12px;
+  --whatsapp-widget-right: 16px;
+  --widget-stack-gap: 12px;
 }
 
-/* WhatsApp Widget */
+/* WhatsApp bubble (bottom of the stack) */
 .whatsapp-widget {
   position: fixed;
   bottom: var(--whatsapp-widget-bottom);
@@ -17,20 +16,14 @@
 }
 
 /*
- * respond.io renders <respond-io-widget> with an open Shadow DOM.
- * Page CSS cannot reach .__respondio-widget inside the shadow tree.
- * Position is applied via whatsapp-widget.js (stacked above .whatsapp-widget).
+ * respond.io uses <respond-io-widget> (open shadow DOM).
+ * whatsapp-widget.js positions it above this bubble; page CSS cannot target shadow innards.
  */
-
-.respondio-widget-offset {
-  bottom: var(--respondio-widget-bottom) !important;
-  right: var(--respondio-widget-right) !important;
-  z-index: 9998 !important;
-}
 
 .whatsapp-button {
   width: 60px;
   height: 60px;
+  flex-shrink: 0;
   background-color: #25d366;
   border-radius: 50%;
   display: flex;
@@ -42,6 +35,12 @@
   position: relative;
   transition: all 0.3s ease;
   z-index: 2;
+}
+
+.whatsapp-button svg {
+  width: 60px;
+  height: 60px;
+  display: block;
 }
 
 .whatsapp-button:hover {
@@ -63,8 +62,14 @@
 }
 
 @keyframes whatsapp-pulse {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(1.6); opacity: 0; }
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
 }
 
 .whatsapp-tooltip {
@@ -88,21 +93,29 @@
   transform: translateX(0);
 }
 
+/* Tablets & phones — keep lower position + safe area; original button/icon sizes */
 @media (max-width: 768px) {
   :root {
-    --whatsapp-widget-bottom: 84px;
-    --whatsapp-widget-right: 35px;
-    --respondio-widget-bottom: 15px;
-    --respondio-widget-right: 10px;
-  }
-
-  .whatsapp-widget {
-    bottom: var(--whatsapp-widget-bottom);
-    right: var(--whatsapp-widget-right);
+    --whatsapp-widget-bottom: max(8px, env(safe-area-inset-bottom, 0px));
+    --whatsapp-widget-right: max(12px, env(safe-area-inset-right, 0px));
+    --widget-stack-gap: 8px;
   }
 
   .whatsapp-button {
     width: 50px;
     height: 50px;
+  }
+
+  .whatsapp-button svg {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --whatsapp-widget-bottom: max(6px, env(safe-area-inset-bottom, 0px));
+    --whatsapp-widget-right: max(10px, env(safe-area-inset-right, 0px));
+    --widget-stack-gap: 6px;
   }
 }
