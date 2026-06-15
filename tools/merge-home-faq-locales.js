@@ -15,7 +15,6 @@ const MERGES = [
   ['ph.json', 'ph.homeFaq.json'],
   ['my.json', 'my.homeFaq.json'],
   ['pk.json', 'pk.homeFaq.json'],
-  ['ja.json', 'ja.homeFaq.json'],
 ];
 
 function merge(localeFile, partialName) {

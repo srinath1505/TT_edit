@@ -635,89 +635,136 @@
         mail-bombing, denial of services attacks, for example) or any other failure or
         inadequacy on the part of telecommunication or network service providers.</p>
 
+
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h22">20. DURATION OF AGREEMENT -
+        <span data-i18n="termsConditionsPage.h22">20. CENT ACCOUNT TERMS AND CONDITIONS</span>
+      </h1>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p1"><b>20.1 Eligibility</b><br />
+        The Cent Account is available only to clients residing in eligible regions as determined by
+        the Company from time to time.<br />
+        The Company reserves the right to refuse, suspend, restrict, or terminate a Cent Account
+        where a client no longer meets the eligibility requirements.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p2"><b>20.2 Equity Requirements</b><br />
+        The Cent Account is intended for clients maintaining account equity within the range
+        specified by the Company.<br />
+        To remain eligible for a Cent Account, the account equity must be maintained between
+        USD 10 and USD 1,000, excluding any promotional bonuses, credits, or other non-
+        withdrawable amounts provided by the Company.<br />
+        For the purpose of determining eligibility, the Company may deduct any bonus, credit, or
+        similar promotional amount from the account equity calculation.<br />
+        Where the account equity exceeds the maximum permitted threshold or otherwise falls
+        outside the eligibility criteria, the Company may suspend the Cent Account and transfer
+        the client to another account type deemed appropriate by the Company.<br />
+        The Company may restrict trading activity during the review and migration process.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p3"><b>20.3 Prohibited Trading Practices</b><br />
+        Scalping is strictly prohibited on Cent Accounts.<br />
+        The Company reserves the right, at its sole discretion, to determine whether a trading
+        strategy constitutes scalping or any other prohibited trading practice.<br />
+        If the Company determines that a client has engaged in scalping or other prohibited
+        trading activity, the Company may:<br />
+        a) Suspend or terminate the account;<br />
+        b) Restrict or remove trading privileges;<br />
+        c) Restrict, delay, or withhold withdrawal requests pending investigation; and/or<br />
+        d) Take any other action deemed necessary to protect the integrity of its services.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p4"><b>20.4 Account Migration</b><br />
+        Where a client no longer qualifies for a Cent Account, the Company may migrate the
+        account to another account type without prior approval from the client.<br />
+        The Company shall determine the most appropriate account type based on its internal
+        policies and eligibility requirements.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p5"><b>20.5 Amendments</b><br />
+        The Company reserves the right to modify, amend, replace, or remove any provision of
+        these Terms and Conditions at any time and at its sole discretion.<br />
+        Any such amendments shall become effective immediately upon implementation unless
+        otherwise determined by the Company.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p6"><b>20.6 General Provisions</b><br />
+        The Company's interpretation of these Terms and Conditions shall be final and binding.<br />
+        The Company reserves all rights not expressly granted herein.<br />
+        By opening or using a Cent Account, the client acknowledges and agrees to be bound by
+        these Terms and Conditions.</p>
+
+      <h1 class="doc-sub">
+        <span data-i18n="termsConditionsPage.h23">21. DURATION OF AGREEMENT -
           AMENDMENTS</span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p1">20.1 Agreement is indefinite until terminated.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p2">20.2 We may amend unilaterally where required by law or regulatory directive.
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p1">21.1 Agreement is indefinite until terminated.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p2">21.2 We may amend unilaterally where required by law or regulatory directive.
         Continued use constitutes acceptance.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h23">21. IMPROPER OR ABUSIVE TRADING -
+        <span data-i18n="termsConditionsPage.h24">22. IMPROPER OR ABUSIVE TRADING -
           UNAUTHORIZED ACTIVITIES
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p1">21.1 Prohibited conduct includes exploitation of misquotes, arbitrage on errors, latency
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p1">22.1 Prohibited conduct includes exploitation of misquotes, arbitrage on errors, latency
         abuse, manipulation, coordinated trading, fraud, and any attempt to gain improper
         advantage.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p2">21.2 We may adjust payouts, restrict access, recover profits, cancel trades, terminate
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p2">22.2 We may adjust payouts, restrict access, recover profits, cancel trades, terminate
         relationship, and use detection tools.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h24">22. CFD - LEVERAGED PRODUCTS TERMS
+        <span data-i18n="termsConditionsPage.h25">23. CFD - LEVERAGED PRODUCTS TERMS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p1"><b>22.1 Overnight Financing</b> - Swaps/financing charges may apply and may be changed
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p1"><b>23.1 Overnight Financing</b> - Swaps/financing charges may apply and may be changed
         at our discretion.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p2"><b>22.2 Expiry and Rollovers</b> - Certain instruments may expire or be rolled. You must
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p2"><b>23.2 Expiry and Rollovers</b> - Certain instruments may expire or be rolled. You must
         monitor expiry details.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p3"><b>22.3 Order Types</b> - Market, limit, and stop orders are subject to slippage and are not
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p3"><b>23.3 Order Types</b> - Market, limit, and stop orders are subject to slippage and are not
         guaranteed at specified levels.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p4"><b>22.4 Corporate Actions</b> - We may adjust or close positions due to corporate actions to
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p4"><b>23.4 Corporate Actions</b> - We may adjust or close positions due to corporate actions to
         maintain economic equivalence.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h25">23. ACCOUNT STATUS - TERMINATION
+        <span data-i18n="termsConditionsPage.h26">24. ACCOUNT STATUS - TERMINATION
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p1">23.1 You may terminate with written notice as specified in our procedures.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p2">23.2 We may terminate with notice or immediately for regulatory, compliance, risk, or
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p1">24.1 You may terminate with written notice as specified in our procedures.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p2">24.2 We may terminate with notice or immediately for regulatory, compliance, risk, or
         breach reasons.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p3">23.3 Upon termination, open positions may be closed and obligations remain payable.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p3">24.3 Upon termination, open positions may be closed and obligations remain payable.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h26">24. EVENTS OF DEFAULT - COMPANY RIGHTS
+        <span data-i18n="termsConditionsPage.h27">25. EVENTS OF DEFAULT - COMPANY RIGHTS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p1">24.1 Events of Default include failure to meet margin, insolvency, misrepresentation,
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p1">25.1 Events of Default include failure to meet margin, insolvency, misrepresentation,
         breach, suspected fraud, or regulatory issues.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p2">24.2 On default, we may close positions, liquidate collateral, set off balances, withhold
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p2">25.2 On default, we may close positions, liquidate collateral, set off balances, withhold
         withdrawals, and pursue recovery.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h27">25. ACKNOWLEDGMENT OF RISKS
+        <span data-i18n="termsConditionsPage.h28">26. ACKNOWLEDGMENT OF RISKS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p1">25.1 Trading leveraged products is speculative and may result in losses exceeding
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p1">26.1 Trading leveraged products is speculative and may result in losses exceeding
         deposits.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p2">25.2 You acknowledge risks of volatility, liquidity, gaps, slippage, platform failure,
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p2">26.2 You acknowledge risks of volatility, liquidity, gaps, slippage, platform failure,
         and third-party disruptions.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h28">26. CONFIDENTIAL INFORMATION
+        <span data-i18n="termsConditionsPage.h29">27. CONFIDENTIAL INFORMATION
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p1">26.1 We will treat confidential information in accordance with applicable law and our
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p1">27.1 We will treat confidential information in accordance with applicable law and our
         privacy policy.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p2">26.2 We may disclose information to regulators, law enforcement, banks, auditors, and
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p2">27.2 We may disclose information to regulators, law enforcement, banks, auditors, and
         advisors as required.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h29">27. NOTICES
+        <span data-i18n="termsConditionsPage.h30">28. NOTICES
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p1">27.1 Notices may be delivered by email, platform messaging, or other channels we
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p1">28.1 Notices may be delivered by email, platform messaging, or other channels we
         designate.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p2">27.2 Notices are deemed received when sent to the last registered contact details or
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p2">28.2 Notices are deemed received when sent to the last registered contact details or
         posted on the platform.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h30">28. CONFLICT OF INTEREST
+        <span data-i18n="termsConditionsPage.h31">29. CONFLICT OF INTEREST
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p1">28.1 We maintain a conflicts policy and may take measures to manage conflicts.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p2">Your interests may conflict with our interests, inter-alia, as a B-Book broker, or with
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p1">29.1 We maintain a conflicts policy and may take measures to manage conflicts.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p2">Your interests may conflict with our interests, inter-alia, as a B-Book broker, or with
         another client's interests. For example: (a) we may execute hedging transactions before
         or after entering into a transaction with you to manage our risk in relation to the
         transaction, which may impact the price you pay or receive for such transactions, and
@@ -736,26 +783,26 @@
         exchanges or trading platforms.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h31">29. GENERAL PROVISIONS
+        <span data-i18n="termsConditionsPage.h32">30. GENERAL PROVISIONS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p1"><b>29.1 Severability</b> - Invalid provisions do not affect remaining provisions.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p2"><b>29.2 Assignment</b> - We may assign rights and obligations. You may not assign without
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p1"><b>30.1 Severability</b> - Invalid provisions do not affect remaining provisions.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p2"><b>30.2 Assignment</b> - We may assign rights and obligations. You may not assign without
         our consent.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p3"><b>29.3 No Waiver</b> - Failure to enforce is not a waiver.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p4"><b>29.4 Entire Agreement</b> - This Agreement and incorporated policies constitute the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p3"><b>30.3 No Waiver</b> - Failure to enforce is not a waiver.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p4"><b>30.4 Entire Agreement</b> - This Agreement and incorporated policies constitute the
         entire agreement.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h32">30. APPLICABLE LAW - JURISDICTION
+        <span data-i18n="termsConditionsPage.h33">31. APPLICABLE LAW - JURISDICTION
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p1">30.1 Governed by the laws of Mauritius.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p2">30.2 The place of residency of the Company and the place of performance of the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p1">31.1 Governed by the laws of Mauritius.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p2">31.2 The place of residency of the Company and the place of performance of the
         Services and of all the obligations arising from the Agreement is in Mauritius. The
         Agreement and/or Terms and Conditions is subject to and shall be construed in
         accordance with the law of Mauritius, without reference to its conflict of law rules.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p3">Any disputes, differences or claims arising out of or in connection with the Agreement,
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p3">Any disputes, differences or claims arising out of or in connection with the Agreement,
         including with respect to its performance, breach, termination or invalidity, between
         the Client and the Company, its directors, officers, employees, agents or shareholders,
         shall be settled only by the courts of Mauritius and/or St. Lucia – per the company's
@@ -763,7 +810,7 @@
         The client irrevocably agrees to submit to the jurisdiction of the state courts located
         within Mauritius and hereby waive any objection to the convenience or propriety of
         venue therein.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p4">The client understands that the Company does not have any physical presence or local
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p4">The client understands that the Company does not have any physical presence or local
         agent in his country and region, and therefore certain laws concerning legal jurisdiction
         may not apply to this Agreement. In particular, the rules on Jurisdiction over Consumer
         Contracts set out in REGULATION (EU) No 1215/2012 (recast) may not apply to the
@@ -775,18 +822,18 @@
         Agreement that is void, illegal or unenforceable is ineffective only to the extent of the
         voidness, illegality or unenforceability, but the remaining provisions are not affected.
         This Section shall survive any termination of the Agreement.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p5"><b>Conditional International Arbitration</b></p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p6">In the event that the clause giving exclusive jurisdiction to the court of Mauritius and
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p5"><b>Conditional International Arbitration</b></p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p6">In the event that the clause giving exclusive jurisdiction to the court of Mauritius and
         St. Lucia has been declared invalid, unenforceable or illegal by any Court of competent
         jurisdiction or by an act of law, the dispute shall be shall be resolved exclusively and
         finally by arbitration in accordance with the Rules of Arbitration (the “Rules”) of the
         International Chamber of Commerce (“ICC”).</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p7">The arbitration shall be held by three (3) arbitrators designated by the parties. Each
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p7">The arbitration shall be held by three (3) arbitrators designated by the parties. Each
         party shall designate one arbitrator. The third arbitrator shall be designated by the two
         arbitrators designated by the Parties. If either party fails to designate an arbitrator
         within thirty (90) days after the filing of the Dispute with the ICC, such arbitrator shall
         be appointed in the manner prescribed by the Rules.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p8">An arbitration proceeding hereunder shall be conducted in Singapore, and shall be
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p8">An arbitration proceeding hereunder shall be conducted in Singapore, and shall be
         conducted in the English language. The arbitral proceedings shall be governed by the
         substantive law of Mauritius or St. Lucia - per the company's CEO decision. The
         decision or award of the arbitrators is final and binding on both Parties. Any award of
@@ -794,11 +841,11 @@
         or award is final and binding on both parties. The arbitration panel may only award for
         direct monetary damages, and in no event, may punitive, consequential and special
         damages be awarded.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p9"><b>Class Action Waiver</b></p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p10">The parties waive any right to assert any claims against the other party as a
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p9"><b>Class Action Waiver</b></p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p10">The parties waive any right to assert any claims against the other party as a
         representative or member in any class or representative action, except where such
         waiver is prohibited by law or deemed by a court of law to be against public policy.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p11">To the extent either party is permitted by law or court of law to proceed with a class or
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p11">To the extent either party is permitted by law or court of law to proceed with a class or
         representative action against the other, the parties agree that: (i) the prevailing party
         shall not be entitled to recover attorneys’ fees or costs associated with pursuing the
         class or representative action (not withstanding any other provision in this agreement);
@@ -807,78 +854,78 @@
         representative action.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h33">31. DISPUTE RESOLUTION
+        <span data-i18n="termsConditionsPage.h34">32. DISPUTE RESOLUTION
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p1">31.1 Complaints should be submitted through our internal complaints process.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p2"><b>Complaints Handling Procedure</b></p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p3">The Company has implemented and maintains a Complaints Handling Procedure (the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p1">32.1 Complaints should be submitted through our internal complaints process.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p2"><b>Complaints Handling Procedure</b></p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p3">The Company has implemented and maintains a Complaints Handling Procedure (the
         “Procedure”), which is described in this document. The purpose of the Procedure is to
         set out the internal complaint resolution system and procedures which the Company
         has established, maintains and follows for the resolution of complaints.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p4">The Parties have agreed that they will make every effort to settle, by means of
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p4">The Parties have agreed that they will make every effort to settle, by means of
         negotiation, all disputes between the Company and the Client related to transactions,
         payouts, and other actions provided for by the Agreement.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p5">If a dispute arises, the Client may submit a complaint to the Company and send to the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p5">If a dispute arises, the Client may submit a complaint to the Company and send to the
         Company.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p6">Client expressly waives any right to initiate formal claim against the Company, unless
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p6">Client expressly waives any right to initiate formal claim against the Company, unless
         such claim was first submitted to the Company in accordance with the Complaints
         Handling Procedure, and has not been resolved to the client’s satisfaction.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p7">All the complaint related to transactions executed by the Client shall be submitted by
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p7">All the complaint related to transactions executed by the Client shall be submitted by
         the Client in compliance with the following requirements:<br />
         A complaint received by a Client shall include:<br /></p>
       <ul class="doc-page-hero-list" style="list-style-type: lower-alpha;">
-        <li data-i18n-html="termsConditionsPage.h33_li1">
+        <li data-i18n-html="termsConditionsPage.h34_li1">
           the Client’s name and surname;
         </li>
-        <li data-i18n-html="termsConditionsPage.h33_li2">
+        <li data-i18n-html="termsConditionsPage.h34_li2">
           the Client’s trading account number;
         </li>
-        <li data-i18n-html="termsConditionsPage.h33_li3">
+        <li data-i18n-html="termsConditionsPage.h34_li3">
           the affected transaction numbers, if applicable;
         </li>
-        <li data-i18n-html="termsConditionsPage.h33_li4">
+        <li data-i18n-html="termsConditionsPage.h34_li4">
           the date that the issue arose and a description of the issue.
         </li>
       </ul>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p8">A complaint must not include offensive language directed either to the Company or a
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p8">A complaint must not include offensive language directed either to the Company or a
         Company employee.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p9">All complaints or grievances must be in writing and shall be addressed, to the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p9">All complaints or grievances must be in writing and shall be addressed, to the
         Customer Support Department of the Company via email at: <a href="mailto:support@tradertok.com"
           class="license-link">support@tradertok.com</a>
         If the Client receives a response from the Customer Support but deems that the
         complaint or grievances need to be raised further for an independent review, the Client
         may either ask the Customer Support to escalate it to the Client Audit Team which will
         independently and impartially investigate it.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p10">The Company will not be able to handle or investigate a complaint, if the requirements
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p10">The Company will not be able to handle or investigate a complaint, if the requirements
         detailed above are not fulfilled.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p11">The Company shall need the Client’s cooperation in order to handle the complaint.
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p11">The Company shall need the Client’s cooperation in order to handle the complaint.
         Since the company is not holding any information and/or records of the client,
         including but not limited to the Client’s trading account history - The company needs
         the client the send all relevant details he has.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p12">The Company will treat each complaint with reasonable care and reach a fair outcome.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p13">The Company shall send its initial response to the Client within 90 business days from
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p12">The Company will treat each complaint with reasonable care and reach a fair outcome.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p13">The Company shall send its initial response to the Client within 90 business days from
         the receipt of the complaint. If the complaint requires further investigation and it
         cannot be resolved within 90 business days, it will issue a holding response indicating
         when the Company will make further contact and inform the Client on the progress of
         the investigation.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p14">The Company shall investigate and reply to the complainant within 365 business days
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p14">The Company shall investigate and reply to the complainant within 365 business days
         from the date of reception of the complaint.
         Upon completion of the investigation, the Company shall send a written notice to the
         complainant informing him of the outcome of the investigation along with the reasons
         for reaching such a decision, or, If applicable, the nature and terms of any offer and/or
         settlement.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p15">The Client may not initiate any formal proceedings during the investigation period
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p15">The Client may not initiate any formal proceedings during the investigation period
         and/or fill any complaint.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h34">32. MISCELLANEOUS
+        <span data-i18n="termsConditionsPage.h35">33. MISCELLANEOUS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p1">32.1 Force majeure may suspend obligations.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p2">32.2 Survival - provisions intended to survive termination shall survive.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p3">32.3 Counterparts and electronic acceptance are valid and binding.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p4"><b>Provision of Cross-border services -The products and Services provided by the
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p1">33.1 Force majeure may suspend obligations.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p2">33.2 Survival - provisions intended to survive termination shall survive.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p3">33.3 Counterparts and electronic acceptance are valid and binding.</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p4"><b>Provision of Cross-border services -The products and Services provided by the
           Company are not intended for any person/s who, based on their nationality, place
           of business, domicile or for any other reasons, is/are subject to legal provisions
           which prohibit foreign financial services providers from servicing clients who are
@@ -888,50 +935,50 @@
           solicitation from The Company.</b></p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h35">ANNEX A – ADDITIONAL
+        <span data-i18n="termsConditionsPage.h36">ANNEX A – ADDITIONAL
           STANDARD TERMS AND
           REPETITIVE PROVISIONS
           (STRUCTURAL EXPANSION)
         </span>
       </h1>
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h36">A1. Reiteration of Client Acknowledgements
+        <span data-i18n="termsConditionsPage.h37">A1. Reiteration of Client Acknowledgements
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h36_p1">The Client expressly acknowledges, confirms, and agrees that:</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h37_p1">The Client expressly acknowledges, confirms, and agrees that:</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc;">
-        <li data-i18n-html="termsConditionsPage.h36_li1">
+        <li data-i18n-html="termsConditionsPage.h37_li1">
           All trading decisions are made independently.
         </li>
-        <li data-i18n-html="termsConditionsPage.h36_li2">
+        <li data-i18n-html="termsConditionsPage.h37_li2">
           The Company bears no responsibility for outcomes.
         </li>
-        <li data-i18n-html="termsConditionsPage.h36_li3">
+        <li data-i18n-html="termsConditionsPage.h37_li3">
           Past performance does not guarantee future results
         </li>
-        <li data-i18n-html="termsConditionsPage.h36_li4">
+        <li data-i18n-html="termsConditionsPage.h37_li4">
           The Client assumes full financial, legal, and regulatory risk.
         </li>
       </ul>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h36_p2">These acknowledgements apply continuously and survive termination of this
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h37_p2">These acknowledgements apply continuously and survive termination of this
         Agreement.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h37">A2. Additional Risk Factors
+        <span data-i18n="termsConditionsPage.h38">A2. Additional Risk Factors
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h37_p1">Without limitation to Section 25, the Client acknowledges risks arising from:</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h38_p1">Without limitation to Section 25, the Client acknowledges risks arising from:</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc;">
-        <li data-i18n-html="termsConditionsPage.h37_li1">
+        <li data-i18n-html="termsConditionsPage.h38_li1">
           Market gaps and weekend volatility.
         </li>
-        <li data-i18n-html="termsConditionsPage.h37_li2">
+        <li data-i18n-html="termsConditionsPage.h38_li2">
           Thin liquidity and off-market pricing.
         </li>
-        <li data-i18n-html="termsConditionsPage.h37_li3">
+        <li data-i18n-html="termsConditionsPage.h38_li3">
           System maintenance and emergency suspensions.
         </li>
-        <li data-i18n-html="termsConditionsPage.h37_li4">
+        <li data-i18n-html="termsConditionsPage.h38_li4">
           Third-party liquidity providers and infrastructure failures.
         </li>
       </ul>
@@ -939,136 +986,136 @@
       </p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h38">A3. Expanded Force Majeure Provisions
+        <span data-i18n="termsConditionsPage.h39">A3. Expanded Force Majeure Provisions
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h38_p1">Force Majeure Events include, without limitation, acts of God, pandemics, cyber
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h39_p1">Force Majeure Events include, without limitation, acts of God, pandemics, cyber
         incidents, power failures, telecommunications outages, governmental actions,
         sanctions, strikes, market suspensions, liquidity withdrawal, and failures of
         counterparties. During such events, the Company may suspend services, close
         positions, or amend conditions without liability.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h39">A4. Repeated Limitation of Liability
+        <span data-i18n="termsConditionsPage.h40">A4. Repeated Limitation of Liability
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h39_p1">To the maximum extent permitted by law, the Company shall not be liable for loss of
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h40_p1">To the maximum extent permitted by law, the Company shall not be liable for loss of
         profit, loss of opportunity, reputational damage, indirect or consequential damages,
         even if foreseeable. This limitation applies cumulatively across all sections of this
         Agreement.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h40">A5. Further Indemnities
+        <span data-i18n="termsConditionsPage.h41">A5. Further Indemnities
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h40_p1">The Client agrees to indemnify the Company against any claims, proceedings,
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h41_p1">The Client agrees to indemnify the Company against any claims, proceedings,
         regulatory actions, fines, or losses arising from the Client’s trading, breach of this
         Agreement, misuse of services, or violation of Applicable Regulations.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h41">A6. Survival and Continuing Obligations
+        <span data-i18n="termsConditionsPage.h42">A6. Survival and Continuing Obligations
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h41_p1">All representations, warranties, indemnities, limitations of liability, risk
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h42_p1">All representations, warranties, indemnities, limitations of liability, risk
         acknowledgements, and dispute resolution provisions shall survive termination,
         suspension, or expiration of this Agreement.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h42">A7. Technical Schedules and Platform Rules
+        <span data-i18n="termsConditionsPage.h43">A7. Technical Schedules and Platform Rules
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h42_p1">The Company may publish technical specifications, margin tables, leverage limits,
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h43_p1">The Company may publish technical specifications, margin tables, leverage limits,
         product specifications, and operational rules separately. Such documents form an
         integral part of this Agreement and are binding upon publication.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h43">A8. Repetition for Structural Parity
+        <span data-i18n="termsConditionsPage.h44">A8. Repetition for Structural Parity
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h43_p1">For the avoidance of doubt, all sections of this Agreement shall be read cumulatively.
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h44_p1">For the avoidance of doubt, all sections of this Agreement shall be read cumulatively.
         Any right, discretion, or protection afforded to the Company in one section shall
         apply equally across all other sections, mutatis mutandis.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h44">ANNEX B – ADDITIONAL
+        <span data-i18n="termsConditionsPage.h45">ANNEX B – ADDITIONAL
           DISCLOSURES AND
           DECLARATIONS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h44_p1">You acknowledge, represent and warrant that;</p>
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h45_p1">You acknowledge, represent and warrant that;</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc; margin-left: 15px;">
-        <li data-i18n-html="termsConditionsPage.h44_li1">
+        <li data-i18n-html="termsConditionsPage.h45_li1">
           You are over 18 years old, and have capacity to enter into this Agreement;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li2">
+        <li data-i18n-html="termsConditionsPage.h45_li2">
           You are eligible to enter a legally binding agreement with us in accordance with the
           laws governing the jurisdiction applicable to you;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li3">
+        <li data-i18n-html="termsConditionsPage.h45_li3">
           You are solely and completely responsible for your own compliance with Applicable
           Law in your jurisdiction including, without limitation, to all exchange control
           restrictions that may be applicable to you and that you have obtained any necessary
           exchange control approval;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li4">
+        <li data-i18n-html="termsConditionsPage.h45_li4">
           You have all necessary consent and the authority to enter into this Agreement and /or
           use the Services;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li5">
+        <li data-i18n-html="termsConditionsPage.h45_li5">
           If you are a body corporate, unincorporated association, trust or partnership you are
           validly existing in accordance with Applicable Law and have obtained all necessary
           consent and authorisations under your constitutional or organisational documents;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li6">
+        <li data-i18n-html="termsConditionsPage.h45_li6">
           Except where we have agreed otherwise in writing, you act on your own behalf and
           not as a trustee or fiduciary for any other person;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li7">
+        <li data-i18n-html="termsConditionsPage.h45_li7">
           All information and documents that you supply is true, accurate, complete and not
           misleading;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li8">
+        <li data-i18n-html="termsConditionsPage.h45_li8">
           You are not an employee of any exchange, a corporation in which any exchange owns
           a majority capital stock, a member of any exchange and/or firm registered on any
           exchange or any bank, trust or insurance company that trades in CFDs and/or the
           underlying assets held by you;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li9">
+        <li data-i18n-html="termsConditionsPage.h45_li9">
           Our assessment of your use of the Services is performed on the basis of the
           information and documents provided by you and we may rely upon information and
           documents provided by you and we are not responsible for any damages or losses which may arise from any
           inaccuracies;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li10">
+        <li data-i18n-html="termsConditionsPage.h45_li10">
           You will only access and use our Services for your own personal benefit;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li11">
+        <li data-i18n-html="termsConditionsPage.h45_li11">
           Neither the entry into this Agreement, or use of the Services, or the giving of any other
           instruction will violate any law, rule, or regulation applicable to you;
         </li>
-        <li data-i18n-html="termsConditionsPage.h44_li12">
+        <li data-i18n-html="termsConditionsPage.h45_li12">
           All money that you use and invest through the Services do not originate in any way
           from drug trafficking, abduction, terrorist activity or any other criminal activity that is
           unlawful or could be considered unlawful by any relevant authority;
         </li>
       </ul>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h44_p2">If you breach any warranty or representation made under this Agreement, we may
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h45_p2">If you breach any warranty or representation made under this Agreement, we may
         close any orders or trades that you have made, and/or close or freeze your account.
         You may also be required to fully indemnify us due to any contraventions by you of
         Applicable Law.</p>
 
       <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h45">ANNEX C – FORMAL
+        <span data-i18n="termsConditionsPage.h46">ANNEX C – FORMAL
           DECLARATIONS
         </span>
       </h1>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h45_p1">All content included in or made available through the Services, including but not
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h46_p1">All content included in or made available through the Services, including but not
         limited to all copyright, trademarks, patents, service marks, domain names, trade
         names, rights in designs, software code, icons, logos, characters, layouts, rights in
         know-how, trade secrets, buttons, color scheme, graphics and other intellectual
         property rights ("IP") is the property of our company, its affiliates or its licensors and is
         protected by local and international intellectual property laws and treaties.</p>
-      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h45_p2">Personal data and privacy -By entering into this Agreement, you agree that you have
+      <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h46_p2">Personal data and privacy -By entering into this Agreement, you agree that you have
         been provided with a copy of our Privacy Notice, which is also available on our
         website. We will use your personal data as set out in our Privacy Notice, if you have
         any questions about the way in which we use your personal data you can contact us.

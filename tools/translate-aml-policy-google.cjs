@@ -19,7 +19,6 @@ const TARGETS = {
   /** Filipino: use Tagalog code supported by Google Translate (fil often requires forceTo) */
   ph: "tl",
   pk: "ur",
-  ja: "ja",
 };
 
 const MAX_CHUNK = 4200;

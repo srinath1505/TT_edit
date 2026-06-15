@@ -138,11 +138,11 @@
         directives relevant to your country of residency.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block05">
-<span>3. DEFINITIONS – INTEPRETATION
+<h1 class="doc-sub">
+        <span>3. DEFINITIONS – INTEPRETATION
         </span>
       </h1>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0px;">
@@ -238,11 +238,11 @@
         be extended, re-enacted or amended
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block06">
-<span>4. PROVISION OF SERVICES
+<h1 class="doc-sub">
+        <span>4. PROVISION OF SERVICES
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -302,11 +302,11 @@
       </p>
 
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block07">
-<span>5. ACCOUNT OPENING INFORMATION AND REQUIREMENTS
+<h1 class="doc-sub">
+        <span>5. ACCOUNT OPENING INFORMATION AND REQUIREMENTS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -348,11 +348,11 @@
         data providers.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block08">
-<span>6. GUARANTEES ON BEHALF OF THE CLIENT
+<h1 class="doc-sub">
+        <span>6. GUARANTEES ON BEHALF OF THE CLIENT
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">You represent, warrant, and guarantee that all funds provided to the Company for
@@ -390,11 +390,11 @@
         Company are authentic, valid, and accurate.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block09">
-<span>7. ELECTRONIC TRADING
+<h1 class="doc-sub">
+        <span>7. ELECTRONIC TRADING
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -507,11 +507,11 @@
         such suspensions or terminations.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block10">
-<span>8. FINANCIAL INFORMATION
+<h1 class="doc-sub">
+        <span>8. FINANCIAL INFORMATION
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -553,11 +553,11 @@
         its Services or Financial Information.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block11">
-<span>9. ORDERS – INSTRUCTIONS AND BASIS OF DEALINGS
+<h1 class="doc-sub">
+        <span>9. ORDERS – INSTRUCTIONS AND BASIS OF DEALINGS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -648,11 +648,11 @@
         maker.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block12">
-<span>10.CONFIRMATIONS
+<h1 class="doc-sub">
+        <span>10.CONFIRMATIONS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -690,11 +690,11 @@
         conflicts of interest.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block13">
-<span>11.PRICING
+<h1 class="doc-sub">
+        <span>11.PRICING
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -738,11 +738,11 @@
         currency pairs and value dates at any time.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block14">
-<span>12.REFUSAL TO EXECUTE ORDERS
+<h1 class="doc-sub">
+        <span>12.REFUSAL TO EXECUTE ORDERS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -793,11 +793,11 @@
         acknowledges that the Company’s refusal to execute Orders may be in accordance with
         these rules, policies, or applicable law.</p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block15">
-<span>13.CANCELLATION OF TRANSACTIONS
+<h1 class="doc-sub">
+        <span>13.CANCELLATION OF TRANSACTIONS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -821,11 +821,11 @@
         cancellation, and failure to provide such notice shall not affect the Company’s right to
         cancel. </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block16">
-<span>14.SETTLEMENT OF TRANSACTIONS
+<h1 class="doc-sub">
+        <span>14.SETTLEMENT OF TRANSACTIONS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -846,11 +846,11 @@
         Force Majeure clause, shall not constitute a breach by the Company.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block17">
-<span>15.BONUS AND PROMOTIONS POLICY
+<h1 class="doc-sub">
+        <span>15.BONUS AND PROMOTIONS POLICY
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -935,11 +935,11 @@
         bonus’s terms and conditions here above and hereinafter.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block18">
-<span>16.CLIENTS FUNDS
+<h1 class="doc-sub">
+        <span>16.CLIENTS FUNDS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -1065,11 +1065,11 @@
         Account shall
         not form part of the assets of the Company in the event of the Client’s insolvency.</p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block19">
-<span>MINIMUM WITHDRAWAL AMOUNTS
+<h1 class="doc-sub">
+        <span>MINIMUM WITHDRAWAL AMOUNTS
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -1078,11 +1078,11 @@
         Account.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block20">
-<span>WITHDRAWAL CHARGES
+<h1 class="doc-sub">
+        <span>WITHDRAWAL CHARGES
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -1099,11 +1099,11 @@
         *The commissions of wire withdrawals will be placed onto the beneficiary.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block21">
-<span>17.DORMANT ACCOUNT PROCEDURE
+<h1 class="doc-sub">
+        <span>17.DORMANT ACCOUNT PROCEDURE
         </span>
       </h1>
       <p class="doc-page-hero-subtitle">
@@ -1117,11 +1117,11 @@
         Reactivation is subject to the approval of the Company.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block22">
-<span>18.COSTS AND CHARGES
+<h1 class="doc-sub">
+        <span>18.COSTS AND CHARGES
         </span>
       </h1>
 
@@ -1170,11 +1170,11 @@
         remuneration from third parties based on a written agreement.
       </p>
 
-      <h1 class="doc-sub">
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block23">
-<span>19.COMPANY LIABILITY AND INDEMNITY
+<h1 class="doc-sub">
+        <span>19.COMPANY LIABILITY AND INDEMNITY
         </span>
       </h1>
 
@@ -1411,6 +1411,56 @@
         into a regular account, applying retroactive adjustments to the account (including setting
         off amounts equivalent to interest paid by the Company), cancelling Transactions,
         restricting or prohibiting hedging activities, and adjusting account balances.
+      </p>
+
+      <p class="doc-page-hero-subtitle">
+        <strong>Cent Account Terms and Conditions
+        </strong>
+      </p>
+      <p class="doc-page-hero-subtitle">
+        The Cent Account is available only to clients residing in eligible regions as determined
+        by the Company from time to time. The Company reserves the right to refuse, suspend,
+        restrict, or terminate a Cent Account where a client no longer meets the eligibility
+        requirements.
+      </p>
+      <p class="doc-page-hero-subtitle">
+        The Cent Account is intended for clients maintaining account equity within the range
+        specified by the Company. To remain eligible for a Cent Account, the account equity
+        must be maintained between USD 10 and USD 1,000, excluding any promotional
+        bonuses, credits, or other non-withdrawable amounts provided by the Company. For the
+        purpose of determining eligibility, the Company may deduct any bonus, credit, or similar
+        promotional amount from the account equity calculation. Where the account equity
+        exceeds the maximum permitted threshold or otherwise falls outside the eligibility
+        criteria, the Company may suspend the Cent Account and transfer the client to another
+        account type deemed appropriate by the Company. The Company may restrict trading
+        activity during the review and migration process.
+      </p>
+      <p class="doc-page-hero-subtitle">
+        Scalping is strictly prohibited on Cent Accounts. The Company reserves the right, at its
+        sole discretion, to determine whether a trading strategy constitutes scalping or any other
+        prohibited trading practice. If the Company determines that a client has engaged in
+        scalping or other prohibited trading activity, the Company may suspend or terminate the
+        account, restrict or remove trading privileges, restrict, delay, or withhold withdrawal
+        requests pending investigation, and/or take any other action deemed necessary to protect
+        the integrity of its services.
+      </p>
+      <p class="doc-page-hero-subtitle">
+        Where a client no longer qualifies for a Cent Account, the Company may migrate the
+        account to another account type without prior approval from the client. The Company
+        shall determine the most appropriate account type based on its internal policies and
+        eligibility requirements.
+      </p>
+      <p class="doc-page-hero-subtitle">
+        The Company reserves the right to modify, amend, replace, or remove any provision of
+        these Terms and Conditions at any time and at its sole discretion. Any such amendments
+        shall become effective immediately upon implementation unless otherwise determined
+        by the Company.
+      </p>
+      <p class="doc-page-hero-subtitle">
+        The Company's interpretation of these Terms and Conditions shall be final and binding.
+        The Company reserves all rights not expressly granted herein. By opening or using a
+        Cent Account, the client acknowledges and agrees to be bound by these Terms and
+        Conditions.
       </p>
 
       <p class="doc-page-hero-subtitle">

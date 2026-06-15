@@ -15,7 +15,6 @@ const TARGETS = {
   my: "ms",
   ph: "tl",
   pk: "ur",
-  ja: "ja",
 };
 
 const MAX_CHUNK = 4200;
