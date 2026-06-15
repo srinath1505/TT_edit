@@ -229,10 +229,33 @@ body.light-theme .legal-page .hero-note {
 }
 
 .document-card.active .document-description {
-  max-height: 10000px;
+  max-height: none;
+  overflow: visible;
   opacity: 1;
   padding: 18px 0 0;
   display: block;
+}
+
+.document-view-full {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--brand-color-start);
+  text-decoration: none;
+}
+
+.document-view-full:hover {
+  text-decoration: underline;
+}
+
+.document-view-full svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  flex-shrink: 0;
 }
 
 /* Preview / fallback copy only (not inside structured panel) */
@@ -520,6 +543,7 @@ body.light-theme .notice-text {
                         'description' => 'The policy explains how personal information is collected, used, stored,
                         shared, and protected across the platform.',
                         'file' => './files/Privacy_Policy_Amber_Rock_Trade_Ltd.pdf',
+                        'full_page' => './privacy-policy',
                         'content_html' => extract_legal_document_content(__DIR__ . '/privacy-policy.php'),
                         'preview' => [],
                         ],
@@ -528,6 +552,7 @@ body.light-theme .notice-text {
                         'description' => 'The agreement sets the legal framework for account use, client
                         responsibilities, service delivery, and platform access.',
                         'file' => './files/Service_Agreement_Terms_&_Conditions_Amber_Rock_Trade_Ltd.pdf',
+                        'full_page' => './terms-conditions',
                         'content_html' => extract_legal_document_content(__DIR__ . '/terms-conditions.php'),
                         'preview' => [],
                         ],
@@ -536,6 +561,7 @@ body.light-theme .notice-text {
                         'description' => 'The policy outlines the checks and controls used to help prevent money
                         laundering, terrorist financing, and misuse of the platform.',
                         'file' => './files/AML_AND_KYC_POLICY_Amber_Rock_Trade_Ltd.pdf',
+                        'full_page' => './anti-money-laundering-policy',
                         'content_html' => extract_legal_document_content(__DIR__ . '/anti-money-laundering-policy.php'),
                         'preview' => [],
                         ],
@@ -544,6 +570,7 @@ body.light-theme .notice-text {
                         'description' => 'The policy explains how orders are handled and how the Company seeks the best
                         possible execution outcome for clients.',
                         'file' => './files/Order_Executio_ Policy_Amber_Rock_Trade_Ltd.pdf',
+                        'full_page' => './order-execution-policy',
                         'content_html' => extract_legal_document_content(__DIR__ . '/order-execution-policy.php'),
                         'preview' => [],
                         ],
@@ -552,6 +579,7 @@ body.light-theme .notice-text {
                         'description' => 'This notice sets out the risks of leveraged and derivative trading so clients
                         can make informed decisions.',
                         'file' => './files/Risk_Disclosure_Amber_Rock_Trade_Ltd.pdf',
+                        'full_page' => './risk-disclosure',
                         'content_html' => extract_legal_document_content(__DIR__ . '/risk-disclosure.php'),
                         'preview' => [],
                         ],
@@ -560,6 +588,7 @@ body.light-theme .notice-text {
                         'description' => 'A broader risk notice covering market commentary, product exposure, margin
                         usage, and the limits of trading knowledge.',
                         'file' => './files/General_Risk _Disclosure_AMBER_ROCK_TRADE_LTD.pdf',
+                        'full_page' => './general-risk-disclosure',
                         'content_html' => extract_legal_document_content(__DIR__ . '/general-risk-disclosure.php'),
                         'preview' => [],
                         ],
@@ -568,6 +597,7 @@ body.light-theme .notice-text {
                         'description' => 'The agreement governs the client relationship, service use, communication, and
                         the responsibilities of both parties.',
                         'file' => './files/CLIENT_SERVICES_AGREEMENT_AMBER_ROCK_TRADE_LTD.pdf',
+                        'full_page' => './client-service-agreement',
                         'content_html' => extract_legal_document_content(__DIR__ . '/client-service-agreement.php'),
                         'preview' => [],
                         ],
@@ -641,6 +671,18 @@ body.light-theme .notice-text {
                   </div>
                 </div>
                 <div class="document-description">
+                  <?php if (!empty($document['full_page'])): ?>
+                  <a href="<?php echo htmlspecialchars($document['full_page'], ENT_QUOTES); ?>"
+                    class="document-view-full">
+                    <span data-i18n="legalPage.viewFullDocument">View full document</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </a>
+                  <?php endif; ?>
                   <?php if (!empty($document['content_html'])): ?>
                   <div class="page-hero-content legal-document-content legal-documents-panel">
                   <?php echo $document['content_html']; ?>
