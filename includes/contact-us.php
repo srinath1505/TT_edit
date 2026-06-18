@@ -229,6 +229,13 @@
                   <span class="form-error" id="contactLeadMessage-error"></span>
                 </div>
 
+                <?php
+                $qualificationNamePrefix = 'contact_';
+                $qualificationIdPrefix = 'contactPage';
+                $qualificationInputClass = 'form-input';
+                include __DIR__ . '/partials/registration-qualification-fields.php';
+                ?>
+
                 <div class="form-status" id="contactLeadFormStatus" role="alert"></div>
 
                 <button type="submit" class="btn-contact-submit" id="contactLeadSubmitBtn"

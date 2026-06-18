@@ -289,8 +289,12 @@
 
     <?php include __DIR__ . '/partials/education-lead-gate-modal.php'; ?>
     <?php include __DIR__ . '/partials/demo-account-modal.php'; ?>
+    <?php include __DIR__ . '/partials/registration-qualification-styles.php'; ?>
 
     <script src="assets/js/i18n.js?v=<?php echo filemtime('assets/js/i18n.js'); ?>" defer></script>
+    <?php if (!$page): ?>
+    <script src="assets/js/home-intro-splash.js?v=<?php echo filemtime('assets/js/home-intro-splash.js'); ?>"></script>
+    <?php endif; ?>
     <?php if (!empty($page) && $page === 'edu-resources'): ?>
     <script
       src="assets/js/edu-resources-calculators.js?v=<?php echo filemtime('assets/js/edu-resources-calculators.js'); ?>"

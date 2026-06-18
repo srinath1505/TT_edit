@@ -24,6 +24,184 @@
     other: "Other",
   };
 
+  var REGISTRATION_QUALIFICATION_FIELD_IDS = {
+    age: "7ab6f7d9-6eb4-4036-85ee-4298d90d329e",
+    monthlyIncome: "11f7782f-96a8-4632-b6eb-1f2bb9aa8762",
+    interestedInAccount: "ab2d6df6-6deb-4698-8cf6-8e9c53df68d8",
+    readyToTrade: "d098a30b-4f50-4437-aa90-7dceb8c89651",
+    minDeposit100: "e4743ede-ed68-49bb-a149-50f34cbb5730",
+  };
+
+  var QUALIFICATION_FIELD_BASE_NAMES = {
+    age: "lead_age",
+    monthlyIncome: "lead_monthly_income",
+    interestedInAccount: "lead_interested_account",
+    readyToTrade: "lead_ready_to_trade",
+    minDeposit100: "lead_min_deposit_100",
+  };
+
+  function qualT(key, fallback) {
+    if (global.i18n && typeof global.i18n.t === "function") {
+      var out = global.i18n.t(key);
+      if (out && out !== key) return out;
+    }
+    return fallback;
+  }
+
+  function getQualificationPrefix(container) {
+    if (!container || !container.querySelector) return "";
+    var wrap = container.querySelector(".registration-qualification-fields");
+    return wrap ? wrap.getAttribute("data-qual-prefix") || "" : "";
+  }
+
+  function qualFieldName(prefix, key) {
+    return prefix + (QUALIFICATION_FIELD_BASE_NAMES[key] || key);
+  }
+
+  function readQualificationField(container, prefix, key) {
+    var name = qualFieldName(prefix, key);
+    var baseName = QUALIFICATION_FIELD_BASE_NAMES[key];
+    if (
+      baseName === "lead_interested_account" ||
+      baseName === "lead_ready_to_trade" ||
+      baseName === "lead_min_deposit_100"
+    ) {
+      var checked = container.querySelector(
+        'input[name="' + name + '"]:checked',
+      );
+      return checked ? checked.value : "";
+    }
+    var field = container.querySelector('[name="' + name + '"]');
+    if (!field || typeof field.value !== "string") return "";
+    return field.value.trim();
+  }
+
+  function readQualificationValues(container) {
+    var prefix = getQualificationPrefix(container);
+    return {
+      age: readQualificationField(container, prefix, "age"),
+      monthlyIncome: readQualificationField(container, prefix, "monthlyIncome"),
+      interestedInAccount: readQualificationField(
+        container,
+        prefix,
+        "interestedInAccount",
+      ),
+      readyToTrade: readQualificationField(container, prefix, "readyToTrade"),
+      minDeposit100: readQualificationField(container, prefix, "minDeposit100"),
+    };
+  }
+
+  function parseQualificationBoolean(value) {
+    if (value === "yes") return true;
+    if (value === "no") return false;
+    return null;
+  }
+
+  function hasQualificationFields(container) {
+    if (!container || !container.querySelector) return false;
+    return !!container.querySelector(".registration-qualification-fields");
+  }
+
+  function validateRegistrationQualificationFields(container) {
+    if (!hasQualificationFields(container)) return "";
+
+    var values = readQualificationValues(container);
+
+    if (!values.age) {
+      return qualT(
+        "registrationQualification.errAgeRequired",
+        "Please enter your age.",
+      );
+    }
+    var ageNum = parseInt(values.age, 10);
+    if (isNaN(ageNum) || ageNum < 18 || ageNum > 120) {
+      return qualT(
+        "registrationQualification.errAgeInvalid",
+        "Please enter a valid age (18–120).",
+      );
+    }
+
+    if (!values.monthlyIncome) {
+      return qualT(
+        "registrationQualification.errIncomeRequired",
+        "Please enter your monthly income.",
+      );
+    }
+    var income = parseFloat(values.monthlyIncome);
+    if (isNaN(income) || income < 0) {
+      return qualT(
+        "registrationQualification.errIncomeInvalid",
+        "Please enter a valid monthly income.",
+      );
+    }
+
+    if (!values.interestedInAccount) {
+      return qualT(
+        "registrationQualification.errInterestedRequired",
+        "Please indicate if you are interested in opening a trading account.",
+      );
+    }
+    if (!values.readyToTrade) {
+      return qualT(
+        "registrationQualification.errReadyRequired",
+        "Please indicate if you are ready to start trading now.",
+      );
+    }
+    if (!values.minDeposit100) {
+      return qualT(
+        "registrationQualification.errDepositRequired",
+        "Please indicate if you can make the minimum deposit of $100.",
+      );
+    }
+
+    return "";
+  }
+
+  function buildRegistrationQualificationCustomFields(container) {
+    if (!hasQualificationFields(container)) return [];
+
+    var values = readQualificationValues(container);
+    return [
+      {
+        id: REGISTRATION_QUALIFICATION_FIELD_IDS.age,
+        value: String(values.age),
+      },
+      {
+        id: REGISTRATION_QUALIFICATION_FIELD_IDS.monthlyIncome,
+        value: String(values.monthlyIncome),
+      },
+      {
+        id: REGISTRATION_QUALIFICATION_FIELD_IDS.interestedInAccount,
+        value: parseQualificationBoolean(values.interestedInAccount),
+      },
+      {
+        id: REGISTRATION_QUALIFICATION_FIELD_IDS.readyToTrade,
+        value: parseQualificationBoolean(values.readyToTrade),
+      },
+      {
+        id: REGISTRATION_QUALIFICATION_FIELD_IDS.minDeposit100,
+        value: parseQualificationBoolean(values.minDeposit100),
+      },
+    ];
+  }
+
+  function appendQualificationCustomFields(existing, container) {
+    var base = Array.isArray(existing) ? existing.slice() : [];
+    return base.concat(buildRegistrationQualificationCustomFields(container));
+  }
+
+  function qualificationWatchSelectors(container) {
+    if (!hasQualificationFields(container)) return [];
+    var prefix = getQualificationPrefix(container);
+    var keys = Object.keys(QUALIFICATION_FIELD_BASE_NAMES);
+    var selectors = [];
+    var i;
+    for (i = 0; i < keys.length; i++) {
+      selectors.push('[name="' + qualFieldName(prefix, keys[i]) + '"]');
+    }
+    return selectors;
+  }
+
   function parseJsonSafe(raw) {
     try {
       return raw ? JSON.parse(raw) : null;
@@ -213,6 +391,14 @@
     splitFullName: splitFullName,
     defaultAccounts: defaultAccounts,
     buildHeardAboutCustomFields: buildHeardAboutCustomFields,
+    REGISTRATION_QUALIFICATION_FIELD_IDS: REGISTRATION_QUALIFICATION_FIELD_IDS,
+    readQualificationValues: readQualificationValues,
+    validateRegistrationQualificationFields:
+      validateRegistrationQualificationFields,
+    buildRegistrationQualificationCustomFields:
+      buildRegistrationQualificationCustomFields,
+    appendQualificationCustomFields: appendQualificationCustomFields,
+    qualificationWatchSelectors: qualificationWatchSelectors,
     postLead: postLead,
     mergePayload: mergePayload,
   };

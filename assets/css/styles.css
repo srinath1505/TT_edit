@@ -4177,6 +4177,13 @@ select option {
   transform: translateY(-1px);
 }
 
+.btn-contact-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 /* Responsive for Contact Form */
 @media (max-width: 768px) {
   .contact-form-section {
@@ -6138,6 +6145,13 @@ body.light-theme .footer-subbar-chip {
   box-shadow: 0 8px 24px rgba(230, 57, 70, 0.4);
 }
 
+.auth-submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 .auth-submit-btn:active {
   transform: translateY(0);
 }
@@ -7429,6 +7443,13 @@ body.light-theme .deposit-modal::-webkit-scrollbar-thumb {
 .btn-submit-deposit:hover {
   box-shadow: 0 8px 30px var(--brand-shadow);
   transform: translateY(-2px);
+}
+
+.btn-submit-deposit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 .btn-submit-deposit .btn-loading {

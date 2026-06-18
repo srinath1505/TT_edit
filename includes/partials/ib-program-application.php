@@ -46,7 +46,7 @@ asort($ib_partner_languages);
           </p>
           <h2 class="registration-page-hero-title">How it works</h2>
           <ul class="registration-account-bullets">
-            <li>Submit your profile in 3 short steps</li>
+            <li>Submit your profile in 4 short steps</li>
             <li>Our Partner Team reviews your fit and promotion model</li>
             <li>Approved applicants are contacted with onboarding details</li>
           </ul>
@@ -67,8 +67,9 @@ asort($ib_partner_languages);
           >
             <div class="ib-program-stepper" aria-hidden="true">
               <span class="ib-program-step-pill is-active" data-step-pill="1">Step 1: Basic Info</span>
-              <span class="ib-program-step-pill" data-step-pill="2">Step 2: Profile</span>
-              <span class="ib-program-step-pill" data-step-pill="3">Step 3: Partner Info</span>
+              <span class="ib-program-step-pill" data-step-pill="2">Step 2: Qualification</span>
+              <span class="ib-program-step-pill" data-step-pill="3">Step 3: Profile</span>
+              <span class="ib-program-step-pill" data-step-pill="4">Step 4: Partner Info</span>
             </div>
 
             <div class="ib-program-step is-active" data-step="1">
@@ -138,6 +139,14 @@ asort($ib_partner_languages);
             </div>
 
             <div class="ib-program-step" data-step="2" hidden>
+              <?php
+              $qualificationNamePrefix = '';
+              $qualificationIdPrefix = 'ibPartner';
+              include __DIR__ . '/registration-qualification-fields.php';
+              ?>
+            </div>
+
+            <div class="ib-program-step" data-step="3" hidden>
               <div class="form-group">
                 <label for="ibPartnerExperience">Experience Level</label>
                 <select id="ibPartnerExperience" name="experience_level" required>
@@ -160,7 +169,7 @@ asort($ib_partner_languages);
               </div>
             </div>
 
-            <div class="ib-program-step" data-step="3" hidden>
+            <div class="ib-program-step" data-step="4" hidden>
               <fieldset class="ib-partner-radio-group">
                 <legend>Are you currently a partner/IB/agent?</legend>
                 <label>

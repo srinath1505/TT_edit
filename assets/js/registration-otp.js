@@ -122,16 +122,36 @@
     state.errorEl.hidden = !message;
   }
 
+  function isOtpActive(state) {
+    return typeof state.options.isActive === "function"
+      ? !!state.options.isActive()
+      : true;
+  }
+
+  function formIsComplete(state) {
+    if (typeof state.options.isFormComplete === "function") {
+      return !!state.options.isFormComplete();
+    }
+    return true;
+  }
+
+  function prerequisitesError(state) {
+    if (typeof state.options.validateBeforeSend === "function") {
+      var extraError = state.options.validateBeforeSend();
+      if (extraError) return extraError;
+    }
+    var payload =
+      state.options.getOtpPayload && state.options.getOtpPayload();
+    return validateOtpPayload(payload);
+  }
+
   function syncSubmit(formEl, state) {
     var submitBtn =
       (state.options.getSubmitButton && state.options.getSubmitButton()) ||
       formEl.querySelector('button[type="submit"]');
     if (!submitBtn) return;
 
-    var active =
-      typeof state.options.isActive === "function"
-        ? !!state.options.isActive()
-        : true;
+    var active = isOtpActive(state);
 
     if (state.wrap) {
       state.wrap.hidden = !active;
@@ -142,7 +162,24 @@
       return;
     }
 
-    submitBtn.disabled = !isReady(formEl);
+    submitBtn.disabled = !formIsComplete(state) || !isReady(formEl);
+  }
+
+  function syncSendButton(formEl, state) {
+    if (!state.sendBtn || (state.panel && !state.panel.hidden)) return;
+
+    var active = isOtpActive(state);
+    if (!active) {
+      state.sendBtn.disabled = false;
+      return;
+    }
+
+    state.sendBtn.disabled = !!prerequisitesError(state);
+  }
+
+  function syncUi(formEl, state) {
+    syncSubmit(formEl, state);
+    syncSendButton(formEl, state);
   }
 
   function reset(formEl) {
@@ -156,7 +193,7 @@
     if (state.timerEl) state.timerEl.textContent = formatTimer(OTP_DURATION_SEC);
     showPanel(state, false);
     setError(state, "");
-    syncSubmit(formEl, state);
+    syncUi(formEl, state);
   }
 
   function isRequired(formEl) {
@@ -186,7 +223,7 @@
   function refresh(formEl) {
     var state = getInstance(formEl);
     if (!state) return;
-    syncSubmit(formEl, state);
+    syncUi(formEl, state);
   }
 
   function onWatchChange(formEl, state) {
@@ -195,11 +232,20 @@
     var nextFingerprint = fingerprint(payload);
     if (state.sent && state.sentFingerprint && nextFingerprint !== state.sentFingerprint) {
       reset(formEl);
+      return;
     }
-    syncSubmit(formEl, state);
+    syncUi(formEl, state);
   }
 
   function sendOtp(formEl, state) {
+    if (typeof state.options.validateBeforeSend === "function") {
+      var extraError = state.options.validateBeforeSend();
+      if (extraError) {
+        setError(state, extraError);
+        return;
+      }
+    }
+
     var payload =
       state.options.getOtpPayload && state.options.getOtpPayload();
     var validationError = validateOtpPayload(payload);
@@ -245,7 +291,7 @@
         if (state.input) {
           state.input.focus();
         }
-        syncSubmit(formEl, state);
+        syncUi(formEl, state);
       })
       .catch(function () {
         setError(
@@ -258,7 +304,6 @@
       })
       .finally(function () {
         if (state.sendBtn) {
-          state.sendBtn.disabled = false;
           state.sendBtn.textContent = t(
             "registrationOtp.sendCode",
             "Send verification code",
@@ -267,6 +312,7 @@
         if (state.resendBtn) {
           state.resendBtn.disabled = false;
         }
+        syncUi(formEl, state);
       });
   }
 
@@ -375,7 +421,7 @@
 
     input.addEventListener("input", function () {
       setError(state, "");
-      syncSubmit(formEl, state);
+      syncUi(formEl, state);
     });
 
     var watchSelectors = options.watchSelectors || [];
@@ -395,7 +441,7 @@
       options.onMount(formEl, state);
     }
 
-    syncSubmit(formEl, state);
+    syncUi(formEl, state);
   }
 
   global.TraderTokRegistrationOtp = {

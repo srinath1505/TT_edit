@@ -2009,6 +2009,38 @@ function getUserDeviceInfo() {
 
 // Signup form submission with phone
 if (signupForm) {
+  function getSignupValidationError() {
+    const first =
+      document.getElementById("signup-firstname")?.value?.trim() || "";
+    const last =
+      document.getElementById("signup-lastname")?.value?.trim() || "";
+    const email = document.getElementById("signup-email")?.value?.trim() || "";
+    const phone = document.getElementById("signup-phone")?.value?.trim() || "";
+    const password = document.getElementById("signup-password")?.value || "";
+    const terms = document.getElementById("terms-agree");
+
+    if (!first) return "Please enter your first name.";
+    if (!last) return "Please enter your last name.";
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return "Please enter a valid email address.";
+    }
+    if (!phone) return "Please enter your phone number.";
+    if (!password || password.length < 8) {
+      return "Password must be at least 8 characters.";
+    }
+    if (!terms || !terms.checked) {
+      return "Please accept the Terms of Service and Privacy Policy.";
+    }
+    if (window.TraderTokLeads) {
+      return (
+        window.TraderTokLeads.validateRegistrationQualificationFields(
+          signupForm,
+        ) || ""
+      );
+    }
+    return "";
+  }
+
   if (window.TraderTokRegistrationOtp) {
     window.TraderTokRegistrationOtp.mount(signupForm, {
       getSubmitButton: function () {
@@ -2042,7 +2074,19 @@ if (signupForm) {
         "#signup-lastname",
         "#signup-email",
         "#signup-phone",
-      ],
+        "#signup-password",
+        "#terms-agree",
+      ].concat(
+        window.TraderTokLeads
+          ? window.TraderTokLeads.qualificationWatchSelectors(signupForm)
+          : [],
+      ),
+      validateBeforeSend: function () {
+        return getSignupValidationError();
+      },
+      isFormComplete: function () {
+        return !getSignupValidationError();
+      },
       onMount: function () {
         document
           .querySelectorAll("#countryList .country-item")
@@ -2062,10 +2106,26 @@ if (signupForm) {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
 
+    const validationError = getSignupValidationError();
+    if (validationError) {
+      const otpErrorEl = signupForm.querySelector(".registration-otp-error");
+      if (otpErrorEl) {
+        otpErrorEl.textContent = validationError;
+        otpErrorEl.hidden = false;
+      }
+      return;
+    }
+
     if (
       window.TraderTokRegistrationOtp &&
       !window.TraderTokRegistrationOtp.isReady(signupForm)
     ) {
+      const otpErrorEl = signupForm.querySelector(".registration-otp-error");
+      if (otpErrorEl) {
+        otpErrorEl.textContent =
+          "Please verify your email with the code sent to you.";
+        otpErrorEl.hidden = false;
+      }
       return;
     }
 
@@ -2102,6 +2162,13 @@ if (signupForm) {
       ],
       userDevice: getUserDeviceInfo(),
     };
+
+    if (window.TraderTokLeads) {
+      payload.customFields =
+        window.TraderTokLeads.buildRegistrationQualificationCustomFields(
+          signupForm,
+        );
+    }
 
     if (window.TraderTokRegistrationOtp) {
       payload.registrationVerificationOtp =
@@ -2599,6 +2666,13 @@ if (signupForm) {
     };
 
     const depositForm = document.getElementById("depositForm");
+    if (depositForm && window.TraderTokLeads) {
+      payload.customFields =
+        window.TraderTokLeads.buildRegistrationQualificationCustomFields(
+          depositForm,
+        );
+    }
+
     if (depositForm && window.TraderTokRegistrationOtp) {
       payload.registrationVerificationOtp =
         window.TraderTokRegistrationOtp.getOtpValue(depositForm);
@@ -2647,6 +2721,34 @@ if (signupForm) {
     }
   }
 
+  function getDepositNewAccountValidationError(form) {
+    const firstname =
+      document.getElementById("depositFirstname")?.value?.trim() || "";
+    const lastname =
+      document.getElementById("depositLastname")?.value?.trim() || "";
+    const email =
+      document.getElementById("depositEmailNew")?.value?.trim() || "";
+    const phone = document.getElementById("depositPhone")?.value?.trim() || "";
+    const password = document.getElementById("depositPassword")?.value || "";
+
+    if (!firstname || !lastname || !email || !phone || !password) {
+      return "Please fill in all fields.";
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return "Please enter a valid email address.";
+    }
+    if (password.length < 8) {
+      return "Password must be at least 8 characters.";
+    }
+    if (window.TraderTokLeads) {
+      return (
+        window.TraderTokLeads.validateRegistrationQualificationFields(form) ||
+        ""
+      );
+    }
+    return "";
+  }
+
   function mountDepositOtp() {
     const form = document.getElementById("depositForm");
     if (!form || !window.TraderTokRegistrationOtp || form.dataset.otpMounted) {
@@ -2691,7 +2793,28 @@ if (signupForm) {
         "#depositLastname",
         "#depositEmailNew",
         "#depositPhone",
-      ],
+        "#depositPassword",
+      ].concat(
+        window.TraderTokLeads
+          ? window.TraderTokLeads.qualificationWatchSelectors(form)
+          : [],
+      ),
+      validateBeforeSend: function () {
+        if (
+          form.querySelector('input[name="depositMode"]:checked')?.value !== "new"
+        ) {
+          return "";
+        }
+        return getDepositNewAccountValidationError(form);
+      },
+      isFormComplete: function () {
+        if (
+          form.querySelector('input[name="depositMode"]:checked')?.value !== "new"
+        ) {
+          return true;
+        }
+        return !getDepositNewAccountValidationError(form);
+      },
     });
   }
 
@@ -2776,12 +2899,9 @@ if (signupForm) {
       const phone = document.getElementById("depositPhone")?.value?.trim();
       const password = document.getElementById("depositPassword")?.value;
 
-      if (!firstname || !lastname || !email || !phone || !password) {
-        setFormError("Please fill in all fields.");
-        return;
-      }
-      if (password.length < 8) {
-        setFormError("Password must be at least 8 characters.");
+      const validationError = getDepositNewAccountValidationError(form);
+      if (validationError) {
+        setFormError(validationError);
         return;
       }
 
@@ -3265,6 +3385,13 @@ if (signupForm) {
     };
 
     const clubForm = document.getElementById("tradersClubForm");
+    if (clubForm && window.TraderTokLeads) {
+      payload.customFields =
+        window.TraderTokLeads.buildRegistrationQualificationCustomFields(
+          clubForm,
+        );
+    }
+
     if (clubForm && window.TraderTokRegistrationOtp) {
       payload.registrationVerificationOtp =
         window.TraderTokRegistrationOtp.getOtpValue(clubForm);
@@ -3313,6 +3440,33 @@ if (signupForm) {
     }
   }
 
+  function getClubNewAccountValidationError(form) {
+    const firstname =
+      document.getElementById("clubFirstname")?.value?.trim() || "";
+    const lastname =
+      document.getElementById("clubLastname")?.value?.trim() || "";
+    const email = document.getElementById("clubEmailNew")?.value?.trim() || "";
+    const phone = document.getElementById("clubPhone")?.value?.trim() || "";
+    const password = document.getElementById("clubPassword")?.value || "";
+
+    if (!firstname || !lastname || !email || !phone || !password) {
+      return "Please fill in all fields.";
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return "Please enter a valid email address.";
+    }
+    if (password.length < 8) {
+      return "Password must be at least 8 characters.";
+    }
+    if (window.TraderTokLeads) {
+      return (
+        window.TraderTokLeads.validateRegistrationQualificationFields(form) ||
+        ""
+      );
+    }
+    return "";
+  }
+
   function mountTradersClubOtp() {
     const form = document.getElementById("tradersClubForm");
     if (!form || !window.TraderTokRegistrationOtp || form.dataset.otpMounted) {
@@ -3357,7 +3511,30 @@ if (signupForm) {
         "#clubLastname",
         "#clubEmailNew",
         "#clubPhone",
-      ],
+        "#clubPassword",
+      ].concat(
+        window.TraderTokLeads
+          ? window.TraderTokLeads.qualificationWatchSelectors(form)
+          : [],
+      ),
+      validateBeforeSend: function () {
+        if (
+          form.querySelector('input[name="tradersClubMode"]:checked')?.value !==
+          "new"
+        ) {
+          return "";
+        }
+        return getClubNewAccountValidationError(form);
+      },
+      isFormComplete: function () {
+        if (
+          form.querySelector('input[name="tradersClubMode"]:checked')?.value !==
+          "new"
+        ) {
+          return true;
+        }
+        return !getClubNewAccountValidationError(form);
+      },
     });
   }
 
@@ -3438,12 +3615,9 @@ if (signupForm) {
       const phone = document.getElementById("clubPhone")?.value?.trim();
       const password = document.getElementById("clubPassword")?.value;
 
-      if (!firstname || !lastname || !email || !phone || !password) {
-        setFormError("Please fill in all fields.");
-        return;
-      }
-      if (password.length < 8) {
-        setFormError("Password must be at least 8 characters.");
+      const validationError = getClubNewAccountValidationError(form);
+      if (validationError) {
+        setFormError(validationError);
         return;
       }
 

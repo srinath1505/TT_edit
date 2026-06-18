@@ -44,56 +44,59 @@
     );
   }
 
-  function validateForm() {
-    clearAllErrors();
-    var isValid = true;
-
+  function getContactValidationError() {
     var name = document.getElementById("contactLeadName").value.trim();
     if (name === "") {
-      showError("contactLeadName", "Name is required");
-      isValid = false;
-    } else if (name.length < 2) {
-      showError("contactLeadName", "Name must be at least 2 characters");
-      isValid = false;
+      return "Name is required";
+    }
+    if (name.length < 2) {
+      return "Name must be at least 2 characters";
     }
 
     var surname = document.getElementById("contactLeadSurname").value.trim();
     if (surname === "") {
-      showError("contactLeadSurname", "Surname is required");
-      isValid = false;
-    } else if (surname.length < 2) {
-      showError("contactLeadSurname", "Surname must be at least 2 characters");
-      isValid = false;
+      return "Surname is required";
+    }
+    if (surname.length < 2) {
+      return "Surname must be at least 2 characters";
     }
 
     var phone = document.getElementById("contactLeadPhone").value.trim();
     if (phone === "") {
-      showError("contactLeadPhone", "Phone number is required");
-      isValid = false;
-    } else if (!validatePhone(phone)) {
-      showError("contactLeadPhone", "Please enter a valid phone number");
-      isValid = false;
+      return "Phone number is required";
+    }
+    if (!validatePhone(phone)) {
+      return "Please enter a valid phone number";
     }
 
     var email = document.getElementById("contactLeadEmail").value.trim();
     if (email === "") {
-      showError("contactLeadEmail", "Email is required");
-      isValid = false;
-    } else if (!validateEmail(email)) {
-      showError("contactLeadEmail", "Please enter a valid email address");
-      isValid = false;
+      return "Email is required";
+    }
+    if (!validateEmail(email)) {
+      return "Please enter a valid email address";
     }
 
     var message = document.getElementById("contactLeadMessage").value.trim();
     if (message === "") {
-      showError("contactLeadMessage", "Message is required");
-      isValid = false;
-    } else if (message.length < 10) {
-      showError("contactLeadMessage", "Message must be at least 10 characters");
-      isValid = false;
+      return "Message is required";
+    }
+    if (message.length < 10) {
+      return "Message must be at least 10 characters";
     }
 
-    return isValid;
+    return leads.validateRegistrationQualificationFields(form) || "";
+  }
+
+  function validateForm() {
+    clearAllErrors();
+    var error = getContactValidationError();
+    if (error) {
+      showFormStatus("error", error);
+      return false;
+    }
+
+    return true;
   }
 
   function buildContactPayload() {
@@ -116,6 +119,7 @@
       clientzoneDisabled: true,
       comment: message,
       description: "[" + source + "] " + message,
+      customFields: leads.buildRegistrationQualificationCustomFields(form),
     });
 
     if (otp) {
@@ -170,7 +174,14 @@
         "#contactLeadSurname",
         "#contactLeadPhone",
         "#contactLeadEmail",
-      ],
+        "#contactLeadMessage",
+      ].concat(leads.qualificationWatchSelectors(form)),
+      validateBeforeSend: function () {
+        return getContactValidationError();
+      },
+      isFormComplete: function () {
+        return !getContactValidationError();
+      },
     });
   }
 
@@ -213,7 +224,6 @@
     e.preventDefault();
 
     if (!validateForm()) {
-      showFormStatus("error", "Please fix the errors above");
       return;
     }
 
