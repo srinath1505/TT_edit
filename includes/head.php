@@ -160,6 +160,10 @@ $ttTwitterImageUrl = $ttOrigin . '/twitter-image.jpg';
     foreach ($sharedStylesheets as $stylesheet) {
         echo assetStylesheetTag($stylesheet);
     }
+
+    if (!$page) {
+        echo assetStylesheetTag('assets/css/home-intro-splash.css');
+    }
     ?>
 
     <?php include __DIR__ . '/partials/site-heading-accent-swap.php'; ?>
@@ -173,6 +177,10 @@ $ttTwitterImageUrl = $ttOrigin . '/twitter-image.jpg';
     <!-- Google Tag Manager (noscript) -->
     <?php include 'gtm-body-code.php'; ?>
     <!-- End Google Tag Manager (noscript) -->
+
+    <?php if (!$page): ?>
+    <?php include __DIR__ . '/partials/home-intro-splash.php'; ?>
+    <?php endif; ?>
 
     <!-- Market Ticker -->
     <div class="top-ticker" id="topTicker">
@@ -1870,6 +1878,13 @@ $ttTwitterImageUrl = $ttOrigin . '/twitter-image.jpg';
               </div>
             </div>
           </div>
+
+          <?php
+          $qualificationNamePrefix = 'signup_';
+          $qualificationIdPrefix = 'signup';
+          $qualificationInputClass = 'auth-input';
+          include __DIR__ . '/partials/registration-qualification-fields.php';
+          ?>
 
           <div class="auth-form-group">
             <label for="signup-password" class="auth-label">Password</label>

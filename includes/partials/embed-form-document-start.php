@@ -54,6 +54,7 @@ $pageTitle = isset($embedPageTitle) ? (string) $embedPageTitle : 'TraderTok';
     }
     ?>
     <?php include __DIR__ . '/global-button-pills.php'; ?>
+    <?php include __DIR__ . '/registration-qualification-styles.php'; ?>
   </head>
   <body class="page-embed-form">
     <div class="embed-form-wrap">

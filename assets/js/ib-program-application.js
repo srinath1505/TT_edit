@@ -119,6 +119,21 @@
     }
 
     if (stepNumber === 2) {
+      if (
+        window.TraderTokLeads &&
+        typeof window.TraderTokLeads.validateRegistrationQualificationFields ===
+          "function"
+      ) {
+        var qualError =
+          window.TraderTokLeads.validateRegistrationQualificationFields(form);
+        if (qualError) {
+          if (!silent) showError(qualError);
+          return false;
+        }
+      }
+    }
+
+    if (stepNumber === 3) {
       if (!readValue("experience_level")) {
         if (!silent) showError("Please select your experience level.");
         return false;
@@ -129,7 +144,7 @@
       }
     }
 
-    if (stepNumber === 3) {
+    if (stepNumber === 4) {
       if (!selectedPartnerValue()) {
         if (!silent) {
           showError("Please choose whether you are currently a partner/IB/agent.");
@@ -148,7 +163,10 @@
 
   function validateAllSteps(silent) {
     return (
-      validateStep(1, silent) && validateStep(2, silent) && validateStep(3, silent)
+      validateStep(1, silent) &&
+      validateStep(2, silent) &&
+      validateStep(3, silent) &&
+      validateStep(4, silent)
     );
   }
 
@@ -455,6 +473,17 @@
     ];
   }
 
+  function buildAllCustomFields() {
+    var base = buildCustomFields();
+    if (
+      window.TraderTokLeads &&
+      typeof window.TraderTokLeads.appendQualificationCustomFields === "function"
+    ) {
+      return window.TraderTokLeads.appendQualificationCustomFields(base, form);
+    }
+    return base;
+  }
+
   function buildPayload() {
     var base = {
       firstName: readValue("first_name"),
@@ -468,7 +497,7 @@
       tags: [{ id: TAG_ID }],
       accounts: DEFAULT_ACCOUNTS,
       userDevice: getUserDeviceInfoSafe(),
-      customFields: buildCustomFields(),
+      customFields: buildAllCustomFields(),
     };
 
     if (window.TraderTokRegistrationOtp) {
@@ -616,7 +645,28 @@
         '[name="email"]',
         '[name="phone"]',
         '[name="country"]',
-      ],
+        '[name="language"]',
+        '[name="experience_level"]',
+        '[name="heard_about"]',
+        '[name="is_partner"]',
+        '[name="promotion_method"]',
+        '[name="referred_by"]',
+      ].concat(
+        window.TraderTokLeads
+          ? window.TraderTokLeads.qualificationWatchSelectors(form)
+          : [],
+      ),
+      validateBeforeSend: function () {
+        if (currentStep !== steps.length) return "";
+        if (!validateAllSteps(true)) {
+          return "Please complete all application fields before requesting a verification code.";
+        }
+        return "";
+      },
+      isFormComplete: function () {
+        if (currentStep !== steps.length) return true;
+        return validateAllSteps(true);
+      },
     });
   }
 

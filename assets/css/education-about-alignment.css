@@ -698,6 +698,13 @@ body.light-theme .registration-account-crosslink:hover {
   font-size: 1rem !important;
 }
 
+.registration-account-submit:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 .education-thank-you-actions {
   display: flex;
   flex-wrap: wrap;

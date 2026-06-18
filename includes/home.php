@@ -408,29 +408,34 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
             <div class="form-group">
               <label for="clubFirstname" data-i18n="auth.firstName">First name</label>
               <input type="text" id="clubFirstname" name="firstname" data-i18n-placeholder="auth.firstNamePlaceholder"
-                placeholder="John" autocomplete="given-name">
+                placeholder="John" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="clubLastname" data-i18n="auth.lastName">Last name</label>
               <input type="text" id="clubLastname" name="lastname" data-i18n-placeholder="auth.lastNamePlaceholder"
-                placeholder="Doe" autocomplete="family-name">
+                placeholder="Doe" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="clubEmailNew" data-i18n="tradersClub.email">Email</label>
             <input type="email" id="clubEmailNew" name="email_new" data-i18n-placeholder="tradersClub.emailPlaceholder"
-              placeholder="Enter your email" autocomplete="email">
+              placeholder="Enter your email" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="clubPhone" data-i18n="tradersClub.phone">Phone</label>
             <input type="tel" id="clubPhone" name="phone" data-i18n-placeholder="tradersClub.phonePlaceholder"
-              placeholder="Enter your phone" autocomplete="tel">
+              placeholder="Enter your phone" autocomplete="tel" required>
           </div>
           <div class="form-group">
             <label for="clubPassword" data-i18n="auth.password">Password</label>
             <input type="password" id="clubPassword" name="password" data-i18n-placeholder="auth.passwordPlaceholder"
-              placeholder="Create a password" minlength="8" autocomplete="new-password">
+              placeholder="Create a password" minlength="8" autocomplete="new-password" required>
           </div>
+          <?php
+          $qualificationNamePrefix = 'club_';
+          $qualificationIdPrefix = 'club';
+          include __DIR__ . '/partials/registration-qualification-fields.php';
+          ?>
         </div>
 
         <p class="traders-club-form-error" id="tradersClubFormError" role="alert" hidden></p>
@@ -797,29 +802,34 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
             <div class="form-group">
               <label for="depositFirstname" data-i18n="auth.firstName">First name</label>
               <input type="text" id="depositFirstname" name="firstname"
-                data-i18n-placeholder="auth.firstNamePlaceholder" placeholder="John" autocomplete="given-name">
+                data-i18n-placeholder="auth.firstNamePlaceholder" placeholder="John" autocomplete="given-name" required>
             </div>
             <div class="form-group">
               <label for="depositLastname" data-i18n="auth.lastName">Last name</label>
               <input type="text" id="depositLastname" name="lastname" data-i18n-placeholder="auth.lastNamePlaceholder"
-                placeholder="Doe" autocomplete="family-name">
+                placeholder="Doe" autocomplete="family-name" required>
             </div>
           </div>
           <div class="form-group">
             <label for="depositEmailNew" data-i18n="deposit.email">Email</label>
             <input type="email" id="depositEmailNew" name="email_new" data-i18n-placeholder="deposit.emailPlaceholder"
-              placeholder="Enter your email" autocomplete="email">
+              placeholder="Enter your email" autocomplete="email" required>
           </div>
           <div class="form-group">
             <label for="depositPhone" data-i18n="deposit.phone">Phone</label>
             <input type="tel" id="depositPhone" name="phone" data-i18n-placeholder="deposit.phonePlaceholder"
-              placeholder="+1 (555) 000-0000" autocomplete="tel">
+              placeholder="+1 (555) 000-0000" autocomplete="tel" required>
           </div>
           <div class="form-group">
             <label for="depositPassword" data-i18n="auth.password">Password</label>
             <input type="password" id="depositPassword" name="password" data-i18n-placeholder="auth.passwordPlaceholder"
-              placeholder="Enter your password" minlength="8" autocomplete="new-password">
+              placeholder="Enter your password" minlength="8" autocomplete="new-password" required>
           </div>
+          <?php
+          $qualificationNamePrefix = 'deposit_';
+          $qualificationIdPrefix = 'deposit';
+          include __DIR__ . '/partials/registration-qualification-fields.php';
+          ?>
         </div>
 
         <p class="traders-club-form-error" id="depositFormError" role="alert" hidden></p>
@@ -974,6 +984,13 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
             data-i18n-placeholder="contactForm.messagePlaceholder" rows="5" required aria-required="true"></textarea>
           <span class="form-error" id="contactLeadMessage-error"></span>
         </div>
+
+        <?php
+        $qualificationNamePrefix = 'contact_';
+        $qualificationIdPrefix = 'contactHome';
+        $qualificationInputClass = 'form-input';
+        include __DIR__ . '/partials/registration-qualification-fields.php';
+        ?>
 
         <div class="form-status" id="contactLeadFormStatus" role="alert" aria-live="polite"></div>
 

@@ -48,8 +48,9 @@
 
   function buildAccountPayload(form, isDemoAccount) {
     var names = leads.splitFullName(readValue(form, "name"));
-    var customFields = leads.buildHeardAboutCustomFields(
-      readValue(form, "heard_about"),
+    var customFields = leads.appendQualificationCustomFields(
+      leads.buildHeardAboutCustomFields(readValue(form, "heard_about")),
+      form,
     );
 
     var payload = leads.mergePayload({
@@ -82,7 +83,7 @@
     return payload;
   }
 
-  function validateForm(form, errEl) {
+  function getFormValidationError(form) {
     var name = readValue(form, "name");
     var email = readValue(form, "email");
     var phone = readValue(form, "phone");
@@ -92,62 +93,51 @@
     var isDemo = form.id === "openDemoAccountPageForm";
 
     if (!name) {
-      showError(
-        errEl,
-        tr(
-          isDemo
-            ? "openDemoAccountPage.errors.nameRequired"
-            : "openLiveAccountPage.errors.nameRequired",
-        ),
+      return tr(
+        isDemo
+          ? "openDemoAccountPage.errors.nameRequired"
+          : "openLiveAccountPage.errors.nameRequired",
       );
-      return false;
     }
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      showError(
-        errEl,
-        tr(
-          isDemo
-            ? "openDemoAccountPage.errors.emailInvalid"
-            : "openLiveAccountPage.errors.emailInvalid",
-        ),
+      return tr(
+        isDemo
+          ? "openDemoAccountPage.errors.emailInvalid"
+          : "openLiveAccountPage.errors.emailInvalid",
       );
-      return false;
     }
     if (!phone) {
-      showError(
-        errEl,
-        tr(
-          isDemo
-            ? "openDemoAccountPage.errors.phoneRequired"
-            : "openLiveAccountPage.errors.phoneRequired",
-        ),
+      return tr(
+        isDemo
+          ? "openDemoAccountPage.errors.phoneRequired"
+          : "openLiveAccountPage.errors.phoneRequired",
       );
-      return false;
     }
     if (!country) {
-      showError(
-        errEl,
-        tr(
-          isDemo
-            ? "openDemoAccountPage.errors.countryRequired"
-            : "openLiveAccountPage.errors.countryRequired",
-        ),
+      return tr(
+        isDemo
+          ? "openDemoAccountPage.errors.countryRequired"
+          : "openLiveAccountPage.errors.countryRequired",
       );
-      return false;
     }
     if (!heardAbout) {
-      showError(errEl, "Please tell us how you heard about us.");
-      return false;
+      return "Please tell us how you heard about us.";
     }
     if (!consent || !consent.checked) {
-      showError(
-        errEl,
-        tr(
-          isDemo
-            ? "openDemoAccountPage.errors.consentRequired"
-            : "openLiveAccountPage.errors.consentRequired",
-        ),
+      return tr(
+        isDemo
+          ? "openDemoAccountPage.errors.consentRequired"
+          : "openLiveAccountPage.errors.consentRequired",
       );
+    }
+
+    return leads.validateRegistrationQualificationFields(form) || "";
+  }
+
+  function validateForm(form, errEl) {
+    var error = getFormValidationError(form);
+    if (error) {
+      showError(errEl, error);
       return false;
     }
 
@@ -180,7 +170,15 @@
         '[name="email"]',
         '[name="phone"]',
         '[name="country"]',
-      ],
+        '[name="heard_about"]',
+        '[name="consent"]',
+      ].concat(leads.qualificationWatchSelectors(form)),
+      validateBeforeSend: function () {
+        return getFormValidationError(form);
+      },
+      isFormComplete: function () {
+        return !getFormValidationError(form);
+      },
     });
   }
 
