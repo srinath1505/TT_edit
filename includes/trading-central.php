@@ -168,7 +168,7 @@
         <div style="text-align: center; max-width: 1200px; margin: 0 auto 40px;">
             <p class="ptag" style="font-size:3.4rem; font-weight: 800; background: var(--brand-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;  letter-spacing: 2px; text-transform: uppercase;" data-i18n="tradingCentral.eyebrow">Trading Central</p>
             <h1 style="font-size: 2.2rem; font-weight: 700; line-height: 1.2; color: var(--text-primary); margin: 24px 0;">
-                <span data-i18n="tradingCentral.heroTitlePart1">Advanced analytics for</span> <br><span style=" color: var(--primary-color);" data-i18n="tradingCentral.heroTitlePart2">smarter trading</span>
+                <span data-i18n="tradingCentral.heroTitlePart1">Trading Central Market Analysis Tools</span>
             </h1>
             <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8; max-width: 800px; margin: 0 auto 40px;" data-i18n="tradingCentral.heroSubtitle">
                 TraderTok brings you one of the most powerful market tools for modern trading. Trading Central combines cutting-edge tech with expert market analysis to elevate your trading experience.

@@ -15,8 +15,7 @@
                 Our Story
             </div>
             <h1 class="about-hero-title gradient-text">
-                <span data-i18n="aboutPage.hero.titleLine1">The Platform Built to</span><br>
-                <span class="gradient-text"  data-i18n="aboutPage.hero.titleHighlight">Turn Noise Into Insight</span>
+                <span data-i18n="aboutPage.hero.titleLine1">About TraderTok</span>
             </h1>
             <p class="about-hero-lead" data-i18n="aboutPage.hero.lead">
                 Financial markets move faster than ever before. TraderTok was created to give traders the clarity, infrastructure, and confidence to navigate them.

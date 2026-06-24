@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span data-i18n="tradertokClubPage.hero.badge">TraderTok Club</span>
       </div>
-      <h1 class="doc-page-hero-title" data-i18n="tradertokClubPage.hero.title">WELCOME TO TRADERTOK CLUB</h1>
+      <h1 class="doc-page-hero-title" data-i18n="tradertokClubPage.hero.title">Join the TraderTok Club</h1>
       <p class="doc-page-hero-subtitle" data-i18n="tradertokClubPage.hero.p1">
         TraderTok Club is an exclusive loyalty programme designed to reward and elevate the trading experience
         of qualifying clients through premium tools, support access, and member-only opportunities.

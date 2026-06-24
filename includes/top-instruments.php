@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span data-i18n="topInstrumentsPage.hero.badge">Asset Information</span>
       </div>
-      <h1 class="doc-page-hero-title" data-i18n="topInstrumentsPage.hero.title">CRYPTOCURRENCY & EQUITY ASSET INFORMATION</h1>
+      <h1 class="doc-page-hero-title" data-i18n="topInstrumentsPage.hero.title">Top Trading Instruments</h1>
       <p class="doc-page-hero-subtitle" data-i18n="topInstrumentsPage.hero.p1">
         This page provides an educational overview of selected cryptocurrency and equity assets available
         on the TraderTok platform. It is designed to help traders understand core characteristics,

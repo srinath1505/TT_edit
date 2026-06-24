@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Segregated Client Accounts</span>
       </div>
-      <h1 class="doc-page-hero-title">SEGREGATED CLIENT ACCOUNTS</h1>
+      <h1 class="doc-page-hero-title">Segregated Client Accounts</h1>
       <p class="doc-page-hero-subtitle">
         A segregated account is a banking structure in which client funds are held separately from the
         company’s operational funds. This supports clearer fund handling, stronger internal discipline,

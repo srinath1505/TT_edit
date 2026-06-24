@@ -4,6 +4,7 @@
     <section class="trading-platforms-hero">
         <div class="container">
             <div class="trading-platforms-hero__inner">
+                <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">Advanced Multi-Asset Trading Platform</h1>
                 <h2 class="trading-platform-hero-title trading-platforms-hero__title">
                     <span data-i18n="tradingPlatformsPage.heroTitle">Trade</span> <span id="typewriter" class="trading-platforms-hero__typewriter"></span>
                 </h2>

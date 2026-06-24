@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Account Administration</span>
       </div>
-      <h1 class="doc-page-hero-title">TAX REPORT</h1>
+      <h1 class="doc-page-hero-title">Tax Reports <h1 class="doc-page-hero-title">TAX REPORT</h1>amp; Trading Statements</h1>
       <p class="doc-page-hero-subtitle">
         Trading activity may create tax reporting obligations depending on where you live, how you trade,
         and what rules apply in your jurisdiction.

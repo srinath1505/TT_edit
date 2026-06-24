@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Help Center</span>
       </div>
-      <h1 class="doc-page-hero-title">TRADERTOK HELP CENTER</h1>
+      <h1 class="doc-page-hero-title">TraderTok Help Center</h1>
       <p class="doc-page-hero-subtitle">
         Find quick answers about TraderTok, account opening, platform access, deposits,
         withdrawals, trading fees, regulation, and support.

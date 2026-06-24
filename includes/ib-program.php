@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span data-i18n="ibProgramPage.hero.badge">Partner Program</span>
       </div>
-      <h1 class="doc-page-hero-title" data-i18n="ibProgramPage.hero.title">TRADERTOK PARTNER PROGRAM</h1>
+      <h1 class="doc-page-hero-title" data-i18n="ibProgramPage.hero.title">Introducing Broker (IB) Program</h1>
       <p class="doc-page-hero-subtitle" data-i18n="ibProgramPage.hero.p1">
         The TraderTok Partner Program is structured to support long-term, performance-driven partnerships
         across global markets through flexible commercial models, operational support, and scalable growth systems.

@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Trading Basics</span>
       </div>
-      <h1 class="doc-page-hero-title">WHAT IS LEVERAGE &amp; MARGIN?</h1>
+      <h1 class="doc-page-hero-title">What Are Leverage and Margin in Trading?</h1>
       <p class="doc-page-hero-subtitle">
         Strong trading decisions start with understanding how exposure really works. Leverage and margin
         can expand opportunity, but they can also increase pressure, speed up losses, and demand much better discipline.

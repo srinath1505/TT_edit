@@ -184,7 +184,7 @@
             <!-- Left Side - Form -->
             <div class="contact-content">
               <h1 class="contact-title"><span data-i18n="contactUsPage.heroTitle">Contact</span> <span
-                  class="" data-i18n="contactUsPage.heroTitleHighlight">Us</span></h1>
+                  class="" data-i18n="contactUsPage.heroTitleHighlight">TraderTok</span></h1>
               <p class="contact-description" data-i18n="contactUsPage.heroDescription">
                 We remain open to any inquiries or questions you might have. Please submit a query in the fields below,
                 and our support team will promptly respond to it.

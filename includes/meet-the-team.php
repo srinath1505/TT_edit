@@ -1,7 +1,7 @@
     <!-- Hero Section -->
     <section class="team-hero">
         <div class="container">
-            <h1 class="team-hero-title" data-i18n="meetTheTeam.heroTitle">Meet the Team</h1>
+            <h1 class="team-hero-title" data-i18n="meetTheTeam.heroTitle">Meet the TraderTok Team</h1>
             <p class="team-hero-subtitle gradient-text" data-i18n="meetTheTeam.heroSubtitle">Our global team of trading experts is here to guide you through your trading journey in your preferred language.</p>
         </div>
     </section>

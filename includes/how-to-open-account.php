@@ -7,7 +7,7 @@
   <div class="container">
     <div class="page-hero-content" style="justify-content: start; align-items: flex-start; text-align: left;">
       <div class="page-hero-badge"><span>Support Guide</span></div>
-      <h1 class="doc-page-hero-title">HOW TO OPEN AN ACCOUNT</h1>
+      <h1 class="doc-page-hero-title">How to Open a Trading Account</h1>
       <p class="doc-page-hero-subtitle">
         This page outlines the usual account-opening journey so new users know what to prepare,
         what checks are involved, and what happens before approval.

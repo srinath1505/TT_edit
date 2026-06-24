@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Copy Trading Guide</span>
       </div>
-      <h1 class="doc-page-hero-title">HOW COPY TRADING WORKS</h1>
+      <h1 class="doc-page-hero-title">How Copy Trading Works</h1>
       <p class="doc-page-hero-subtitle">
         Copy trading allows users to automatically replicate the trades of experienced traders in real time.
         Instead of analyzing every market themselves, users can connect part of their account to a selected

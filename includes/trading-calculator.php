@@ -148,7 +148,7 @@
 <main class="trading-calculators-page">
   <div class="container">
     <header class="trading-calculators-hero">
-      <h1 class="trading-calculators-title">Trading Calculators</h1>
+      <h1 class="trading-calculators-title">Trading Calculators &amp; Risk Management Tools</h1>
       <p class="trading-calculators-intro">
         Plan your trades more confidently with TraderTok&apos;s trading calculators. Estimate potential profit or loss, pip value, margin requirements, and position size before placing a trade.
       </p>

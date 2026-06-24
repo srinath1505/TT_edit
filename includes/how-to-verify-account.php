@@ -7,7 +7,7 @@
   <div class="container">
     <div class="page-hero-content" style="justify-content: start; align-items: flex-start; text-align: left;">
       <div class="page-hero-badge"><span>Support Guide</span></div>
-      <h1 class="doc-page-hero-title">HOW TO VERIFY YOUR ACCOUNT</h1>
+      <h1 class="doc-page-hero-title">How to Verify Your Trading Account</h1>
       <p class="doc-page-hero-subtitle">
         Verification helps protect your account, supports regulatory compliance, and allows TraderTok
         to keep the platform secure for all users.

@@ -7,7 +7,7 @@
   <div class="container">
     <div class="page-hero-content" style="justify-content: start; align-items: flex-start; text-align: left;">
       <div class="page-hero-badge"><span>Support Guide</span></div>
-      <h1 class="doc-page-hero-title">HOW TO WITHDRAW</h1>
+      <h1 class="doc-page-hero-title">How to Withdraw Funds</h1>
       <p class="doc-page-hero-subtitle">
         This guide walks through the usual withdrawal flow, expected timelines, and the checks that
         may be required before funds are released.

@@ -859,8 +859,7 @@ body.light-theme .acct-data-table tbody tr:nth-child(even) {
         <div class="container">
           <div class="account-types-text">
             <h1 class="account-types-title">
-              <span class="" data-i18n="accountTypesPage.hero.line1">Choose the Right Account for Your</span>
-              <span class="" data-i18n="accountTypesPage.hero.line2">Trading Journey</span>
+              <span class="" data-i18n="accountTypesPage.hero.line1">Trading Account Types</span>
             </h1>
             <p class="account-types-subtitle" data-i18n="accountTypesPage.hero.subtitle">
               Whether you&rsquo;re just starting or trading at a professional level, our account types are designed to match your experience and goals.

@@ -6,7 +6,7 @@
         <div class="page-hero-overlay"></div>
         <div class="page-hero-content">
             <h1 class="page-hero-title">
-                <span data-i18n="tradingEssentials.titlePart1">Educational</span> <span> <span data-i18n="tradingEssentials.titlePart2">Resources</span></span>
+                <span data-i18n="tradingEssentials.titlePart1">Trading Essentials for Every Trader</span>
             </h1>
              <p class="sec-subtitle">
                 <span data-i18n="tradingEssentials.subtitle1">Master the fundamentals of the forex market with our curated collection of essential trading guides.</span> <br/> 

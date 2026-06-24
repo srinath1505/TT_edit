@@ -7,7 +7,7 @@
   <div class="container">
     <div class="page-hero-content" style="justify-content: start; align-items: flex-start; text-align: left;">
       <div class="page-hero-badge"><span>Support Guide</span></div>
-      <h1 class="doc-page-hero-title">HOW TO DEPOSIT</h1>
+      <h1 class="doc-page-hero-title">How to Deposit Funds</h1>
       <p class="doc-page-hero-subtitle">
         Funding your account should feel straightforward. This guide explains the usual deposit
         flow, the payment methods available, and the checks that may apply before funds are credited.

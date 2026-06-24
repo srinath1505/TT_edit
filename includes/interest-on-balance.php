@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Account Benefits</span>
       </div>
-      <h1 class="doc-page-hero-title">INTEREST ON BALANCE</h1>
+      <h1 class="doc-page-hero-title">Earn Interest on Your Trading Account Balance</h1>
       <p class="doc-page-hero-subtitle">
         Some account benefits are designed to make idle funds work harder. Interest on balance refers to
         periodic interest credited to eligible cash balances held in your account.

@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Trading Basics</span>
       </div>
-      <h1 class="doc-page-hero-title">BUY AND SELL EXPLAINED</h1>
+      <h1 class="doc-page-hero-title">Buy and Sell Orders Explained</h1>
       <p class="doc-page-hero-subtitle">
         Every trade begins with a decision: buy or sell. These actions sound simple, but in trading they
         reflect a view on market direction, timing, and risk.

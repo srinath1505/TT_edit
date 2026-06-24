@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Accessibility Statement</span>
       </div>
-      <h1 class="doc-page-hero-title">INCLUSIVE ACCESS ACROSS TRADERTOK</h1>
+      <h1 class="doc-page-hero-title">Accessibility Statement</h1>
       <p class="doc-page-hero-subtitle">
         At TraderTok, we are committed to ensuring our website and services are accessible to all users, including individuals with disabilities.
       </p>
