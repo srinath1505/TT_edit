@@ -618,8 +618,8 @@ body.light-theme .notice-text {
           <div class="legal-hero-inner">
             <div class="hero-content">
               <h1 class="hero-title">
-                <span data-i18n="legalPage.heroTitle">Important Legal Information &</span>
-                <span class="" data-i18n="legalPage.heroTitleHighlight">Policies</span>
+                <span data-i18n="legalPage.heroTitle">Legal Documents &amp;</span>
+                <span class="" data-i18n="legalPage.heroTitleHighlight">Compliance Information</span>
               </h1>
               <p class="hero-description" data-i18n="legalPage.heroDescription1">
                 At TraderTok, we are committed to maintaining the highest standards of regulatory

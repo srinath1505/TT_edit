@@ -14,8 +14,8 @@
             <span data-i18n="regulations.heroBadge">Regulations</span>
           </div>
           <h1 class="page-hero-title">
-            <span data-i18n="regulations.heroTitleHighlight">TraderTok</span>
-            <span data-i18n="regulations.heroTitle">License</span>
+            <span data-i18n="regulations.heroTitleHighlight">Regulations &amp;</span>
+            <span data-i18n="regulations.heroTitle">Licensing Information</span>
           </h1>
           <p class="page-hero-subtitle" data-i18n="regulations.heroSubtitle">
             TraderTok is fully authorized and regulated by respected and reputable regulatory authorities, ensuring that

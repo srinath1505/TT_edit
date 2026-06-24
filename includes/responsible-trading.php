@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Responsible Trading</span>
       </div>
-      <h1 class="doc-page-hero-title">RESPONSIBLE TRADING</h1>
+      <h1 class="doc-page-hero-title">Responsible Trading Practices</h1>
       <p class="doc-page-hero-subtitle">
         Responsible trading means approaching financial markets with a clear understanding of risk,
         realistic expectations, and discipline.

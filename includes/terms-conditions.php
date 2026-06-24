@@ -10,12 +10,12 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-      <div class="doc-page-hero-title">
-        <span data-i18n="termsConditionsPage.heroTitle" style='color: var(--brand-color-start)'>TERMS AND CONDITIONS</span>
-      </div>
-      <h1 class="doc-sub">
-        <span data-i18n="termsConditionsPage.h2">PREAMBLE</span>
+      <h1 class="doc-page-hero-title">
+      <span data-i18n="termsConditionsPage.heroTitle" style='color: var(--brand-color-start)'>Terms &amp; Conditions</span>
       </h1>
+      <h2 class="doc-sub">
+        <span data-i18n="termsConditionsPage.h2">PREAMBLE</span>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h2_p1">These Terms and Conditions (the <b>Agreement</b>) govern the relationship between
         <b>AMBER ROCK TRADE LTD</b> (the <b>Company, we, us</b>) and the <b>Client (you)</b>. The
         Company is authorised and regulated by the Financial Services Commission of Mauritius (<b>FSC</b>) as an
@@ -55,9 +55,9 @@
         or all specific terms at any time. All customers must therefore regularly revisit the full
         disclosure of terms and conditions in order to ensure full compliance and agreement.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h3">1. COMMUNICATION WITH US</span>
-      </h1>
+      </h2>
 
       <ul class="doc-page-hero-list" style="list-style-type: none; margin-left: 0px">
         <li data-i18n-html="termsConditionsPage.h3_li1"><b>1.1 Channels</b> - You may communicate with us in writing (including email and
@@ -79,9 +79,9 @@
       </ul>
       <p class="doc-sub"></p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h4">2. MEMBERSHIP ELIGIBILITY</span>
-      </h1>
+      </h2>
 
       <ul class="doc-page-hero-list" style="list-style-type: none; margin-left: 0px">
         <li data-i18n-html="termsConditionsPage.h4_li1"><b>2.1 Legal Capacity</b> - Services are available only to persons or entities with legal
@@ -99,9 +99,9 @@
       </ul>
       <p class="doc-sub"></p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h5">3. DEFINITIONS - INTERPRETATION</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h5_p1"><b>3.1 Key Definitions</b> (non-exhaustive):</p>
       <ul class="doc-page-hero-list" style="list-style-type:disc;">
         <li data-i18n-html="termsConditionsPage.h5_li1"><b>Account</b> - Your trading account with the Company.</li>
@@ -124,9 +124,9 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h5_p2"><b>3.2 Interpretation</b> - Headings are for convenience only. Singular includes plural.
         References to law include amendments and replacements.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h6">4. PROVISION OF SERVICES</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h6_p1"><b>4.1 Market Maker Model</b></p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h6_p2">The Company acts as principal and market maker in respect of the Financial Products
         offered. This means that the Company may act as the counterparty to Client
@@ -220,9 +220,9 @@
         company, in accordance with the express instructions of legal authorities, regulators or
         financial institutions.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h7">5. ACCOUNT OPENING INFORMATION AND REQUIREMENTS</span>
-      </h1>
+      </h2>
 
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h7_li1"><b>5.1 Information Accuracy</b> - You must provide accurate, complete, and up-to-date
@@ -239,10 +239,10 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h8">6. CLIENT REPRESENTATIONS, WARRANTIES,
           AND GUARANTEES</span>
-      </h1>
+      </h2>
 
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h8_li1"><b>6.1 Source of Funds</b> - All funds are yours, free of liens and third-party claims, and not
@@ -262,9 +262,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h9">7. ELECTRONIC TRADING - ACCESS CODES</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h9_li1"><b>7.1 Credentials</b> - Access codes are personal and non-transferable. You are responsible
           for all actions using your credentials.</li>
@@ -280,9 +280,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h10">8. FINANCIAL INFORMATION - MARKET DATA</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h10_li1"><b>8.1 Third-Party Providers</b> - Financial information may come from third parties and
           may be delayed, inaccurate, or incomplete.</li>
@@ -294,9 +294,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h11">9. ORDERS - INSTRUCTIONS AND BASIS OF DEALINGS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h11_li1"><b>9.1 Placing Orders</b> - Orders must be placed via approved Trading Platforms. Other
           channels may be rejected.</li>
@@ -314,9 +314,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h12">10. CONFIRMATIONS - STATEMENTS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h12_li1"><b>10.1 Availability</b> - Confirmations and statements are provided electronically via the
           Trading Platform.</li>
@@ -328,9 +328,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h13">11. PRICING - QUOTES - SPREADS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h13_li1"><b>11.1 Quoted Prices</b> - Prices displayed are indicative and may change before execution.</li>
         <li data-i18n-html="termsConditionsPage.h13_li2"><b>11.2 Slippage</b> - Positive or negative slippage may occur. You accept the risk.</li>
@@ -341,9 +341,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h14">12. REFUSAL TO EXECUTE ORDERS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h14_li1"><b>12.1 Discretion</b> - We may refuse any Order at our sole discretion, with or without
           explanation.</li>
@@ -358,10 +358,10 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h15">13. CANCELLATION - ADJUSTMENT -
           REVERSAL OF TRANSACTIONS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h15_li1">13.1 We may cancel, adjust, void, or reverse Transactions where we reasonably believe
           they arise from fraud, illegal activity, misuse, pricing error, system malfunction,
@@ -373,9 +373,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h16">14. SETTLEMENT OF TRANSACTIONS</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0">
         <li data-i18n-html="termsConditionsPage.h16_li1">14.1 Transactions are binding upon execution.
         </li>
@@ -388,9 +388,9 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h17">15. BONUS AND PROMOTIONS POLICY</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h17_p1">15.1 Bonuses and promotions are discretionary, time-limited, and subject to conditions.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h17_p2">All promotions which we offer will have specific terms and conditions which apply to
         that promotion. We can change, or stop providing a promotion, in accordance with the
@@ -457,9 +457,9 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h17_p12"><b>15.4 Revocation</b> - We may revoke bonuses and restrict withdrawals where misuse is
         suspected.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h18">16. CLIENT FUNDS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h18_p1">16.1 <b>Holding of Funds</b> - Client funds may be held in accounts with banks or
         institutions designated by us. Legal regimes may differ.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h18_p2">You can take money out of your account by sending it back to the payment method
@@ -496,9 +496,9 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h18_p8"><b>16.5 Minimum Withdrawal and Fees</b> - Minimums and fees may apply as published in
         fee schedules or on the website.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h19">17. DORMANT - INACTIVE ACCOUNTS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h19_p1">17.1 Accounts with no trade or deposit for 30 days may be classified as inactive and
         may be subject to fees.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h19_p2">17.2 Inactive Accounts are subject to a handling fee of $100 (one hundred) or its
@@ -507,9 +507,9 @@
         Dormant Account.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h19_p3">17.3 Reactivation may require updated KYC and approval.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h20">18. COSTS AND CHARGES</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h20_p1">18.1 You agree to pay commissions, spreads, swaps, financing, platform fees,
         withdrawal fees, taxes, and third-party costs.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h20_p2">We will charge you a fee for each order we execute for you. This is called a "spread"
@@ -522,9 +522,9 @@
         apply to all of our Services. However, for specific Services, other fees may also apply.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h20_p3">18.2 Fees are non-refundable and may change upon notice.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h21">19. COMPANY LIABILITY AND INDEMNITY</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h21_p1"><b>19.1 Limitation</b> - We are not liable for indirect, consequential, or incidental losses.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h21_p2">In the event of a force majeure scenario, the company will not be held liable for any
         loss, damage or inconvenience suffered due to circumstances beyond the company's
@@ -636,9 +636,9 @@
         inadequacy on the part of telecommunication or network service providers.</p>
 
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h22">20. CENT ACCOUNT TERMS AND CONDITIONS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h22_p1"><b>20.1 Eligibility</b><br />
         The Cent Account is available only to clients residing in eligible regions as determined by
         the Company from time to time.<br />
@@ -682,29 +682,29 @@
         By opening or using a Cent Account, the client acknowledges and agrees to be bound by
         these Terms and Conditions.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h23">21. DURATION OF AGREEMENT -
           AMENDMENTS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p1">21.1 Agreement is indefinite until terminated.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h23_p2">21.2 We may amend unilaterally where required by law or regulatory directive.
         Continued use constitutes acceptance.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h24">22. IMPROPER OR ABUSIVE TRADING -
           UNAUTHORIZED ACTIVITIES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p1">22.1 Prohibited conduct includes exploitation of misquotes, arbitrage on errors, latency
         abuse, manipulation, coordinated trading, fraud, and any attempt to gain improper
         advantage.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h24_p2">22.2 We may adjust payouts, restrict access, recover profits, cancel trades, terminate
         relationship, and use detection tools.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h25">23. CFD - LEVERAGED PRODUCTS TERMS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p1"><b>23.1 Overnight Financing</b> - Swaps/financing charges may apply and may be changed
         at our discretion.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p2"><b>23.2 Expiry and Rollovers</b> - Certain instruments may expire or be rolled. You must
@@ -714,55 +714,55 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h25_p4"><b>23.4 Corporate Actions</b> - We may adjust or close positions due to corporate actions to
         maintain economic equivalence.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h26">24. ACCOUNT STATUS - TERMINATION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p1">24.1 You may terminate with written notice as specified in our procedures.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p2">24.2 We may terminate with notice or immediately for regulatory, compliance, risk, or
         breach reasons.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h26_p3">24.3 Upon termination, open positions may be closed and obligations remain payable.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h27">25. EVENTS OF DEFAULT - COMPANY RIGHTS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p1">25.1 Events of Default include failure to meet margin, insolvency, misrepresentation,
         breach, suspected fraud, or regulatory issues.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h27_p2">25.2 On default, we may close positions, liquidate collateral, set off balances, withhold
         withdrawals, and pursue recovery.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h28">26. ACKNOWLEDGMENT OF RISKS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p1">26.1 Trading leveraged products is speculative and may result in losses exceeding
         deposits.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h28_p2">26.2 You acknowledge risks of volatility, liquidity, gaps, slippage, platform failure,
         and third-party disruptions.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h29">27. CONFIDENTIAL INFORMATION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p1">27.1 We will treat confidential information in accordance with applicable law and our
         privacy policy.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h29_p2">27.2 We may disclose information to regulators, law enforcement, banks, auditors, and
         advisors as required.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h30">28. NOTICES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p1">28.1 Notices may be delivered by email, platform messaging, or other channels we
         designate.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h30_p2">28.2 Notices are deemed received when sent to the last registered contact details or
         posted on the platform.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h31">29. CONFLICT OF INTEREST
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p1">29.1 We maintain a conflicts policy and may take measures to manage conflicts.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h31_p2">Your interests may conflict with our interests, inter-alia, as a B-Book broker, or with
         another client's interests. For example: (a) we may execute hedging transactions before
@@ -782,10 +782,10 @@
         provided by other brokers and the market price, as well as the current prices on any
         exchanges or trading platforms.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h32">30. GENERAL PROVISIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p1"><b>30.1 Severability</b> - Invalid provisions do not affect remaining provisions.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p2"><b>30.2 Assignment</b> - We may assign rights and obligations. You may not assign without
         our consent.</p>
@@ -793,10 +793,10 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h32_p4"><b>30.4 Entire Agreement</b> - This Agreement and incorporated policies constitute the
         entire agreement.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h33">31. APPLICABLE LAW - JURISDICTION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p1">31.1 Governed by the laws of Mauritius.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h33_p2">31.2 The place of residency of the Company and the place of performance of the
         Services and of all the obligations arising from the Agreement is in Mauritius. The
@@ -853,10 +853,10 @@
         claim or otherwise participate in any recovery secured through the class or
         representative action.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h34">32. DISPUTE RESOLUTION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p1">32.1 Complaints should be submitted through our internal complaints process.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p2"><b>Complaints Handling Procedure</b></p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p3">The Company has implemented and maintains a Complaints Handling Procedure (the
@@ -918,10 +918,10 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h34_p15">The Client may not initiate any formal proceedings during the investigation period
         and/or fill any complaint.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h35">33. MISCELLANEOUS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p1">33.1 Force majeure may suspend obligations.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p2">33.2 Survival - provisions intended to survive termination shall survive.</p>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h35_p3">33.3 Counterparts and electronic acceptance are valid and binding.</p>
@@ -934,17 +934,17 @@
           You confirm that you access this website on your own initiative and without any
           solicitation from The Company.</b></p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h36">ANNEX A – ADDITIONAL
           STANDARD TERMS AND
           REPETITIVE PROVISIONS
           (STRUCTURAL EXPANSION)
         </span>
-      </h1>
-      <h1 class="doc-sub">
+      </h2>
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h37">A1. Reiteration of Client Acknowledgements
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h37_p1">The Client expressly acknowledges, confirms, and agrees that:</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc;">
         <li data-i18n-html="termsConditionsPage.h37_li1">
@@ -963,10 +963,10 @@
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h37_p2">These acknowledgements apply continuously and survive termination of this
         Agreement.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h38">A2. Additional Risk Factors
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h38_p1">Without limitation to Section 25, the Client acknowledges risks arising from:</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc;">
         <li data-i18n-html="termsConditionsPage.h38_li1">
@@ -985,63 +985,63 @@
       <p class="doc-page-hero-subtitle">
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h39">A3. Expanded Force Majeure Provisions
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h39_p1">Force Majeure Events include, without limitation, acts of God, pandemics, cyber
         incidents, power failures, telecommunications outages, governmental actions,
         sanctions, strikes, market suspensions, liquidity withdrawal, and failures of
         counterparties. During such events, the Company may suspend services, close
         positions, or amend conditions without liability.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h40">A4. Repeated Limitation of Liability
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h40_p1">To the maximum extent permitted by law, the Company shall not be liable for loss of
         profit, loss of opportunity, reputational damage, indirect or consequential damages,
         even if foreseeable. This limitation applies cumulatively across all sections of this
         Agreement.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h41">A5. Further Indemnities
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h41_p1">The Client agrees to indemnify the Company against any claims, proceedings,
         regulatory actions, fines, or losses arising from the Client’s trading, breach of this
         Agreement, misuse of services, or violation of Applicable Regulations.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h42">A6. Survival and Continuing Obligations
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h42_p1">All representations, warranties, indemnities, limitations of liability, risk
         acknowledgements, and dispute resolution provisions shall survive termination,
         suspension, or expiration of this Agreement.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h43">A7. Technical Schedules and Platform Rules
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h43_p1">The Company may publish technical specifications, margin tables, leverage limits,
         product specifications, and operational rules separately. Such documents form an
         integral part of this Agreement and are binding upon publication.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h44">A8. Repetition for Structural Parity
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h44_p1">For the avoidance of doubt, all sections of this Agreement shall be read cumulatively.
         Any right, discretion, or protection afforded to the Company in one section shall
         apply equally across all other sections, mutatis mutandis.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h45">ANNEX B – ADDITIONAL
           DISCLOSURES AND
           DECLARATIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h45_p1">You acknowledge, represent and warrant that;</p>
       <ul class="doc-page-hero-list" style="list-style-type: disc; margin-left: 15px;">
         <li data-i18n-html="termsConditionsPage.h45_li1">
@@ -1104,11 +1104,11 @@
         You may also be required to fully indemnify us due to any contraventions by you of
         Applicable Law.</p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="termsConditionsPage.h46">ANNEX C – FORMAL
           DECLARATIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="termsConditionsPage.h46_p1">All content included in or made available through the Services, including but not
         limited to all copyright, trademarks, patents, service marks, domain names, trade
         names, rights in designs, software code, icons, logos, characters, layouts, rights in

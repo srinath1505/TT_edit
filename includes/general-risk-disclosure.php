@@ -10,14 +10,14 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-      <div class="doc-page-hero-title" >
-        <span data-i18n="generalRiskDisclosurePage.heroTitle" style='color: var(--brand-color-start)'>GENERAL RISK DISCLOSURE</span>
-      </div>
+      <h1 class="doc-page-hero-title">
+      <span data-i18n="generalRiskDisclosurePage.heroTitle" style='color: var(--brand-color-start)'>General Risk Disclosure Statement</span>
+      </h1>
       <div data-i18n-html="generalRiskDisclosurePage.block01">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>This Risk Disclosure Notice is part of the Client Agreements as
           defined in our Terms & Conditions</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">This notice provides you with information about the risks associated with
         investment products, in which you may invest, through services provided to
         you by Amber Rock Trade.

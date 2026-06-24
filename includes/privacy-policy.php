@@ -10,12 +10,12 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-      <div class="doc-page-hero-title">
-        <span data-i18n="privacyPolicyPage.heroTitle" style='color: var(--brand-color-start)'>Privacy Policy</span>
-      </div>
-      <h1 class="doc-sub">
-        <span data-i18n="privacyPolicyPage.h2">INTRODUCTION</span>
+      <h1 class="doc-page-hero-title">
+      <span data-i18n="privacyPolicyPage.heroTitle" style='color: var(--brand-color-start)'>Privacy Policy</span>
       </h1>
+      <h2 class="doc-sub">
+        <span data-i18n="privacyPolicyPage.h2">INTRODUCTION</span>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n="privacyPolicyPage.heroSubtitle">
         Our comprehensive data protection policy reflects our commitment to upholding high security standards.
       </p>
@@ -35,9 +35,9 @@
         Policy.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h3">1. SCOPE AND APPLICATION</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n="privacyPolicyPage.s3intro">
         This Privacy Policy applies to:
       </p>
@@ -53,9 +53,9 @@
         mobile applications, email, telephone, or other electronic or physical means.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h4">2. DEFINITIONS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n="privacyPolicyPage.s4intro">
         For the purposes of this Privacy Policy:
       </p>
@@ -83,9 +83,9 @@
         <b>“Third Parties”</b> means any entity other than the Company and its Affiliates.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h5">3.COLLECTION OF PERSONAL DATA</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s5p1">
         The Company collects the necessary information required to open a client's trading account
         and process transactions. In addition, we safeguard clients' assets and privacy while
@@ -121,9 +121,9 @@
         enforcement obligations.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h6">4. CLIENT CONSENT AND ONGOING AUTHORIZATION</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s6p1">
         By opening an account, using the Company’s services, or continuing to interact with the
         Company, clients provide their informed and explicit consent to electronic storage and processing of Personal
@@ -134,9 +134,9 @@
         Continues use of services constitutes ongoing consent, subject to applicable law.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h7">5. USE OF PERSONAL DATA</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s7p1">
         The Company uses clients' personal data for legitimate business and regulatory purposes
         in order to provide quality service and ensure security. This includes, but not limited to,
@@ -164,9 +164,9 @@
         Company at: <a class="license-link" href="mailto:compliance@tradertok.com">compliance@tradertok.com</a>
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h8">6. PROTECTION OF PERSONAL DATA</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s8p1">
         The Company implements administrative, technical, and physical safeguards consistent
         with industry standards to protect Personal Data. Access is restricted based on role-based
@@ -181,9 +181,9 @@
         events.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h9">7. AFFILIATES AND PARTNERS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s9p1">
         The Company may share personal data with affiliates as reasonably necessary to provide
         related products or services. Information may also be shared with partners and affiliates
@@ -191,9 +191,9 @@
         Company to do so.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h10">8. NON-AFFILIATED THIRD PARTIES</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s10p1">
         The Company does not sell, license, lease, or otherwise disclose clients' personal data to
         third parties, except as described in this Privacy Policy. However, the Company may
@@ -211,9 +211,9 @@
         Company’s reasonable control.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h11">9. CONTACTING CLIENTS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s11p1">
         The Company may contact clients regarding promotional offers, as consented to during
         account registration, when agreeing to the Company’s terms and conditions. Clients can
@@ -246,9 +246,9 @@
         the request is fully implemented.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h12">10. CLIENT RIGHTS</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s12p1">
         Subject to applicable law, client may request to access their Personal Data, to correction
         inaccurate data and/or to request the deletion and/or restriction of processing (where
@@ -277,9 +277,9 @@
         good faith.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h13">11. LIMITATION OF LIABILITY</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s13p1">
         The Company is not responsible for the privacy practices or content of websites linked to
         <b>tradertok.com</b>. When clients choose to link to co-branded or third-party websites, any
@@ -295,9 +295,9 @@
         personal information
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h14">12. USE OF COOKIES</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s14p1">
         The Company uses cookies to secure client trading activities and improve the
         functionality of the <b>tradertok.com</b> website. These cookies do not contain any personal or
@@ -324,9 +324,9 @@
         the placement and use of cookies as described in this Policy.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="privacyPolicyPage.h15">13. PRIVACY POLICY UPDATES</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="privacyPolicyPage.s15p1">
         The Company reserves the unilateral right to amend, modify, update, or revise this Policy
         at any time in its sole discretion and changes take effect immediately upon publication on

@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Referral Program</span>
       </div>
-      <h1 class="doc-page-hero-title">TRADERTOK INVITE &amp; EARN</h1>
+      <h1 class="doc-page-hero-title">Refer a Friend &amp; Earn Rewards</h1>
       <p class="doc-page-hero-subtitle">
         Invite your friends to TraderTok and unlock exclusive rewards, bonuses, and status upgrades
         as they start trading.

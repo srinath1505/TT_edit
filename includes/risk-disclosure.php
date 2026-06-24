@@ -10,12 +10,12 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-      <div class="doc-page-hero-title doc-heading-accent" style='color: var(--brand-color-start)'>
-        <span data-i18n="legalPage.riskDisclosureHeroTitle">RISK DISCLOSURE</span>
-      </div>
-      <h1 class="doc-sub">
+      <h1 class="doc-page-hero-title doc-heading-accent" style='color: var(--brand-color-start)'>
+      <span data-i18n="legalPage.riskDisclosureHeroTitle">Risk Disclosure Notice</span>
+    </h1>
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h2">Definitions</span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0px;">
 
         <li data-i18n-html="riskDisclosurePage.defLi1"><strong>Margin:</strong> Funds required to open and maintain a position, acting as collateral against
@@ -37,9 +37,9 @@
         undersigned ("Customer," "you," "your") acknowledges, understands, and agrees to the following:
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h3">1. GENERAL RISK DISCLOSURE ON TRADING</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s1p1">
         Trading financial instruments, including CFDs and FX contracts, involves a high level of risk, it
         is not suitable for all investors and may result in losses that exceed your initial investment. Past
@@ -75,11 +75,11 @@
         for all trading decisions and related risks.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h4">2. DISCLOSURE ASSOCIATED WITH LONG CFD POSITIONS (FOR PURCHASERS
           OF CFDS)
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s2p1">
         Holding a long CFD position means you are purchasing CFDs with the expectation that the market
         price of the underlying asset will rise between the time of purchase and sale.
@@ -95,11 +95,11 @@
         in a loss.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h5">3. DISCLOSURE ASSOCIATED WITH SHORT CFD POSITIONS (FOR SELLERS OF
           CFDS)
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s3p1">
         Holding a short CFD position means you are selling CFDs with the expectation that the market
         price of the underlying asset will fall between the time of purchase and sale.
@@ -120,10 +120,10 @@
         certain circumstances. Clients acknowledge and accept these risks before entering short positions.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h6">4. HIGH LEVERAGE AND LOW MARGINS CAN LEAD TO RAPID LOSSES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s4p1">
         Both CFDs and FX Contracts involve a high degree of leverage or "gearing," which makes trading
         these instruments riskier than investing directly in the underlying asset. The margining system
@@ -148,10 +148,10 @@
         directly influences the outcome of their investment.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h7">5. MARGIN REQUIREMENTS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s5p1">
         Clients are required to maintain the minimum margin requirements for their open positions at all
         times and are responsible for monitoring their account balance. It is the Customer’s responsibility
@@ -170,10 +170,10 @@
         loss, for which Client will be liable.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h8">6. CASH SETTLEMENT
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s6p1">
         The Customer acknowledges that CFDs and FX Contracts are cash-settled, with the difference
         between the buying and selling price determining the outcome of the investment. No physical
@@ -185,10 +185,10 @@
         the Company.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h9">7. OTC TRANSACTIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s7p1">CFD and FX Contract transactions with the Company are conducted over-the-counter
         (OTC),
         meaning they are not executed on a recognized or designated investment exchange. All positions
@@ -210,10 +210,10 @@
         and execution, and by trading OTC instruments, you acknowledge and accept these risks.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h10">8. CFDS AND FX CONTRACTS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s8p1">
         Trading CFDs and FX Contracts carries significant risks. The leverage involved means that even
         a small market movement can result in a much larger movement in the value of your liability. You
@@ -222,11 +222,11 @@
         Customer’s sole responsibility to monitor positions and manage all associated risks.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h11">9. PRICES, MARGIN, AND VALUATIONS ARE SET BY THE COMPANY AND MAY
           DIFFER FROM OTHER SOURCES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s9p1">
         The Company will provide prices for trading, valuing Customer positions, and determining margin
         requirements in accordance with its Trading Policies and Procedures. The performance of your
@@ -241,10 +241,10 @@
         time to time.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h12">10. EXTENT OF LOSSES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s10p1">
         When you hold a short position and the price increases, your losses may not become apparent until
         you close the position. In certain scenarios, losses can exceed your initial margin deposits. Short
@@ -253,10 +253,10 @@
         risks associated with your position before entering any transaction.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h13">11. RIGHTS TO UNDERLYING ASSETS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s11p1">
         You have no rights or obligations concerning the underlying assets of your CFDs or FX Contracts.
         CFDs may be based on a variety of underlying assets, such as stocks, indices, currencies, and
@@ -267,10 +267,10 @@
         and commodities.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h14">12. CURRENCY RISK
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s12p1">
         Investing in FX Contracts and CFDs involving an underlying asset in a currency different from
         your base currency carries currency risk. If the CFD or FX Contract is settled in a currency other
@@ -283,10 +283,10 @@
         entering into such transactions.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h15">13. ONE-CLICK TRADING AND IMMEDIATE EXECUTION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s13p1">
         The Company's online trading system facilitates immediate execution of Customer orders once the
         notional amount is entered, and "Buy/Sell" is clicked. Once an order is submitted, it cannot be
@@ -299,10 +299,10 @@
         rapidly moving markets.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h16">14. THE COMPANY IS NOT AN ADVISER OR FIDUCIARY
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s14p1">
         Any market recommendations provided by the Company are general and not personal investment
         advice. The Company has not considered your individual financial situation, investment
@@ -321,10 +321,10 @@
         provides.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h17">15. RECOMMENDATIONS ARE NOT GUARANTEED
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s15p1">
         The market recommendations provided by the Company are based on the judgment of its personnel
         and should be considered as general guidance only.
@@ -343,10 +343,10 @@
         recommendations is done entirely at the Customer’s own risk.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h18">16. NO GUARANTEES OF PROFIT
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s16p1">
         Trading CFDs and FX Contracts involves a high risk of loss, including the possibility of losing
         your entire investment. There are no guarantees of profits or protection from losses when trading
@@ -357,10 +357,10 @@
         bearing any potential losses resulting from trading these instruments.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h19">17. CUSTOMER MAY NOT BE ABLE TO CLOSE OPEN POSITIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s17p1">
         In certain market conditions, such as periods of high volatility, low liquidity, or other extreme or
         unforeseen events (including force majeure), the Company may be unable to close a position at
@@ -372,10 +372,10 @@
       </p>
 
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h20">18. INTERNET TRADING
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s18p1">
         The Company is not liable for any claims, losses, damages, or expenses arising from technical
         failures, connectivity issues, cyber events, or other disruptions affecting the Company’s systems,
@@ -391,10 +391,10 @@
         on such systems is at the Customer’s own risk.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h21">19. QUOTING ERRORS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s19p1">
         A quoting error refers to any incorrect, inaccurate, or unintended price provided by the Company
         in response to a Customer request, including, but not limited to, errors caused by system
@@ -415,10 +415,10 @@
         submitted within 14 calendar days of the trade or quoting error to allow for a timely and fair review.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="riskDisclosurePage.h22">20. UPDATES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle" data-i18n-html="riskDisclosurePage.s20p1">
         The Company reserves the right to modify this Risk Disclosure Statement and its policies at any
         time, at its discretion, whenever it deems necessary or appropriate, including in response to

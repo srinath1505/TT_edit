@@ -9,7 +9,7 @@
       <div class="page-hero-badge">
         <span>Key Information Document</span>
       </div>
-      <h1 class="doc-page-hero-title">KEY INFORMATION DOCUMENT</h1>
+      <h1 class="doc-page-hero-title">Key Information Documents (KIDs)</h1>
       <p class="doc-page-hero-subtitle">
         TraderTok is a global online trading platform designed to empower traders at every level through
         multi-asset market access, advanced trading technology, and a user-focused experience.

@@ -10,12 +10,12 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-    <div class="doc-page-hero-title">
-      <span data-i18n="privacyPolicyPage.heroTitle" style='color: var(--brand-color-start)'>Cookies Policy</span>
-    </div>
-      <h1 class="doc-sub">
+    <h1 class="doc-page-hero-title">
+    <span data-i18n="privacyPolicyPage.heroTitle" style='color: var(--brand-color-start)'>Cookies Policy</span>
+    </h1>
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h2">Introduction</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         This Cookies Policy explains how Amber Rock Trade Ltd (“Company”, “we”, “us”, or “our”)
         uses cookies and similar technologies when you visit our website <a class="license-link"
@@ -31,20 +31,20 @@
         your browser settings.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h3">1. What Are Cookies?</span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Cookies are small text files that are stored on your device (computer, tablet, or mobile
         device) when you visit a website. Cookies help websites function properly, improve user
         experience, and provide analytical and performance-related information.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h4">
           Types of Cookies We Use
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         <strong>2.1 Strictly Necessary Cookies</strong>
       </p>
@@ -112,10 +112,10 @@
         These cookies are only placed with your consent, where required by applicable law.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h5">3. Third-Party Cookies
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Some cookies may be set by third-party service providers that perform services on our
         behalf, such as:
@@ -133,10 +133,10 @@
         parties.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h6">4. How Long Cookies Are Stored
         </span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:disc">
         <li><strong>Session cookies:</strong> Deleted when you close your browser.</li>
         <li><strong>Persistent cookies:</strong> Remain on your device for a specified period or until manually
@@ -144,10 +144,10 @@
       </ul>
       <p class="doc-page-hero-subtitle"></p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h7">5. Managing Cookies
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         You can manage your cookie preferences at any time by:
       </p>
@@ -164,19 +164,19 @@
       </p>
 
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h8">6. Data Protection and Privacy
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Information collected through cookies may constitute personal data. For more details on
         how we process personal data, please refer to our Privacy Policy.
       </p>
 
-      <h1 class="doc-sub">
+      <h2 class="doc-sub">
         <span data-i18n="cookiesPolicyPage.h9">7. Changes to This Cookie Policy
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">We may update this Cookie Policy from time to time. Any changes will be posted
         on this
         page with an updated revision date.</p>

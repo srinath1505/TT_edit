@@ -10,13 +10,13 @@
 
   <div class="container">
     <div class="page-hero-content legal-document-content" style="justify-content: start; align-items: flex-start; text-align: left;">
-      <div class="doc-page-hero-title">
-        <span data-i18n="clientServiceAgreementPage.heroTitle" style='color: var(--brand-color-start)'>CLIENT SERVICE AGREEMENT</span>
-      </div>
-      <div data-i18n-html="clientServiceAgreementPage.block01">
-<h1 class="doc-sub">
-        <span>INTRODUCTION</span>
+      <h1 class="doc-page-hero-title">
+      <span data-i18n="clientServiceAgreementPage.heroTitle" style='color: var(--brand-color-start)'>Client Service Agreement</span>
       </h1>
+      <div data-i18n-html="clientServiceAgreementPage.block01">
+<h2 class="doc-sub">
+        <span>INTRODUCTION</span>
+      </h2>
       <p class="doc-page-hero-subtitle">This Client Services Agreement (the <strong>“Agreement”</strong>) governs the
         relationship
         between
@@ -35,10 +35,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block02">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>WHEREAS:
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company is a licensed investment dealer that provides investment and ancillary
         services through its website and through its electronic system over the Internet (hereafter
@@ -73,10 +73,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block03">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>1. COMMUNICATION WITH US
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         You may communicate with us in writing by email or orally (including by telephone). The
         language of communication shall be English, and you will receive documents and other
@@ -114,10 +114,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block04">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>2. MEMBERSHIP ELIGIBILITY
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Services are available and reserved only for individuals or legal entities that have
         established a legally binding contract under the laws applicable in their country of
@@ -141,10 +141,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block05">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>3. DEFINITIONS – INTEPRETATION
         </span>
-      </h1>
+      </h2>
       <ul class="doc-page-hero-list" style="list-style-type:none; margin-left: 0px;">
 
         <li><strong>Account:</strong> The personal trading account the Client maintains with the Company, designated
@@ -241,10 +241,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block06">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>4. PROVISION OF SERVICES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The following are the investment services which the Company is authorized to provide in
         accordance with its LSP authorization are governed by this Agreement:
@@ -305,10 +305,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block07">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>5. ACCOUNT OPENING INFORMATION AND REQUIREMENTS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         When you register for the above-mentioned Services, the Company will ask you to provide
         certain identifying information. By doing so, you acknowledge, agree and consent to share
@@ -351,10 +351,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block08">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>6. GUARANTEES ON BEHALF OF THE CLIENT
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">You represent, warrant, and guarantee that all funds provided to the Company for
         trading
         purposes are your sole and exclusive property, free and clear of any lien, charge, pledge,
@@ -393,10 +393,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block09">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>7. ELECTRONIC TRADING
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company will provide you with Access Codes for gaining online access to the
         Company’s website and/or trading platforms, which are strictly personal <strong>and</strong> nontransferable,
@@ -510,10 +510,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block10">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>8. FINANCIAL INFORMATION
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Through one or more of its Services, the Company makes available to you a wide range of
         financial information that is generated internally, from agents, suppliers or partners
@@ -556,10 +556,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block11">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>9. ORDERS – INSTRUCTIONS AND BASIS OF DEALINGS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         <strong>Reception and Execution of Transactions</strong>
       </p>
@@ -651,10 +651,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block12">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>10.CONFIRMATIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Confirmations for all Transactions that have been executed in your Trading Account on a
         trading day will be available via your online Account through the Trading Platform as soon
@@ -693,10 +693,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block13">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>11.PRICING
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company will quote prices at which it is prepared to deal with you. Same where:
       </p>
@@ -741,10 +741,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block14">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>12.REFUSAL TO EXECUTE ORDERS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company has the absolute right, at any time and for any reason or no reason, and
         without giving any notice providing any prior notice or explanation, to refuse, at its sole
@@ -796,10 +796,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block15">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>13.CANCELLATION OF TRANSACTIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company has the right to cancel a Transaction if it has adequate reasons/evidence to
         believe that one of the following has been incurred:
@@ -824,10 +824,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block16">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>14.SETTLEMENT OF TRANSACTIONS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         All Transactions entered into by the Client are binding immediately upon execution.
         Acquisition of a financial instrument shall be deemed complete only after the instrument
@@ -849,10 +849,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block17">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>15.BONUS AND PROMOTIONS POLICY
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         The Company offers several attractive Bonus programs to its new and existing Clients,
         who have activated their trading account. Bonuses and/ or financial awards and/ or
@@ -938,10 +938,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block18">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>16.CLIENTS FUNDS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Funds belonging to you that will be used for trading purposes will be kept in an account
         with any bank or financial institution used to accept funds which the Company may specify
@@ -1068,10 +1068,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block19">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>MINIMUM WITHDRAWAL AMOUNTS
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         When you withdraw funds from your Account, a minimum withdrawal amount of $50.00
         is required. The exact minimum will be based on the currency denomination of the Client
@@ -1081,10 +1081,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block20">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>WITHDRAWAL CHARGES
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         Traders who are members of our Platinum, Black and VIP accounts are granted their first
         withdrawal free of charge. The exact charges and fees will be based on the currency
@@ -1102,10 +1102,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block21">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>17.DORMANT ACCOUNT PROCEDURE
         </span>
-      </h1>
+      </h2>
       <p class="doc-page-hero-subtitle">
         You acknowledge and confirm that any Client account in which no trade or deposit occurs
         for a period exceeding 30 (thirty) calendar days shall be classified by the Company as an
@@ -1120,10 +1120,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block22">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>18.COSTS AND CHARGES
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         <strong>Trading Commissions</strong>
@@ -1173,10 +1173,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block23">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>19.COMPANY LIABILITY AND INDEMNITY
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         The Company shall act in good faith and with due diligence in performing transactions and
@@ -1212,10 +1212,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block24">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>20.DURATION OF THE AGREEMENT AND AMENDMENT THEREOF
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         This Agreement is valid indefinitely until terminated by either the Client, the Company, or
@@ -1239,11 +1239,11 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block25">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>21.IMPROPER OR ABUSIVE TRADING AND/ OR UNAUTHORISED
           ACTIVITIES
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         The Company’s objective is to provide the most efficient trading liquidity available in the
@@ -1319,10 +1319,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block26">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>22.CFD TRADING TERMS
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         <strong>Overnight Interest
@@ -1567,10 +1567,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block27">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>23.TERMINATION
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         You have the right to terminate the Agreement by giving the Company at least 7 (seven)
@@ -1620,10 +1620,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block28">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>24.EVENTS OF DEFAULT AND RIGHTS ON DEFAULT
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         The following shall constitute “Events of Default” (each an “Event Default”) on the
@@ -1674,10 +1674,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block29">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>25.ACKNOWLEDGEMENT OF RISKS
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         It should be noted that due to market conditions and fluctuations, the value of Financial
@@ -1718,10 +1718,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block30">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>26.CONFIDENTIAL INFORMATION
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         The Company does not have any obligation to disclose to you any information or take into
@@ -1744,10 +1744,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block31">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>27.NOTICES
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         Unless the contrary is specifically provided, any notice, instructions, authorizations,
@@ -1763,10 +1763,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block32">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>28.CONFILICT OF INTEREST
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         Under Applicable Regulations the Company is required to have arrangements in place to
@@ -1783,10 +1783,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block33">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>29.GENERAL PROVISIONS
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         You acknowledge that no representations were made to you by or on behalf of the
@@ -1835,10 +1835,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block34">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>30.APPLICABLE LAW, JURISDICTION
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         This Agreement and all transactional relations between you and the Company are governed
@@ -1850,10 +1850,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block35">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>31.DISPUTE RESOLUTION PROVISION
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         In the event of any dispute or difference arising between the Parties hereto relating to or
@@ -1890,10 +1890,10 @@
       </div>
 
       <div data-i18n-html="clientServiceAgreementPage.block36">
-<h1 class="doc-sub">
+<h2 class="doc-sub">
         <span>32.MISCELLANEOUS
         </span>
-      </h1>
+      </h2>
 
       <p class="doc-page-hero-subtitle">
         This Agreement contains the entire agreement and understanding among the Parties hereto
