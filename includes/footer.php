@@ -116,7 +116,7 @@
             <h3 class="footer-title" data-i18n="footer.downloadOurApp">Download our app from the stores</h3>
             <div class="footer-store-btns">
               <a href="https://apps.apple.com/tr/app/tradertok/id6759670314" class="footer-store-btn">
-                <img src="assets/images/Apple_logo_black.png" alt="Apple" class="store-icon" />
+                <img src="assets/images/Apple_logo_black.png" alt="Apple App Store Download Badge" class="store-icon" />
                 <span>App Store</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.tradertok.app" class="footer-store-btn">
@@ -179,7 +179,7 @@
                   d="M146.9 148.1h-77.7l-.6 3.6c60.4 14.7 100.4 50.3 117 93l-16.9-81.5c-2.9-11.2-11.4-14.6-21.8-15.1z"
                   fill="#F9A533" />
               </svg>
-              <img src="assets/images/Mastercard-logo.svg.png" alt="Mastercard" class="payment-icon">
+              <img src="assets/images/Mastercard-logo.svg.png" alt="Mastercard Payment Method Accepted" class="payment-icon">
             </div>
           </div>
 

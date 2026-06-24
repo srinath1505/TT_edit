@@ -275,7 +275,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
 </style>
 <!-- Hero Section -->
 <section class="hero gold-silver-banner" aria-label="TraderTok banner">
-  <img src="assets/images/banner.jpeg" alt="Banner" class="banner-img">
+  <img src="assets/images/banner.jpeg" alt="TraderTok Online Trading Platform Banner" class="banner-img">
 <h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">TraderTok &ndash; Trade Forex, Stocks, Indices &amp; Commodities</h1>
 </section>
 
@@ -357,7 +357,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
         </button>
       </div>
       <div class="traders-club-image">
-        <img src="assets/images/card-tradertok.png" alt="TraderTok Free Card" loading="lazy">
+        <img src="assets/images/card-tradertok.png" alt="TraderTok Logo" loading="lazy">
       </div>
     </div>
   </div>
@@ -566,7 +566,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
       <div class="platforms-visual">
         <div class="device-wrapper">
           <img src="assets/images/devices-mockup.png"
-            alt="TraderTok desktop and mobile trading platform interface showing real-time charts" class="devices-img"
+            alt="TraderTok Trading Platform on Multiple Devices" class="devices-img"
             loading="lazy" />
 
           <div class="screen-overlay laptop-screen">
@@ -750,7 +750,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
         </button>
       </div>
       <div class="deposit-image">
-        <img src="assets/images/7.6.png" alt="7.6% Annual Deposit Rate" loading="lazy">
+        <img src="assets/images/7.6.png" alt="TraderTok Platform Rating and Customer Reviews" loading="lazy">
       </div>
     </div>
   </div>
@@ -855,7 +855,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
           connect with other traders</p>
       </div>
       <div class="telegram-person">
-        <img src="assets/images/Person holding phone happily.png" alt="Happy trader" loading="lazy">
+        <img src="assets/images/Person holding phone happily.png" alt="Happy Trader Using Mobile Trading App" loading="lazy">
       </div>
       <a href="https://t.me/+awNc7BFxH45jOTNk" target="_blank" class="btn-telegram">
         <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -1141,7 +1141,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
                   </svg>
                 </div>
                 <div class="home-payment-overview__icon-tile home-payment-overview__icon-tile--brand">
-                  <img src="./assets/images/Mastercard-logo.svg.png" alt="Mastercard" class="home-payment-overview__brand-img home-payment-overview__brand-img--mastercard" width="120" height="75" loading="lazy" data-i18n-alt="homePayment.mastercardAlt">
+                  <img src="./assets/images/Mastercard-logo.svg.png" alt="Mastercard Payment Method Accepted" class="home-payment-overview__brand-img home-payment-overview__brand-img--mastercard" width="120" height="75" loading="lazy" data-i18n-alt="homePayment.mastercardAlt">
                 </div>
                 <div class="home-payment-overview__icon-tile">
                   <span class="home-payment-overview__icon-label" data-i18n="homePayment.iconLabelCards">Cards</span>
@@ -1184,7 +1184,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
                     </div>
                   </div>
                   <div class="home-payment-overview__wallet-chip home-payment-overview__wallet-chip--mm" role="listitem" data-i18n-aria="homePayment.walletMobileMoneyAria" aria-label="Mobile money">
-                    <img src="./assets/images/mm.jpg" alt="Mobile money" class="home-payment-overview__wallet-mm-img" width="120" height="56" loading="lazy" data-i18n-alt="homePayment.walletMobileMoneyAria">
+                    <img src="./assets/images/mm.jpg" alt="TraderTok Client Success and Trading Experience" class="home-payment-overview__wallet-mm-img" width="120" height="56" loading="lazy" data-i18n-alt="homePayment.walletMobileMoneyAria">
                   </div>
                   <div class="home-payment-overview__wallet-chip" role="listitem" data-i18n-aria="homePayment.walletGcashAria" aria-label="GCash, Asia">
                     <span class="home-payment-overview__gcash-wordmark" aria-hidden="true"><span class="home-payment-overview__gcash-g">G</span><span class="home-payment-overview__gcash-c">C</span><span class="home-payment-overview__gcash-ash">ash</span></span>
