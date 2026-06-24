@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.tradertok.com/</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/banner.jpeg</image:loc>
+      <image:title>TraderTok Online Trading Platform Banner</image:title>
+      <image:caption>Professional multi-asset online trading platform</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/card-tradertok.png</image:loc>
+      <image:title>TraderTok Logo</image:title>
+      <image:caption>TraderTok brand logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/devices-mockup.png</image:loc>
+      <image:title>TraderTok Trading Platform on Multiple Devices</image:title>
+      <image:caption>TraderTok trading platform available on desktop, tablet and mobile devices</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/7.6.png</image:loc>
+      <image:title>TraderTok Platform Rating and Customer Reviews</image:title>
+      <image:caption>TraderTok platform rating badge</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Person%20holding%20phone%20happily.png</image:loc>
+      <image:title>Happy Trader Using Mobile Trading App</image:title>
+      <image:caption>A happy trader using the TraderTok mobile trading application</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Mastercard-logo.svg.png</image:loc>
+      <image:title>Mastercard Payment Method Accepted</image:title>
+      <image:caption>Mastercard accepted for deposits and withdrawals at TraderTok</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/mm.jpg</image:loc>
+      <image:title>TraderTok Client Success and Trading Experience</image:title>
+      <image:caption>Mobile money payment option available at TraderTok</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Trading Platform -->
+  <url>
+    <loc>https://www.tradertok.com/trading-platform</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/laptop_platforms.png</image:loc>
+      <image:title>TraderTok Trading Platform on Laptop</image:title>
+      <image:caption>TraderTok web and desktop trading platform displayed on a laptop</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Iphone%20-%20platforms2.png</image:loc>
+      <image:title>TraderTok Mobile Trading App on iPhone</image:title>
+      <image:caption>TraderTok mobile trading application on iPhone</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/mt5.png</image:loc>
+      <image:title>MetaTrader 5 Trading Platform</image:title>
+      <image:caption>MetaTrader 5 (MT5) platform available through TraderTok</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Regulations -->
+  <url>
+    <loc>https://www.tradertok.com/regulations</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/mauritius.png</image:loc>
+      <image:title>TraderTok Mauritius Financial Services License</image:title>
+      <image:caption>TraderTok regulated by Mauritius Financial Services Commission</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Meet the Team -->
+  <url>
+    <loc>https://www.tradertok.com/meet-the-team</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Avatars/Kai_Lockwood.png</image:loc>
+      <image:title>Kai Lockwood - TraderTok Team</image:title>
+      <image:caption>Kai Lockwood, TraderTok leadership team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Avatars/Juan_Garcia.png</image:loc>
+      <image:title>Juan Garcia - TraderTok Team</image:title>
+      <image:caption>Juan Garcia, TraderTok leadership team member</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/Avatars/Aaron_Dev.png</image:loc>
+      <image:title>Vikram Patel - TraderTok Team</image:title>
+      <image:caption>Vikram Patel, TraderTok leadership team member</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Research -->
+  <url>
+    <loc>https://www.tradertok.com/research</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/10030610.png</image:loc>
+      <image:title>Online Trading and Investment Illustration</image:title>
+      <image:caption>Online trading and investment education illustration</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Trading Central -->
+  <url>
+    <loc>https://www.tradertok.com/trading-central</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/trading-central.png</image:loc>
+      <image:title>Trading Central Dashboard</image:title>
+      <image:caption>Trading Central market analysis dashboard integrated with TraderTok</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/trading-central-mac-2.png</image:loc>
+      <image:title>Trading Central Data Driven Insights</image:title>
+      <image:caption>Data-driven trading insights from Trading Central on Mac</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/trading-central-mac.png</image:loc>
+      <image:title>Trading Central Professional-Grade Analysis</image:title>
+      <image:caption>Professional-grade market analysis tools from Trading Central</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/trading-central-mob.png</image:loc>
+      <image:title>Trading Central Mobile Market Opportunities</image:title>
+      <image:caption>Trading Central tools available on mobile for boundless market opportunities</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Us -->
+  <url>
+    <loc>https://www.tradertok.com/contact-us</loc>
+    <image:image>
+      <image:loc>https://www.tradertok.com/assets/images/36019266_kulins0879.png</image:loc>
+      <image:title>Professional Trader Monitoring Financial Markets</image:title>
+      <image:caption>Professional trader monitoring financial markets at TraderTok</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
