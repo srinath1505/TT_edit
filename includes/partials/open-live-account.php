@@ -3,8 +3,7 @@
     <div class="container" style="padding-top: 100px;">
       <div class="registration-account-layout">
         <div class="registration-account-intro">
-          <h1 class="education-subpage-section-title" data-i18n="openLiveAccountPage.heroTitle">Open a live trading
-            account</h1>
+          <h1 class="education-subpage-section-title" data-i18n="openLiveAccountPage.heroTitle">Open a Live Trading Account</h1>
           <p class="registration-page-hero-lead" data-i18n="openLiveAccountPage.heroLead">
             Tell us how to reach you. A member of the team will follow up with eligibility checks, documentation, and
             next steps. Trading involves risk; this is not financial advice.

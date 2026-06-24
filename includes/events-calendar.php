@@ -202,8 +202,8 @@ body.light-theme .markets-header p {
 <section class="events-calendar-page">
   <!-- Page Header -->
   <div class="markets-header">
-    <h1><span data-i18n="eventsCalendarPage.heroTitle">Markets</span> <span class=""
-        data-i18n="eventsCalendarPage.heroTitleHighlight">Overview</span></h1>
+    <h1><span data-i18n="eventsCalendarPage.heroTitle">Economic Events &amp;</span> <span class=""
+        data-i18n="eventsCalendarPage.heroTitleHighlight">Market Calendar</span></h1>
     <p data-i18n="eventsCalendarPage.heroSubtitle">Real-time market data, economic events, and cryptocurrency prices all in one place</p>
   </div>
 

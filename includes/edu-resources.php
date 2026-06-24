@@ -133,7 +133,7 @@ $practical_uses = [
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">Tools &amp; Resources</div>
-            <h1 class="education-subpage-title">Trading Tools &amp; Resources</h1>
+            <h1 class="education-subpage-title">Trading Resources &amp; Learning Materials</h1>
             <p class="education-subpage-subtitle">
                 Access TraderTok trading tools and resources including interactive pip, position-size, and risk-reward calculators, economic calendar guides, trading checklists, and practical learning support.
             </p>

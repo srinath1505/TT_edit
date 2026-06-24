@@ -3,7 +3,7 @@
     <div class="container" style="padding-top: 100px;">
       <div class="registration-account-layout">
         <div class="registration-account-intro">
-          <h1 class="education-subpage-section-title">Join TraderTok Club</h1>
+          <h1 class="education-subpage-section-title">Join the TraderTok Club Today</h1>
           <p class="registration-page-hero-lead">
             Get daily trading insights, market updates, and beginner-friendly education designed to help you grow as a trader.
           </p>

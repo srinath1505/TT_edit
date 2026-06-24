@@ -10,7 +10,7 @@
                 <span class="eyebrow-dot gradient-text"></span>
                 <span data-i18n="educationHubPage.heroEyebrow">TraderTok Education Hub</span>
             </div>
-            <h1 class="page-hero-title1" data-i18n="educationHubPage.heroTitle">Learn about financial markets through a structured and accessible knowledge hub.</h1>
+            <h1 class="page-hero-title1" data-i18n="educationHubPage.heroTitle">Trading Education Hub</h1>
             <p class="page-hero-subtitle1" data-i18n="educationHubPage.heroSubtitle">
                 TraderTok Education Hub brings together educational content designed to help users understand market concepts, trading foundations, risk awareness, and the broader trading ecosystem in one place.
             </p>

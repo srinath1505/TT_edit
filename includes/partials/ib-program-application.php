@@ -40,7 +40,7 @@ asort($ib_partner_languages);
     <div class="container" style="padding-top: 100px;">
       <div class="registration-account-layout">
         <div class="registration-account-intro">
-          <h1 class="education-subpage-section-title">Become a Trading Partner (IB)</h1>
+          <h1 class="education-subpage-section-title">Apply for the Introducing Broker Program</h1>
           <p class="registration-page-hero-lead">
             Refer traders, grow your network, and earn commissions for every active client you bring.
           </p>

@@ -56,7 +56,7 @@ $mobile_highlights = [
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">Platform Tutorials</div>
-            <h1 class="education-subpage-title">Platform Tutorials</h1>
+            <h1 class="education-subpage-title">Trading Tutorials for Beginners &amp; Professionals</h1>
             <p class="education-subpage-subtitle">
                 Learn how to use TraderTok trading platforms with beginner-friendly tutorials on charts, order types, stop-loss, take-profit, and mobile trading.
             </p>

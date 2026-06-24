@@ -62,7 +62,7 @@ $outlook_points = [
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">Market commentary</div>
-            <h1 class="education-subpage-title">Market News &amp; Insights</h1>
+            <h1 class="education-subpage-title">Market News &amp; Trading Updates</h1>
             <p class="education-subpage-subtitle">
                 Market news and analysis in one place: forex, gold, indices, and macro themes—framed for learning, not recommendations.
             </p>

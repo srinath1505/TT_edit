@@ -291,8 +291,8 @@ body.light-theme .training-page .hero-description {
           <div class="training-layout">
             <!-- Left Column - Text & Stats -->
             <div class="training-left">
-              <h1 class="hero-title"><span data-i18n="liveTrainingPage.heroTitle">Learn Trading</span> <span
-                  class="" data-i18n="liveTrainingPage.heroTitleHighlight">Live</span></h1>
+              <h1 class="hero-title"><span data-i18n="liveTrainingPage.heroTitle">Live Trading</span> <span
+                  class="" data-i18n="liveTrainingPage.heroTitleHighlight">Training Sessions</span></h1>
               <p class="hero-description" data-i18n="liveTrainingPage.heroDescription">
                 Join our expert-led live trading sessions and webinars. Get real-time market analysis, learn proven
                 strategies, and interact directly with professional traders.

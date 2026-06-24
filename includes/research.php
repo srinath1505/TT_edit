@@ -582,8 +582,8 @@ body.light-theme .research-page .education-text p {
      <section class="research-hero">
        <div class="container">
          <div class="hero-content">
-           <h1 class="hero-title"><span data-i18n="researchPage.heroTitle">Market Insights That</span> <span
-               class="" data-i18n="researchPage.heroTitleHighlight">Matter</span></h1>
+           <h1 class="hero-title"><span data-i18n="researchPage.heroTitle">Market Research &amp;</span> <span
+               class="" data-i18n="researchPage.heroTitleHighlight">Trading Insights</span></h1>
            <p class="hero-description-small" data-i18n="researchPage.heroDesc1">
              Our research materials are carefully prepared to help traders and investors better understand the markets.
              Each video and PDF on this page has been thoughtfully developed to offer insights that are practical,

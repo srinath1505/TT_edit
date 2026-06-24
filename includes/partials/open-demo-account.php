@@ -3,7 +3,7 @@
     <div class="container" style="padding-top: 100px;">
       <div class="registration-account-layout">
         <div class="registration-account-intro">
-          <h1 class="education-subpage-section-title" data-i18n="openDemoAccountPage.heroTitle">Open a free demo account
+          <h1 class="education-subpage-section-title" data-i18n="openDemoAccountPage.heroTitle">Open a Free Demo Trading Account
           </h1>
           <p class="registration-page-hero-lead" data-i18n="openDemoAccountPage.heroLead">
             Practice with virtual funds on live market data. Submit your details below; our team will follow up with

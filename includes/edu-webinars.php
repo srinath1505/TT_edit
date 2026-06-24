@@ -54,7 +54,7 @@ $related_reading = [
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">Trading Webinars</div>
-            <h1 class="education-subpage-title">Live Trading Webinars &amp; Learning Sessions</h1>
+            <h1 class="education-subpage-title">Live Trading Webinars</h1>
             <p class="education-subpage-subtitle">
                 Join TraderTok webinars on forex, CFDs, trading strategy, risk management, technical analysis, and weekly market outlooks.
             </p>

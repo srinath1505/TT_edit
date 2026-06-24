@@ -179,7 +179,7 @@ $faq_items = [
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">TraderTok Academy</div>
-            <h1 class="education-subpage-title">Forex &amp; CFD Trading Courses That Help You Learn Step by Step</h1>
+            <h1 class="education-subpage-title">Online Trading Courses</h1>
             <p class="education-subpage-subtitle">
                 Explore structured trading courses designed to help you understand forex, CFDs, leverage, charts, risk management, and trading psychology. Whether you are just starting or building your knowledge, TraderTok Academy helps you learn in a clear and practical way.
             </p>

@@ -276,6 +276,7 @@ body.light-theme .home-payment-overview__wallet-gpay-muted {
 <!-- Hero Section -->
 <section class="hero gold-silver-banner" aria-label="TraderTok banner">
   <img src="assets/images/banner.jpeg" alt="Banner" class="banner-img">
+<h1 style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">TraderTok &ndash; Trade Forex, Stocks, Indices &amp; Commodities</h1>
 </section>
 
 

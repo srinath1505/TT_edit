@@ -92,7 +92,7 @@ foreach (range('A', 'Z') as $letter) {
         <div class="page-hero-overlay1"></div>
         <div class="education-subpage-hero-inner container">
             <div class="education-subpage-eyebrow">Trading Terminology</div>
-            <h1 class="education-subpage-title">Trading Glossary: Forex &amp; CFD Terms Explained</h1>
+            <h1 class="education-subpage-title">Trading Glossary &amp; Financial Terms</h1>
             <p class="education-subpage-subtitle">
                 Understand essential forex and CFD trading terms with clear definitions for leverage, margin, pip, spread, stop-loss, slippage, and more.
             </p>
