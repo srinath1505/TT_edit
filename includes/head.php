@@ -117,6 +117,89 @@ $ttTwitterImageUrl = $ttOrigin . '/twitter-image.jpg';
       content="<?php echo htmlspecialchars((string) $get->desc, ENT_QUOTES, 'UTF-8'); ?>">
     <meta name="twitter:image" content="<?php echo htmlspecialchars($ttTwitterImageUrl, ENT_QUOTES, 'UTF-8'); ?>">
 
+    <!-- Canonical -->
+    <?php
+    $ttCanonicalBase = 'https://www.tradertok.com';
+    $ttCanonicalSlug = isset($page) && is_string($page) && $page !== '' ? '/' . ltrim($page, '/') : '/';
+    echo '    <link rel="canonical" href="' . htmlspecialchars($ttCanonicalBase . $ttCanonicalSlug, ENT_QUOTES, 'UTF-8') . '">' . "\n";
+    ?>
+
+    <!-- Schema.org JSON-LD: Global (all pages) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.tradertok.com/#organization",
+          "name": "TraderTok",
+          "url": "https://www.tradertok.com/",
+          "logo": "https://www.tradertok.com/logo.png",
+          "email": "support@tradertok.com",
+          "telephone": "+44 7520 640 890",
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "Amber Rock Trade Ltd"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Level 5, Alexander House, 35 Cybercity",
+            "addressLocality": "Ebene",
+            "postalCode": "72201",
+            "addressCountry": "MU"
+          },
+          "sameAs": []
+        },
+        {
+          "@type": "FinancialService",
+          "@id": "https://www.tradertok.com/#financialservice",
+          "name": "TraderTok",
+          "url": "https://www.tradertok.com/",
+          "description": "Multi-asset online trading platform providing access to forex, stocks, indices, commodities and cryptocurrencies.",
+          "provider": {
+            "@id": "https://www.tradertok.com/#organization"
+          },
+          "areaServed": "Worldwide",
+          "serviceType": [
+            "Online Trading",
+            "Forex Trading",
+            "CFD Trading",
+            "Commodity Trading",
+            "Stock Trading",
+            "Cryptocurrency Trading"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.tradertok.com/#website",
+          "url": "https://www.tradertok.com/",
+          "name": "TraderTok",
+          "publisher": {
+            "@id": "https://www.tradertok.com/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.tradertok.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <?php
+    // Schema.org JSON-LD: Page-specific (trading-platform, education-hub, etc.)
+    if (!empty($page)) {
+        $ttPageSchemaMap = require __DIR__ . '/config/page-schema.php';
+        if (isset($ttPageSchemaMap[$page])) {
+            echo '    <script type="application/ld+json">' . "\n";
+            echo '    ' . $ttPageSchemaMap[$page] . "\n";
+            echo '    </script>' . "\n";
+        }
+        unset($ttPageSchemaMap);
+    }
+    ?>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZHD8CS6T8H"></script>
     <script>
