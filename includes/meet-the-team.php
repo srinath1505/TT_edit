@@ -89,7 +89,7 @@
                     <div class="team-cards">
                         <!-- <article class="team-card">
                             <div class="team-card-overlay"></div>
-                            <img src="assets/images/Avatars/Kai_Lockwood.png" alt="Kai Lockwood" class="team-card-avatar">
+                            <img src="assets/images/Avatars/Kai_Lockwood.png" alt="Kai Lockwood" loading="lazy" class="team-card-avatar">
                             <div class="team-card-content">
                                 <h3 class="team-card-name" data-i18n="meetTheTeam.english.kai_lockwood.name">Kai Lockwood</h3>
                                 <p class="team-card-role" data-i18n="meetTheTeam.english.kai_lockwood.role">Kai Lockwood is a proactive and client-focused Account Manager with a strong track record of building long-term partnerships. Known for clear communication, attention to detail, and fast problem-solving, Jayden consistently delivers on client goals while maintaining a positive, collaborative working style.</p>
@@ -154,7 +154,7 @@
                     <div class="team-cards">
                         <article class="team-card">
                             <div class="team-card-overlay"></div>
-                            <img src="assets/images/Avatars/Juan_Garcia.png" alt="Juan Garcia" class="team-card-avatar">
+                            <img src="assets/images/Avatars/Juan_Garcia.png" alt="Juan Garcia" loading="lazy" class="team-card-avatar">
                             <div class="team-card-content">
                                 <h3 class="team-card-name" data-i18n="meetTheTeam.spanish.juan_garcia.name">Juan Garcia</h3>
                                 <p class="team-card-role" data-i18n="meetTheTeam.spanish.juan_garcia.role">Juan Garcia is a strategic and client-focused Account Manager who excels at building strong relationships with Spanish-speaking clients. With deep market knowledge and a proactive approach, Juan delivers personalized solutions and ensures every client achieves their trading goals.</p>
@@ -168,7 +168,7 @@
                     <div class="team-cards">
                         <article class="team-card">
                             <div class="team-card-overlay"></div>
-                            <img src="assets/images/Avatars/Aaron_Dev.png" alt="Vikram Patel" class="team-card-avatar">
+                            <img src="assets/images/Avatars/Aaron_Dev.png" alt="Vikram Patel" loading="lazy" class="team-card-avatar">
                             <div class="team-card-content">
                                 <h3 class="team-card-name" data-i18n="meetTheTeam.hindi.aaron_dev.name">Vikram Patel</h3>
                                 <p class="team-card-role" data-i18n="meetTheTeam.hindi.aaron_dev.role">Vikram Patel is a dedicated and knowledgeable Account Manager who specializes in serving Hindi-speaking clients. With a strong understanding of both Indian and international markets, Vikram provides tailored guidance and ensures a seamless, supportive trading experience for every client.</p>
@@ -202,7 +202,7 @@
                         <div class="team-cards">
                             <article class="team-card">
                                 <div class="team-card-overlay"></div>
-                                <!-- <img src="assets/images/Avatars/Alex_Taylor.png" alt="Alex Taylor" class="team-card-avatar"> -->
+                                <!-- <img src="assets/images/Avatars/Alex_Taylor.png" alt="Alex Taylor" loading="lazy" class="team-card-avatar"> -->
                                 <div class="team-card-content">
                                     <h3 class="team-card-name" data-i18n="meetTheTeam.managers.alex_taylor.name">Alex Taylor</h3>
                                     <p class="team-card-role" data-i18n="meetTheTeam.managers.alex_taylor.role">Alex Taylor is a highly attentive and client-focused Account Manager who always strives to understand each client's priorities. With strong communication skills and a calm, professional manner, Alex ensures smooth cooperation and consistent, reliable results.</p>
@@ -210,7 +210,7 @@
                             </article>
                             <article class="team-card">
                                 <div class="team-card-overlay"></div>
-                                <!-- <img src="assets/images/Avatars/Chris_Evans.png" alt="Chris Evans" class="team-card-avatar"> -->
+                                <!-- <img src="assets/images/Avatars/Chris_Evans.png" alt="Chris Evans" loading="lazy" class="team-card-avatar"> -->
                                 <div class="team-card-content">
                                     <h3 class="team-card-name" data-i18n="meetTheTeam.managers.chris_evans.name">Chris Evans</h3>
                                     <p class="team-card-role" data-i18n="meetTheTeam.managers.chris_evans.role">Chris Evans is a dynamic and detail-oriented Account Manager who combines strong communication skills with a strategic mindset. Focused on understanding client goals and delivering consistent results, Chris builds trust through transparency, reliability, and a solution-oriented approach.</p>
@@ -218,7 +218,7 @@
                             </article>
                             <article class="team-card">
                                 <div class="team-card-overlay"></div>
-                                <!-- <img src="assets/images/Avatars/Lucas_Martin.png" alt="Lucas Martin" class="team-card-avatar"> -->
+                                <!-- <img src="assets/images/Avatars/Lucas_Martin.png" alt="Lucas Martin" loading="lazy" class="team-card-avatar"> -->
                                 <div class="team-card-content">
                                     <h3 class="team-card-name" data-i18n="meetTheTeam.managers.lucas_martin.name">Lucas Martin</h3>
                                     <p class="team-card-role" data-i18n="meetTheTeam.managers.lucas_martin.role">Lucas Martin is a highly organized and client-oriented Account Manager who consistently delivers on commitments. With strong communication skills and a calm, professional approach, Lucas builds trust quickly and ensures every client feels supported and well-informed.</p>
@@ -257,7 +257,7 @@
                         <div class="team-cards">
                             <article class="team-card">
                                 <div class="team-card-overlay"></div>
-                                <!-- <img src="assets/images/Avatars/Brooke_Davis.png" alt="Brooke Davis" class="team-card-avatar"> -->
+                                <!-- <img src="assets/images/Avatars/Brooke_Davis.png" alt="Brooke Davis" loading="lazy" class="team-card-avatar"> -->
                                 <div class="team-card-content">
                                     <h3 class="team-card-name" data-i18n="meetTheTeam.billing.brooke_davis.name">Brooke Davis</h3>
                                     <p class="team-card-role" data-i18n="meetTheTeam.billing.brooke_davis.role">Brooke Davis is a meticulous and client-oriented Billing Specialist who ensures seamless financial transactions for all clients. With expertise in payment processing and account management, Brooke handles deposits, withdrawals, and billing inquiries with precision and care, making every financial interaction smooth and transparent.</p>
@@ -265,7 +265,7 @@
                             </article>
                             <article class="team-card">
                                 <div class="team-card-overlay"></div>
-                                <!-- <img src="assets/images/Avatars/Roy_Bruce.png" alt="Roy Bruce" class="team-card-avatar"> -->
+                                <!-- <img src="assets/images/Avatars/Roy_Bruce.png" alt="Roy Bruce" loading="lazy" class="team-card-avatar"> -->
                                 <div class="team-card-content">
                                     <h3 class="team-card-name" data-i18n="meetTheTeam.billing.roy_bruce.name">Roy Bruce</h3>
                                     <p class="team-card-role" data-i18n="meetTheTeam.billing.roy_bruce.role">Roy Bruce is a detail-driven Billing Specialist with extensive experience in financial operations and client support. Known for his analytical approach and quick problem-solving skills, Roy manages payment verifications, account reconciliations, and ensures all transactions meet the highest standards of accuracy and security.</p>

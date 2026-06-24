@@ -28,7 +28,7 @@
           <div class="regulation-container">
             <article class="regulation-card">
               <div class="regulation-card-overlay"></div>
-              <img src="assets/images/mauritius.png" alt="TraderTok Mauritius Financial Services License" class="regulation-card-flag">
+              <img src="assets/images/mauritius.png" alt="TraderTok Mauritius Financial Services License" loading="lazy" class="regulation-card-flag">
               <div class="regulation-card-content">
                 <h3 class="regulation-card-name" data-i18n="regulations.fsc.name">FSC</h3>
                 <h5 class="regulation-card-name2" data-i18n="regulations.fsc.name2">Financial Services

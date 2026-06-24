@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="trading-platform-card__device" aria-hidden="true">
-                        <img src="assets/images/Iphone - platforms2.png" alt="TraderTok Mobile Trading App on iPhone" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
+                        <img src="assets/images/Iphone - platforms2.png" alt="TraderTok Mobile Trading App on iPhone" loading="lazy" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
                     </div>
                 </div>
 
@@ -88,7 +88,7 @@
                         </div>
                     </div>
                     <div class="trading-platform-card__device trading-platform-card__device--desktop" aria-hidden="true">
-                        <img src="assets/images/laptop_platforms.png" alt="TraderTok Trading Platform on Laptop" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
+                        <img src="assets/images/laptop_platforms.png" alt="TraderTok Trading Platform on Laptop" loading="lazy" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
                     </div>
                 </div>
             </div>
@@ -110,13 +110,13 @@
                         <h3 class="trading-platform-card__title" data-i18n="tradingPlatformsPage.mobilePlatform">Mobile Platform</h3>
                         <div class="trading-platform-card__platforms">
                             <div class="trading-platform-card__platform-row">
-                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
+                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" loading="lazy" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
                                 <a href="<?php echo htmlspecialchars($mt5PlatformLinks['mobile_ios'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-platform btn-platform-primary" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
                                     <span data-i18n="tradingPlatformsPage.downloadMt5ForIos">Download MT5 for iOS</span>
                                 </a>
                             </div>
                             <div class="trading-platform-card__platform-row">
-                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
+                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" loading="lazy" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
                                 <a href="<?php echo htmlspecialchars($mt5PlatformLinks['mobile_android'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-platform btn-platform-outline" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
                                     <span data-i18n="tradingPlatformsPage.downloadMt5ForAndroid">Download MT5 for Android</span>
                                 </a>
@@ -124,7 +124,7 @@
                         </div>
                     </div>
                     <div class="trading-platform-card__device" aria-hidden="true">
-                        <img src="assets/images/Iphone - platforms2.png" alt="TraderTok Mobile Trading App on iPhone" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
+                        <img src="assets/images/Iphone - platforms2.png" alt="TraderTok Mobile Trading App on iPhone" loading="lazy" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
                     </div>
                 </div>
 
@@ -133,13 +133,13 @@
                         <h3 class="trading-platform-card__title" data-i18n="tradingPlatformsPage.webDesktop">Web &amp; Desktop</h3>
                         <div class="trading-platform-card__platforms">
                             <div class="trading-platform-card__platform-row">
-                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
+                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" loading="lazy" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
                                 <a href="<?php echo htmlspecialchars($mt5PlatformLinks['desktop_windows'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-platform btn-platform-primary" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
                                     <span data-i18n="tradingPlatformsPage.downloadMt5ForWindows">Download MT5 for Windows</span>
                                 </a>
                             </div>
                             <div class="trading-platform-card__platform-row">
-                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
+                                <img src="assets/images/mt5.png" alt="MetaTrader 5 Trading Platform" loading="lazy" width="80" height="80" class="platform-icon trading-platform-card__mt5-icon trading-platform-card__mt5-icon--lg">
                                 <a href="<?php echo htmlspecialchars($mt5PlatformLinks['web_trader'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-platform btn-platform-outline" style="text-decoration: none;" target="_blank" rel="noopener noreferrer">
                                     <span data-i18n="footer.platformWebTrader">Web Trader</span>
                                 </a>
@@ -147,7 +147,7 @@
                         </div>
                     </div>
                     <div class="trading-platform-card__device trading-platform-card__device--desktop" aria-hidden="true">
-                        <img src="assets/images/laptop_platforms.png" alt="TraderTok Trading Platform on Laptop" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
+                        <img src="assets/images/laptop_platforms.png" alt="TraderTok Trading Platform on Laptop" loading="lazy" style="max-width: 100%; height: auto; max-height: 550px; object-fit: contain;">
                     </div>
                 </div>
             </div>

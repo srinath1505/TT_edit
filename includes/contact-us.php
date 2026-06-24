@@ -245,7 +245,7 @@
 
             <!-- Right Side - Image -->
             <div class="contact-image-wrapper">
-              <img src=" assets/images/36019266_kulins0879.png" alt="Professional Trader Monitoring Financial Markets" class="contact-image">
+              <img src="assets/images/36019266_kulins0879.png" loading="lazy" alt="Professional Trader Monitoring Financial Markets" class="contact-image">
             </div>
           </div>
         </div>

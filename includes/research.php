@@ -983,7 +983,7 @@ body.light-theme .research-page .education-text p {
 
            <div class="education-visual">
              <div class="education-image-container">
-               <img src="assets/images/10030610.png" alt="Why education matters" class="education-image" data-i18n-alt="researchPage.whyEducationImageAlt">
+               <img src="assets/images/10030610.png" alt="Why education matters" loading="lazy" class="education-image" data-i18n-alt="researchPage.whyEducationImageAlt">
              </div>
            </div>
          </div>
