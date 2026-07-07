@@ -116,7 +116,7 @@
             <h3 class="footer-title" data-i18n="footer.downloadOurApp">Download our app from the stores</h3>
             <div class="footer-store-btns">
               <a href="https://apps.apple.com/tr/app/tradertok/id6759670314" class="footer-store-btn">
-                <img src="assets/images/Apple_logo_black.png" alt="Apple App Store Download Badge" class="store-icon" />
+                <img src="assets/images/Apple_logo_black.png" alt="Download TraderTok trading app from the Apple App Store" class="store-icon" />
                 <span>App Store</span>
               </a>
               <a href="https://play.google.com/store/apps/details?id=com.tradertok.app" class="footer-store-btn">
