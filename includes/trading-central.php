@@ -177,7 +177,7 @@
         </div>
 
         <div style="text-align: center; margin-bottom: 100px;">
-            <img src="assets/images/trading-central.png" alt="Trading Central dashboard" data-i18n-alt="tradingCentral.altDashboard" style="max-width: 100%; height: auto; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+            <img src="assets/images/trading-central.png" alt="Trading Central Market Research Tools" data-i18n-alt="tradingCentral.altDashboard" style="max-width: 100%; height: auto; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
         </div>
 
         <!-- Stats -->
@@ -214,7 +214,7 @@
                 <a href="https://appzone.tradertok.com/#/auth/register" class="btn-secondary" style="display: inline-block;" data-i18n="tradingCentral.features.registerBtn">Register to Access</a>
             </div>
             <div>
-                <img src="assets/images/trading-central-mac-2.png" alt="Data Driven Insights" style="max-width: 100%; border-radius: 16px;">
+                <img src="assets/images/trading-central-mac-2.png" alt="Trading Central Technical Analysis Dashboard" style="max-width: 100%; border-radius: 16px;">
             </div>
         </div>
 
@@ -224,7 +224,7 @@
                 <p data-i18n="tradingCentral.features.f2desc">Navigate global markets with the latest market-scanning tools powered by AI.</p>
             </div>
             <div style="direction: ltr;">
-                <img src="assets/images/trading-central-mac.png" alt="Professional-Grade Analysis" style="max-width: 100%; border-radius: 16px;">
+                <img src="assets/images/trading-central-mac.png" alt="Trading Central Market Analysis on Desktop" style="max-width: 100%; border-radius: 16px;">
             </div>
         </div>
 
@@ -234,7 +234,7 @@
                 <p data-i18n="tradingCentral.features.f3desc">Access real-time insights into hundreds of financial instruments.</p>
             </div>
             <div>
-                <img src="assets/images/trading-central-mob.png" alt="Boundless Market Opportunities" style="max-width: 100%; border-radius: 16px;">
+                <img src="assets/images/trading-central-mob.png" alt="Trading Central Mobile Trading Insights" style="max-width: 100%; border-radius: 16px;">
             </div>
         </div>
 

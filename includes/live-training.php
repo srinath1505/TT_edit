@@ -324,7 +324,7 @@ body.light-theme .training-page .hero-description {
               <div class="training-image">
                 <img
                   src="assets/images/lovely-lady-with-curly-hair-email-with-her-friend-using-silver-laptop-being-isolated-grey-wall.png"
-                  alt="Live Training">
+                  alt="Traders Using Laptop for Online Investment Research">
               </div>
             </div>
 

@@ -605,7 +605,7 @@ body.light-theme .notice-text {
                         'title' => 'GBL (Investment Dealer Licence)',
                         'description' => 'Global Business Licence certificate for Amber Rock Trade Ltd as an Investment Dealer.',
                         'file' => './assets/images/cert.jpg',
-                        'content_html' => '<p class="legal-doc-cert-wrap"><img src="./assets/images/cert.jpg" alt="Amber Rock Trade Ltd Global Business Licence (Investment Dealer) certificate" style="max-width:100%;height:auto;border-radius:12px;display:block;" loading="lazy" decoding="async" /></p>',
+                        'content_html' => '<p class="legal-doc-cert-wrap"><img src="./assets/images/cert.jpg" alt="Financial Regulation and Compliance Certificate" style="max-width:100%;height:auto;border-radius:12px;display:block;" loading="lazy" decoding="async" /></p>',
                         'preview' => [],
                         'download_aria_label' => 'Open certificate',
                         ],
